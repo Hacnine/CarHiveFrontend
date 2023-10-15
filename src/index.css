@@ -5,6 +5,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities{
+  .boxshadow{
+    box-shadow: 0 0 1px #1ecb15,
+    0 0 25px #1ecb15;
+  }
+}
+
+.glow-green{
+  @apply bg-primary-green hover:boxshadow;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,11 +23,11 @@
 }
 
 .wrapper {
-  @apply max-w-[1368px] px-8 mx-auto;
+  @apply max-w-[1368px] lg:px-28 px-16 mx-auto;
 }
 
 .head_text {
-  @apply text-[46px] text-primary-black font-bold uppercase leading-[146%] font-kalam;
+  @apply text-[46px]  text-primary-black font-bold uppercase leading-[146%] font-kalam;
 }
 
 .green_text {
@@ -25,7 +35,7 @@
 }
 
 .link {
-  @apply text-light-gray font-raleway border-b-2 hover:border-primary-green transition-all duration-150 ease-in cursor-pointer;
+  @apply text-light-gray font-raleway hover:border-b-2 hover:border-primary-green transition-all duration-300 ease-in cursor-pointer;
 }
 
 .btn_base {
