@@ -7,6 +7,37 @@ import { RiAccountPinCircleFill } from "react-icons/ri";
 import { SiPowerpages } from "react-icons/si";
 import { HiNewspaper } from "react-icons/hi";
 import { TbBrandBooking } from "react-icons/tb";
+import busIcon from "../assets/bus-icon.svg";
+import locationIcon from "../assets/location-icon.svg";
+import calendarIcon from "../assets/calendar-icon.svg";
+
+import van from "../assets/van.svg";
+import bus from "../assets/bus.svg";
+import carsports from "../assets/carsports.svg";
+import car from "../assets/car.svg";
+
+export const vehicleTypes = [
+  {
+    type: "Car",
+    image: car,
+    alt: "car-icon",
+  },
+  {
+    type: "Bus",
+    image: bus,
+    alt: "bus-icon",
+  },
+  {
+    type: "Prestige",
+    image: carsports,
+    alt: "carsports-icon",
+  },
+  {
+    type: "Van",
+    image: van,
+    alt: "van-icon",
+  },
+];
 
 export const navLinks = [
   { href: "#home", label: "Home" },
@@ -73,6 +104,26 @@ export const navLinks2 = [
       { name: "Cars Single", link: "/" },
     ],
   },
+];
+
+
+
+
+export const formItems = [
+
+  {
+    label: "Pick Up Location",
+    placeholder: "Enter your pickup location",
+    icon: locationIcon,
+  },
+  {
+    label: "Drop Off Location",
+    placeholder: "Enter your dropoff location",
+    icon: locationIcon,
+  },
+
+  { label: "Pick Up Date & Time", placeholder: "Select a date and time.", icon: calendarIcon },
+  { label: "Drop Up Date & Time", placeholder: "Select dates and time.", icon: calendarIcon },
 ];
 
 // export const shoes = [

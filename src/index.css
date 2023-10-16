@@ -7,10 +7,12 @@
 
 @layer utilities{
   .boxshadow{
-    box-shadow: 0 0 1px #1ecb15,
-    0 0 25px #1ecb15;
+    box-shadow: 0 0 1px #50b14b,
+    0 0 20px #4aa545;
   }
 }
+
+
 
 .glow-green{
   @apply bg-primary-green hover:boxshadow;

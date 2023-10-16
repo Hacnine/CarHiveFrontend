@@ -1,6 +1,6 @@
 import { Navigation } from "./components";
 import Practise from "./views/Practise";
-import './views/customcss.css'
+import "./views/customcss.css";
 
 import {
   CarsForRental,
@@ -19,12 +19,13 @@ function App() {
   return (
     <main>
       {/* <Practise/> */}
+     
+
       <section>
         <Navigation />
       </section>
       <section>
-      <Hero />
-
+        <Hero />
       </section>
       {/* <section>
         <RentingProcess/>
@@ -53,7 +54,6 @@ function App() {
       <section>
         <Footer />
       </section> */}
-      
     </main>
   );
 }
