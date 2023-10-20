@@ -20,14 +20,15 @@ module.exports = withMT({
       },
       
       fontFamily: {
-        kalam: ["Kalam", "cursive"],
-        raleway: ["Raleway", "sans-serif"],
+        neon: ["Tilt Neon", "sans-serif"],
+        young: ["Young Serif", "serif"],
       },
       colors: {
         "primary-black": "#222",
         "primary-green": "#1fc916",
         "light-green": "#1ecb15",
-        "navy-blue":"#0c0c20ff",
+        "slate-blue":"#031b4e",
+        "white-green": "#eafae8ff",
         "secondary-green": "#EDF3E0",
         "accent-green": "#fdc4a7ff",
         "light-gray": "#686868",
@@ -38,11 +39,16 @@ module.exports = withMT({
         "secondary-gray": "#E4E4E4",
       },
       screens: {
-        sm: "640px",
+        sm: "740px",
+        md:"968px",
         lg: "1100px",
+        rental_md: "968px",
         // xl: "1100px",
+        "wide": "1440px",
+
 
       },
+      
     },
   },
   variants:{

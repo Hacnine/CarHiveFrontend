@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;800;900&family=Nunito:wght@300&family=Poppins:wght@300;400&family=Roboto&family=Tilt+Neon&family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;800;900&family=Nunito:wght@300&family=Poppins:wght@300;400&family=Roboto&family=Tilt+Neon&family=Young+Serif&display=swapp");
 
 @tailwind base;
 @tailwind components;
@@ -21,27 +21,25 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Raleway", sans-serif;
+
 }
 
 .wrapper {
-  @apply max-w-[1368px] lg:px-28 px-16 mx-auto;
+  @apply max-w-[1368px] lg:px-28 px-8 mx-auto;
 }
 
 .head_text {
-  @apply text-[46px]  text-primary-black font-bold uppercase leading-[146%] font-kalam;
+  @apply lg:text-[44px] md:text-3xl text-2xl font-bold  leading-[146%] text-center ;
 }
 
-.green_text {
-  @apply text-primary-green font-kalam;
-}
+
 
 .link {
-  @apply text-light-gray font-raleway hover:border-b-2 hover:border-primary-green transition-all duration-300 ease-in cursor-pointer;
+  @apply text-light-gray  hover:border-b-2 hover:border-primary-green transition-all duration-300 ease-in cursor-pointer;
 }
 
 .btn_base {
-  @apply outline-none transition-all duration-150 ease-in;
+  @apply capitalize border-2 border-primary-green  items-center justify-center  font-semibold  rounded-md;
 }
 
 .primary_btn {

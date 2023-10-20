@@ -14,46 +14,60 @@ import {
   Testimonials,
   Footer,
 } from "./views";
+import { vehicleTypes } from "./constants";
+import ImageSlider from "./components/ImageSlider";
 
 function App() {
   return (
-    <main>
+    <main className="relative">
       {/* <Practise/> */}
+      {/* <ImageSlider/> */}
      
-
+   
+              
       <section>
         <Navigation />
       </section>
       <section>
         <Hero />
       </section>
-      {/* <section>
+
+     <section className=" lg:mt-32 mt-[520px]">
         <RentingProcess/>
       </section>
-      <section>
+
+       <section className=" lg:mt-32 mt-20 wrapper">
         <CarsForRental />
       </section>
-      <section>
+      <section className=" lg:mt-32 mt-20 wrapper">
+
         <Pricing />
-      </section> */}
-      {/* <section>
+      </section>
+
+      <section className=" lg:mt-32 mt-20 wrapper">
         <Testimonials />
       </section>
-      <section>
+
+      <section className=" lg:mt-32 mt-20 wrapper">
         <Posts />
       </section>
-      <section>
+
+      <section className=" lg:mt-32 mt-20 wrapper">
         <Services />
       </section>
-      <section>
+
+      <section className=" lg:mt-32 mt-20 wrapper">
+
         <FAQ />
       </section>
-      <section>
+
+      <section className=" lg:mt-32 mt-20 wrapper">
         <Contact />
       </section>
-      <section>
+
+      <section className=" lg:mt-32 mt-20 wrapper">
         <Footer />
-      </section> */}
+      </section>
     </main>
   );
 }
