@@ -8,7 +8,6 @@ import Pricing from "./Pricing";
 import RentingProcess from "./RentingProcess";
 import Services from "./Services";
 import Testimonials from "./Testimonials";
-
 export {
   CarsForRental,
   Contact,

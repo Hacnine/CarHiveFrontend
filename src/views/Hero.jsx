@@ -32,8 +32,8 @@ const Hero = () => {
                 <span className=" text-red-400">Select</span> Your Vehicle Types
               </h4>
               <div className="grid grid-cols-2  gap-2  border-gray-600 lg:w-full w-60 ">
-                {vehicleTypes.map((items) => (
-                  <div className="relative lg:w-36 lg:h-24 h-24 w-28  bg-light-green rounded-lg  flex  items-center justify-center ">
+                {vehicleTypes.map((items, index) => (
+                  <div className="relative lg:w-36 lg:h-24 h-24 w-28  bg-light-green rounded-lg  flex  items-center justify-center " key={index}>
                     <img
                   src={items.image}
                   alt={items.alt}
@@ -53,11 +53,12 @@ const Hero = () => {
                     <span className=" text-red-400">Select</span> Date and Time
                   </h4>
                   <div className="grid grid-rows-2 lg:grid-flow-col lg:gap-3 ">
-                    {formItems.map((item) => (
+                    {formItems.map((item, index) => (
                       <LabelInput
                         label={item.label}
                         placeholder={item.placeholder}
                         icon={item.icon}
+                        key={index}
                       />
                     ))}
 

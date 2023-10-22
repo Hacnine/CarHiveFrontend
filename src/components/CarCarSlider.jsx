@@ -3,19 +3,21 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {FcPrevious, FcNext} from "react-icons/fc";
+import {MdOutlineNavigateNext, MdNavigateBefore} from "react-icons/md";
 import { carNames } from "../constants";
 import CarCard from "./CarCard";
 
 const CarCarSlider = () => {
   const CustomPrevArrow = ({ onClick }) => (
-    <div onClick={onClick} className=" absolute  top-44  -left-3  w-10 h-10  bg-white  border border-gray-300 shadow-lg rounded-full  text-center  cursor-pointer hover:scale-110 transform transition-transform p-2 flex items-center justify-center z-50">
-      <FcPrevious />
+    <div onClick={onClick} className=" absolute  top-44  -left-3  w-10 h-10  bg-white -translate-y-4 border  border-green-100 shadow-lg rounded-full cursor-pointer hover:scale-110 transform transition-transform text-primary-green flex items-center justify-center z-50">
+            <MdNavigateBefore className="w-7 h-7" />
+
     </div>
   );
 
   const CustomNextArrow = ({ onClick }) => (
-    <div onClick={onClick} className="absolute top-44 right-1  w-10 h-10 bg-white border border-gray-300 shadow-lg rounded-full  text-center  cursor-pointer hover:scale-110 transform transition-transform p-2 flex items-center justify-center" >
-      <FcNext />
+    <div onClick={onClick} className="absolute top-44 right-1  w-10 h-10 bg-white border -translate-y-4 border-green-100  shadow-lg rounded-full  text-center  cursor-pointer hover:scale-110 transform transition-transform text-primary-green flex items-center justify-center z-50" >
+      <MdOutlineNavigateNext className="w-7 h-7" />
 
     </div>
   );
@@ -58,7 +60,7 @@ const CarCarSlider = () => {
   };
   return (
     // sm:bg-green-600 md:bg-yellow-900 lg:bg-red-500
-    <div className="pl-3 border gap-2 border-gray-700 ">
+    <div className="pl-3  gap-2 border-gray-700 ">
       <Slider {...settings}>
         {carNames.map((item, index) => (
           <div key={index} className=" p-2  ">

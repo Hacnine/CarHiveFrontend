@@ -2,7 +2,13 @@ import { FaBeer, Fa500Px, FaAccusoft } from "react-icons/fa";
 
 import { AiFillHome, AiTwotoneCar, AiTwotoneHeart } from "react-icons/ai";
 import { RiAccountPinCircleFill } from "react-icons/ri";
-import {GiCarDoor, GiHobbitDoor,GiDoorway,GiTreeDoor, GiDoorRingHandle} from "react-icons/gi"
+import {
+  GiCarDoor,
+  GiHobbitDoor,
+  GiDoorway,
+  GiTreeDoor,
+  GiDoorRingHandle,
+} from "react-icons/gi";
 import { SiPowerpages } from "react-icons/si";
 import { HiNewspaper } from "react-icons/hi";
 import { TbBrandBooking } from "react-icons/tb";
@@ -20,14 +26,29 @@ import { HiLocationMarker } from "react-icons/hi";
 import { TbCalendarEvent } from "react-icons/tb";
 import { carOne, carThree, carTwo } from "../assets";
 
-
-
-  export const images = [
-    {image:carOne,},
-    {image:carTwo,},
-    {image:carThree,},
-
-  ];
+export const reviews = [
+  {
+    image: carOne,
+    titlle: "Excellent Service! Car Rent Service!",
+    comment:
+      "Endorsed by industry experts, Rentaly is the Car Rental solution you can trust. With years of experience in the field, we provide fast, reliable and secure Car Rental services.",
+    userName: "Kanesha Keyton",
+  },
+  {
+    image: carOne,
+    titlle: "Amazing Experience!",
+    comment:
+      "Backed by a consortium of seasoned professionals, Carhive stands as the property management solution you can rely on. With a wealth of expertise in the real estate industry, we deliver swift, dependable, and secure property management services.",
+    userName: "Isac Samuel",
+  },
+  {
+    image: carOne,
+    titlle: "Excellent Service! Car Rent Service!",
+    comment:
+      "We have been using Rentaly for our trips needs for several years now and have always been happy with their service. Their customer support is Excellent Service! and they are always available to help with any issues we have. Their prices are also very competitive.",
+    userName: "Jovan Reels",
+  },
+];
 
 export const carNames = [
   {
@@ -69,8 +90,6 @@ export const carNames = [
       //   number: "",
       //   Icon: GiTreeDoor,
       // },
-
-      
     ],
   },
   {
@@ -97,7 +116,6 @@ export const carNames = [
         number: "Sedan",
         Icon: BsCarFront,
       },
-     
     ],
   },
   {
@@ -124,7 +142,6 @@ export const carNames = [
         number: "Sedan",
         Icon: BsCarFront,
       },
-     
     ],
   },
   {
@@ -151,10 +168,8 @@ export const carNames = [
         number: "Sedan",
         Icon: BsCarFront,
       },
-     
     ],
   },
-
 ];
 export const vehicleTypes = [
   {
@@ -293,4 +308,35 @@ export const steps = [
     description:
       "Hassle-free convenience as we take care of every detail, allowing you to unwind and embrace a journey filled comfort.",
   },
+];
+
+  
+export const essentialPlanOptions = [
+  "Quisque rhoncus",
+  " Lorem ipsum dolor",
+  "Vivamus velit mir",
+  "Velit mir",
+  "Elit mir ivamus",
+];
+
+export const recommendedPlanOptions = [
+  "Quisque rhoncus",
+  " Lorem ipsum dolor",
+  "Vivamus velit mir",
+  "Velit mir",
+  "Elit mir ivamus",
+  "Lorem ipsum dolor",
+  "Ipsum dolor",
+];
+
+export const proPlanOptions = [
+  "Quisque rhoncus",
+  " Lorem ipsum dolor",
+  "Vivamus velit mir",
+  "Velit mir",
+  "Elit mir ivamus",
+  "Lorem ipsum dolor",
+  "Ipsum dolor",
+  "Quisque rhoncus",
+  "lit mir iamus",
 ];

@@ -42,7 +42,6 @@ module.exports = withMT({
         sm: "740px",
         md:"968px",
         lg: "1100px",
-        rental_md: "968px",
         // xl: "1100px",
         "wide": "1440px",
 

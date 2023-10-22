@@ -6,7 +6,6 @@ import PricingCard from "./PricingCard";
 import PrimaryButton from "./PrimaryButton";
 import ServiceCard from "./ServiceCard";
 import Step from "./Step";
-import Testimonial from "./Testimonial";
 import CarCarSlider from "./CarCarSlider";
 
 export {
@@ -19,5 +18,4 @@ export {
   PrimaryButton,
   ServiceCard,
   Step,
-  Testimonial,
 };
