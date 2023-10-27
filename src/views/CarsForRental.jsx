@@ -12,7 +12,7 @@ const CarsForRental = () => {
           </p>
           <h1 className="head_text font-neon text-slate-blue items-center ">
             <span className="inline-block">
-              <MdCarRental className="text-primary-green  " />
+              
             </span>{" "}
             <span className="text-primary-green ml-2 "> Car</span> For Rental
           </h1>

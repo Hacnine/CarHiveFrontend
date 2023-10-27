@@ -18,10 +18,19 @@ module.exports = withMT({
         '4xl': ['48px', '58px'],
         '8xl': ['96px', '106px']
       },
+
+  
+     
+
+      backgroundImage: {
+        'hero-img':  "url('/src/assets/heroImage.jpg')",
+        'sevices': "url('/src/assets/servces-background.jpg')",
+      },
       
       fontFamily: {
         neon: ["Tilt Neon", "sans-serif"],
         young: ["Young Serif", "serif"],
+        open: ["Open Sans", "sans-serif"],
       },
       colors: {
         "primary-black": "#222",

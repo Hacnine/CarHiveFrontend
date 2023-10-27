@@ -1,45 +1,18 @@
-import locationIcon from "../assets/location-icon.svg";
-import calendarIcon from "../assets/calendar-icon.svg";
 
-export default function PrimaryButton ({className,textColor, onOpen, buttonName, icon, padding}) {
+export default function PrimaryButton ({className,textColor, onOpen, buttonName, icon, padding,  scale, url}) {
   
   function handleClick(){
     onOpen();
   }
 
-//  icon = [
-//     <HiLocationMarker/>,
-//     <BsCalculatorFill/>
-//   ];
   return (
     <div>
-      <button className={`btn_base ${className} 
-      ${textColor ? `${textColor}` : 'text-white'} ${padding ? `${padding}`: `px-4 h-8 text-sm`}`}
+      <a href={url}>
+      <button className={`btn_base shadow-lg shadow-green-800 tracking-[1px] font-serif ${className} 
+      ${textColor ? `${textColor}` : 'text-white'} ${padding ? `${padding}`: `px-4 py-2 text-sm`} ${scale? "":"hover:scale-110 transition-all duration-200 ease-in "}`}
       
       onClick={handleClick} >{icon}{buttonName}</button>
+      </a>
     </div>
   )
 }
-
-
-
-
-// const Button = ({ label, iconUrl, backgroundColor, borderColor, textColor, fullWidth }) => {
-//   return (
-//     <button className={`flex justify-center items-center gap-2 px-7 py-4  border font-montserrat text-lg leading-none rounded-full 
-//     ${
-//       backgroundColor ? `${backgroundColor} ${borderColor} ${textColor}` : " bg-coral-red  border-coral-red text-white"
-//     } ${fullWidth && 'w-full'}
-//        `}>
-
-//       {label} 
-//       {iconUrl && <img
-//         src={iconUrl}
-//         alt="arrow right icon"
-//         className="ml-2 rounded-full h-5 w-5"
-//       />}
-//     </button>
-//   );
-// };
-
-// export default Button;

@@ -13,8 +13,10 @@ const CarCard = ({ name, imgSrc, Icon, price, number, summary }) => {
   
   return (
   
-    <div className="p-2 border border-gray-300 rounded-lg w-fit ">
-      <img src={imgSrc} alt="car image" className=" md:w-[320px]  w-[700px]" />
+    <div className="p-2 border border-gray-300 rounded-lg w-fit shadow-md">
+      <div className="relative overflow-hidden ">
+      <img src={imgSrc} alt="car image" className=" md:w-[320px] h-44 w-[700px] object-cover rounded transition-transform transform scale-100 hover:scale-110 ease-in duration-500" />
+      </div>
 
       <div className="flex  justify-between mt-4 px-5">
         <h4 className=" text-slate-blue  font-semibold ">{name}</h4>

@@ -1,7 +1,7 @@
-import { FaBeer, Fa500Px, FaAccusoft } from "react-icons/fa";
+import { FaBeer, Fa500Px, FaAccusoft, FaRoad, FaTrophy } from "react-icons/fa";
 
 import { AiFillHome, AiTwotoneCar, AiTwotoneHeart } from "react-icons/ai";
-import { RiAccountPinCircleFill } from "react-icons/ri";
+import { RiAccountPinCircleFill, RiSecurePaymentFill } from "react-icons/ri";
 import {
   GiCarDoor,
   GiHobbitDoor,
@@ -20,7 +20,7 @@ import carsports from "../assets/carsports.svg";
 import car from "../assets/car.svg";
 import { MdOutlineAccountBox } from "react-icons/md";
 import { PiBagSimpleBold } from "react-icons/pi";
-import { BsCarFront } from "react-icons/bs";
+import { BsCarFront, BsFillMapFill, BsFillPinMapFill } from "react-icons/bs";
 
 import { HiLocationMarker } from "react-icons/hi";
 import { TbCalendarEvent } from "react-icons/tb";
@@ -310,33 +310,60 @@ export const steps = [
   },
 ];
 
-  
 export const essentialPlanOptions = [
-  "Quisque rhoncus",
-  " Lorem ipsum dolor",
-  "Vivamus velit mir",
-  "Velit mir",
-  "Elit mir ivamus",
+  "Economy and compact car options.",
+  "Limited mileage.",
+  "Basic insurance coverage.",
+  "No additional services included.",
 ];
 
 export const recommendedPlanOptions = [
-  "Quisque rhoncus",
-  " Lorem ipsum dolor",
-  "Vivamus velit mir",
-  "Velit mir",
-  "Elit mir ivamus",
-  "Lorem ipsum dolor",
-  "Ipsum dolor",
+  "Mid-size and full-size car options",
+  "Extended mileage allowance.",
+  "Comprehensive insurance coverage.",
+  "Optional add-ons like GPS, child seats, and roadside assistance for an extra fee.",
 ];
 
 export const proPlanOptions = [
-  "Quisque rhoncus",
-  " Lorem ipsum dolor",
-  "Vivamus velit mir",
-  "Velit mir",
-  "Elit mir ivamus",
-  "Lorem ipsum dolor",
-  "Ipsum dolor",
-  "Quisque rhoncus",
-  "lit mir iamus",
+  "Premium and luxury car options.",
+  "Unlimited mileage.",
+  "Full insurance coverage with zero deductible",
+  "Complimentary add-ons such as GPS.",
+  "Priority pickup and drop-off service.",
+  "Access to loyalty rewards program for future discounts.  ",
+];
+
+export const services = [
+  { title: "Let's Begin Your Adventure" },
+  {
+    description:
+      "Welcome to the start of your adventure on wheels! At our car rental service, we're excited to kickstart your journey. Whether you're planning a road trip, a weekend getaway, or simply need reliable transportation, we're here to provide you with top-notch vehicles and a hassle-free experience. Let's begin your journey today and explore the world with the freedom of the open road.",
+  },
+];
+
+export const serviceCard = [
+  {
+    title: "First Class Services",
+    description:
+      "Where luxury meets exceptional care, creating unforgettable moments and exceeding your every expectation.",
+    Icon:FaTrophy,
+  },
+  {
+    title: "24/7 Road Assistance ",
+    description:
+      "Reliable support when you need it most, keeping you on the move with confidence and peace of mind.",
+    Icon:FaRoad,
+  },
+  {
+    title: "Free Pick-Up & Drop-Off",
+    description:
+      "Enjoy free pickup and drop-off services, adding an extra layer of ease to your car rental experience.",
+  Icon:BsFillPinMapFill,
+  },
+  {
+    title: "Secured Payment",
+    description:
+      "Our secured payment services ensure your financial transactions are always safe and protected.",
+    Icon:RiSecurePaymentFill,
+  },
 ];

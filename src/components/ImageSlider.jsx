@@ -1,30 +1,13 @@
+
 import React, { useEffect, useState } from 'react';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { BsCarFront } from "react-icons/bs";
-import { GiHobbitDwelling } from "react-icons/gi";
-import { carNames } from "../constants";
-import CarCard from "./CarCard";
+import { heroImage } from '../assets';
 
 const ImageSlider = () => {
-
-  const [prevScrollY, setPrevScrollY] = useState(0);
-  const [scrollingUp, setScrollingUp] = useState(true);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > prevScrollY) {
-        // Scrolling down
-        setScrollingUp(false);
-      } else {
-        // Scrolling up
-        setScrollingUp(true);
-      }
-
-      setPrevScrollY(currentScrollY);
+      setScrollY(window.scrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -32,20 +15,27 @@ const ImageSlider = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [prevScrollY]);
+  }, []);
+
+  const topCrop = -scrollY * 0.4; // Adjust the factor to control the cropping
+
 
   return (
-    <nav  id="navbar"
-    className="bg-blue-500 p-4 fixed w-full transition-transform duration-300"
-   >
-      <div className=''>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae corrupti dolore magni doloribus laborum consectetur vel laudantium consequuntur qui, natus nisi temporibus odio repudiandae, dolor ut quasi aspernatur cupiditate placeat.
+    <div
+      className="relative h-screen bg-cover bg-center"
+      style={{ backgroundImage: "" }}
+    >
+        <div
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-transform"
+        style={{
+          transform: `translate(-50%, calc(-50% + ${topCrop}px))`,
+        }}
+      >
+        <img src={heroImage} className='w-full'/>
+        
       </div>
-    </nav>
+    </div>
   );
-}
-
-
-
+};
 
 export default ImageSlider;

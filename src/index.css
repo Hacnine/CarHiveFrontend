@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;800;900&family=Nunito:wght@300&family=Poppins:wght@300;400&family=Roboto&family=Tilt+Neon&family=Young+Serif&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;800;900&family=Nunito:wght@300&family=Poppins:wght@300;400&family=Roboto&family=Tilt+Neon&family=Young+Serif&display=swapp");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;800;900&family=Nunito:wght@300&family=Open+Sans:wght@700&family=Poppins:wght@300;400&family=Roboto&family=Tilt+Neon&family=Young+Serif&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -29,7 +30,11 @@
 }
 
 .head_text {
-  @apply lg:text-[44px] md:text-3xl text-2xl font-bold  leading-[146%] text-center ;
+  @apply  text-5xl   font-bold  leading-[146%] text-center ;
+}
+
+.para_text {
+  @apply text-gray-600 font-medium  ;
 }
 
 
@@ -39,7 +44,7 @@
 }
 
 .btn_base {
-  @apply capitalize border-2 border-primary-green  items-center justify-center  font-semibold  rounded-md;
+  @apply capitalize  items-center justify-center  font-semibold  rounded-md;
 }
 
 .primary_btn {

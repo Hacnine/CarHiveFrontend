@@ -1,43 +1,19 @@
-// import { Carousel } from "@material-tailwind/react";
-
 import { Carousel } from "@material-tailwind/react";
-import { carOne } from "../assets";
-
+import { testiOne } from "../assets";
+import { testimonials } from "../constants/index_three";
+import Title from "../components/Title";
+import TestimonialCard from "../components/TestimonialCard";
 
 const Testimonials = () => {
   return (
-    <section>
-      <Carousel
-       
-      >
+    <section className="flex flex-wrap flex-row justify-center   items-center md:space-y-0 space-y-3 md:space-x-3 mx-auto border">
 
-<div className="w-1/3">
-<img
-        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-        alt="image 2"
-        className="h-full w-full object-cover"
-      />
-      </div>
-      <div className="w-1/3">
-      <img
-        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-        alt="image 3"
-        className="h-full w-full object-cover"
-      />
-      </div>
-      <div className="w-1/3">
-       
-<img
-        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-        alt="image 3"
-        className="h-full w-full object-cover"
-      />
-      </div>
-     
-   
-     
-
-    </Carousel>
+      {testimonials.map((items, index) => (
+        <div className="relative border border-purple-500 " key={index}>
+         
+          <TestimonialCard items={items}/>
+        </div>
+      ))}
     </section>
   );
 };

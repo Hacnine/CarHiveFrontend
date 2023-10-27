@@ -3,7 +3,7 @@ import Contact from "./Contact";
 import FAQ from "./FAQ";
 import Footer from "./Footer";
 import Hero from "./Hero";
-import Posts from "./Posts";
+import News from "./News";
 import Pricing from "./Pricing";
 import RentingProcess from "./RentingProcess";
 import Services from "./Services";
@@ -14,7 +14,7 @@ export {
   FAQ,
   Footer,
   Hero,
-  Posts,
+  News,
   Pricing,
   RentingProcess,
   Services,

@@ -11,7 +11,7 @@ const Hero = () => {
       <img
         src={heroImage}
         alt="cover-image"
-        className=" min-w-full min-h-screen flex-1"
+        className=" min-w-full min-h-screen flex-1 object-cover"
       />
       <div className="absolute top-36 flex items-center flex-col">
         <div className=" wrapper min-h-[444px] ">
