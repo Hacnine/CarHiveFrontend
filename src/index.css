@@ -26,7 +26,7 @@
 }
 
 .wrapper {
-  @apply max-w-[1368px] lg:px-28 px-8 mx-auto;
+  @apply max-w-[1368px] lg:px-28 px-4 mx-auto;
 }
 
 .head_text {
@@ -49,4 +49,8 @@
 
 .primary_btn {
   @apply rounded-[4px] text-white uppercase tracking-widest font-bold border-2 border-transparent hover:text-primary-black hover:bg-white;
+}
+
+.input {
+  @apply border border-green-400 bg-white-green text-gray-600 font-medium text-sm shadow-lg shadow-green-800/5 ring-4 ring-transparent outline-none placeholder:text-green-300 focus:border-transparent  transition-all ease-in duration-300  gap-3;
 }

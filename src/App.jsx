@@ -14,35 +14,36 @@ import {
   Testimonials,
   Footer,
 } from "./views";
-import { vehicleTypes } from "./constants";
 import ImageSlider from "./components/ImageSlider";
-import Headroom from "react-headroom";
 import NewsPage from "./views/NewsPage";
+import Booking from "./views/Booking";
 
 function App() {
   return (
     <main className="">
       {/* <Practise/> */}
       {/* <ImageSlider/> */}
+      
 
-      <section className="">
+      {/* <section className="">
       <NewsPage/>
-      </section> 
+      </section> */}
+      <Booking/>
     
-        <section>
+      {/* <section>
         <Navigation />
       </section>
       <section>
         <Hero />
       </section>
 
-      <section className=" lg:mt-32 mt-[520px]">
+      <section className=" lg:mt-32 mt-[620px]">
         <RentingProcess />
       </section>
 
       <section className=" lg:mt-32 mt-20 wrapper">
         <CarsForRental />
-      </section> 
+      </section>
 
       <section className=" lg:mt-32 mt-20 ">
         <Testimonials />
@@ -54,22 +55,24 @@ function App() {
 
       <section className=" lg:mt-32 mt-20 wrapper">
         <News />
-      </section>
+      </section>  
 
-     {/*  <section className=" lg:mt-32 mt-20 ">
+     <section className=" mt-10 ">
         <Services />
       </section>
+  
+      <section className=" lg:mt-32 mt-20 ">
+        <Contact />
+      </section>
 
+      
       <section className=" lg:mt-32 mt-20 wrapper">
         <FAQ />
-      </section>  */}
-      <section className=" lg:mt-32 mt-20 wrapper">
-        <Contact />
       </section>
 
       <section className=" lg:mt-32 mt-20 ">
         <Footer />
-      </section>
+      </section> */}
     </main>
   );
 }

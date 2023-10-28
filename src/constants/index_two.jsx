@@ -32,7 +32,7 @@ export const newsIcons = [
 export const newsForm = [
   {label: "Email", type:"email" ,className:"w-full h-10 rounded-md border-green-300 focus:ring-green-100"},
   {label:"Name", type:"name", className:"w-full h-10 rounded-md border-green-300 focus:ring-green-100"},
-  {label:"Message " , type: "textarea",className: "w-full h-52 rounded-md border-green-300 focus:ring-blue-700"},
+  {label:"Message" , type: "textarea",className: "w-full h-52 rounded-md border-green-300 focus:ring-blue-700"},
 
 
 ]

@@ -1,13 +1,13 @@
 const LabelInput = ({ label, placeholder, icon }) => {
   return (
-    <div className="w-full pt-4">
+    <div className="w-full  border-black pt-4">
       <label className="font-bold text-sm text-gray-800">{label}</label>
 
-      <div className=" max-w-fit flex items-center justify-between  gap-5 p-2  border border-gray-500 rounded-xl mt-3">
+      <div className=" w-[99%] flex items-center justify-between  gap-5 p-2  border border-gray-500 rounded-xl mt-3">
         <input
           type="text"
           placeholder={placeholder}
-          className=" placeholder:text-xs  outline-none bg-transparent"
+          className=" placeholder:text-xs w-full h-full bg-white-green outline-none"
         />
         <span className="text-gray-500">{icon}</span>
       </div>

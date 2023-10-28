@@ -65,6 +65,7 @@ const NewsPage = () => {
                     type={items.type}
                     label={items.label}
                     className={items.className}
+                    
                   />
                 </div>
               ))}

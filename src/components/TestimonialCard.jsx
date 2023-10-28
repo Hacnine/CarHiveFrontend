@@ -10,14 +10,14 @@ const TestimonialCard = ({items}) => {
 
       <div className="absolute  -bottom-0 lg:w-[350px] w-[350px] md:w-[275px] md:h-[445px] lg:h-[570px] h-[570px] bg-black/40 px-4 rounded-lg text-gray-400/95">
         <div className="pt-10">
-          <Title title={items.title} textColor={" "} />
+          <Title title={items.title} textColor={"text-gray-300"} />
         </div>
 
         <p className="text-gray-400 font-medium md:text-sm py-5 text center  ">
           {items.comment}
         </p>
 
-        <p className="font-bold font-serif">___ {items.commentor}</p>
+        <p className="font-bold font-serif text-gray-300/90">___ {items.commentor}</p>
       </div>
     </>
   );
