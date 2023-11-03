@@ -22,7 +22,7 @@ const News = () => {
               <img
                 src={items.img}
                 alt="Travel Image"
-                className="rounded-lg w-[400px] transition-transform transform  hover:scale-110 ease-in duration-500"
+                className="rounded-lg w-[400px] transition-transform transform  hover:scale-105 ease-in duration-500"
               />
 
               <div className=" lg:-translate-y-64 -translate-y-52 translate-x-3 bg-primary-green px-2 h-fit flex flex-col items-center  rounded-md font-serif max-w-fit">

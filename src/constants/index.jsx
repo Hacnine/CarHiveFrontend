@@ -1,4 +1,5 @@
-import { FaBeer, Fa500Px, FaAccusoft, FaRoad, FaTrophy } from "react-icons/fa";
+import { FaBeer, Fa500Px, FaAccusoft, FaRoad, FaTrophy, FaCar, FaCalendar } from "react-icons/fa";
+import {PiMaskHappyFill, PiNotepadFill} from "react-icons/pi"
 
 import { AiFillHome, AiTwotoneCar, AiTwotoneHeart } from "react-icons/ai";
 import { RiAccountPinCircleFill, RiSecurePaymentFill } from "react-icons/ri";
@@ -11,7 +12,7 @@ import {
 } from "react-icons/gi";
 import { SiPowerpages } from "react-icons/si";
 import { HiNewspaper } from "react-icons/hi";
-import { TbBrandBooking } from "react-icons/tb";
+import { TbBrandBooking, TbClock } from "react-icons/tb";
 import busIcon from "../assets/bus-icon.svg";
 
 import van from "../assets/van.svg";
@@ -267,23 +268,136 @@ export const formItems = [
   {
     label: "Pick Up Location",
     placeholder: "Enter your pickup location",
-    icon: locationIcon,
+    Icon:HiLocationMarker ,
+    tag:"Location",
+    timeList: [
+      { time: "" }
+    ]
+    
   },
   {
     label: "Drop Off Location",
     placeholder: "Enter your dropoff location",
-    icon: locationIcon,
+    Icon:HiLocationMarker ,
+    tag:"Location",
+    timeList: [
+      { time: "" }
+    ]
+
   },
 
   {
     label: "Pick Up Date & Time",
     placeholder: "Select a date and time.",
-    icon: calendarIcon,
+    Icon:TbClock,
+    tag:"DateTime",
+    timeList: [
+  { time: "00:00" },
+  { time: "00:30" },
+  { time: "01:00" },
+  { time: "01:30" },
+  { time: "02:00" },
+  { time: "02:30" },
+  { time: "03:00" },
+  { time: "03:30" },
+  { time: "04:00" },
+  { time: "04:30" },
+  { time: "05:00" },
+  { time: "05:30" },
+  { time: "06:00" },
+  { time: "06:30" },
+  { time: "07:00" },
+  { time: "07:30" },
+  { time: "08:00" },
+  { time: "08:30" },
+  { time: "09:00" },
+  { time: "09:30" },
+  { time: "10:00" },
+  { time: "10:30" },
+  { time: "11:00" },
+  { time: "11:30" },
+  { time: "12:00" },
+  { time: "12:30" },
+  { time: "13:00" },
+  { time: "13:30" },
+  { time: "14:00" },
+  { time: "14:30" },
+  { time: "15:00" },
+  { time: "15:30" },
+  { time: "16:00" },
+  { time: "16:30" },
+  { time: "17:00" },
+  { time: "17:30" },
+  { time: "18:00" },
+  { time: "18:30" },
+  { time: "19:00" },
+  { time: "19:30" },
+  { time: "20:00" },
+  { time: "20:30" },
+  { time: "21:00" },
+  { time: "21:30" },
+  { time: "22:00" },
+  { time: "22:30" },
+  { time: "23:00" },
+  { time: "23:30" },
+]
+
   },
   {
     label: "Drop Up Date & Time",
     placeholder: "Select dates and time.",
-    icon: calendarIcon,
+    Icon:TbClock,
+    tag:"DateTime",
+    timeList: [
+  { time: "00:00" },
+  { time: "00:30" },
+  { time: "01:00" },
+  { time: "01:30" },
+  { time: "02:00" },
+  { time: "02:30" },
+  { time: "03:00" },
+  { time: "03:30" },
+  { time: "04:00" },
+  { time: "04:30" },
+  { time: "05:00" },
+  { time: "05:30" },
+  { time: "06:00" },
+  { time: "06:30" },
+  { time: "07:00" },
+  { time: "07:30" },
+  { time: "08:00" },
+  { time: "08:30" },
+  { time: "09:00" },
+  { time: "09:30" },
+  { time: "10:00" },
+  { time: "10:30" },
+  { time: "11:00" },
+  { time: "11:30" },
+  { time: "12:00" },
+  { time: "12:30" },
+  { time: "13:00" },
+  { time: "13:30" },
+  { time: "14:00" },
+  { time: "14:30" },
+  { time: "15:00" },
+  { time: "15:30" },
+  { time: "16:00" },
+  { time: "16:30" },
+  { time: "17:00" },
+  { time: "17:30" },
+  { time: "18:00" },
+  { time: "18:30" },
+  { time: "19:00" },
+  { time: "19:30" },
+  { time: "20:00" },
+  { time: "20:30" },
+  { time: "21:00" },
+  { time: "21:30" },
+  { time: "22:00" },
+  { time: "22:30" },
+  { time: "23:00" },
+  { time: "23:30" },
+]
   },
 ];
 
@@ -292,23 +406,31 @@ export const steps = [
     title: "Choose a vehicle",
     description:
       "Unlock unparalleled adventures and memorable journeys with our vast fleet of vehicles tailored to suit every need, taste, and destination.",
+      Icon:FaCar
   },
+  
   {
     title: "Pick location & date",
     description:
       "Pick your ideal location and date, and let us take you on a journey filled with convenience, flexibility, and unforgettable experiences.",
+      Icon:FaCalendar,
   },
   {
     title: "Book your car",
     description:
       "Secure your reservation with ease, unlocking a world of possibilities and embarking on your next adventure with confidence.",
+      Icon:PiNotepadFill
   },
   {
     title: "Sit back & relax",
     description:
       "Hassle-free convenience as we take care of every detail, allowing you to unwind and embrace a journey filled comfort.",
+      Icon:PiMaskHappyFill
   },
 ];
+
+
+
 
 export const essentialPlanOptions = [
   "Economy and compact car options.",

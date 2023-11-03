@@ -8,7 +8,7 @@ import { RiLoginCircleFill } from "react-icons/ri";
 import Headroom from "react-headroom";
 import NavDrawer from "./NavDrawer";
 
-const Navigation = () => {
+const Navigation = ({paddingB, background}) => {
   const [open, setOpen] = useState(false);
 
   const openDrawer = () => {
@@ -36,13 +36,14 @@ const Navigation = () => {
     // <Headroom
     //   className="absolute w-full ">
       <nav id="navbar" 
-      className={`py-6 absolute w-full z-30 ${color}`}>
+      className={` ${paddingB} w-full  z-30 ${color} ${background}  border-black`}>
 
 
-        {/* <Navbar> */}
         <div className=" ">
-          <div className="wrapper flex  items-center  justify-between">
-            <img src={logo} alt="site logo" height={1} width={100} />
+          <div className=" flex  items-center  justify-between gap-6">
+             
+            <img src={logo} alt="site logo"   className="boject-cover h-full sm:w-[200px] w-[120px]" />
+
 
             {/* Nav Items */}
             <div className="hidden lg:block  ">

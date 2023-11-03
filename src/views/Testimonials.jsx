@@ -6,10 +6,10 @@ import TestimonialCard from "../components/TestimonialCard";
 
 const Testimonials = () => {
   return (
-    <section className="flex flex-wrap flex-row justify-center   items-center md:space-y-0 space-y-3 md:space-x-3 mx-auto ">
+    <section className="flex flex-wrap flex-row justify-center   items-center md:space-y-0  md:space-x-3 gap-2 mx-auto ">
 
       {testimonials.map((items, index) => (
-        <div className="relative" key={index}>
+        <div className="" key={index}>
          
           <TestimonialCard items={items}/>
         </div>

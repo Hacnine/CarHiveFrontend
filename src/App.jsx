@@ -17,43 +17,48 @@ import {
 import ImageSlider from "./components/ImageSlider";
 import NewsPage from "./views/NewsPage";
 import Booking from "./views/Booking";
+import SingleCarPage from "./views/SingleCarPage";
+import { useState } from "react";
+import CarsForRentalPage from "./views/CarsForRentalPage";
 
 function App() {
+  
+
   return (
     <main className="">
+      <CarsForRentalPage/>
+
       {/* <Practise/> */}
-      {/* <ImageSlider/> */}
-      
+      {/* <ImageSlider /> */}
 
       {/* <section className="">
       <NewsPage/>
-      </section> */}
-      <Booking/>
-    
-      {/* <section>
-        <Navigation />
       </section>
-      <section>
+      <Booking/> */}
+      {/* <SingleCarPage /> */}
+
+ 
+      {/* <section className="">
         <Hero />
       </section>
 
-      <section className=" lg:mt-32 mt-[620px]">
+      <section className=" lg:mt-24 mt-[620px]">
         <RentingProcess />
       </section>
 
-      <section className=" lg:mt-32 mt-20 wrapper">
+      <section className=" lg:mt-24 mt-20 wrapper">
         <CarsForRental />
       </section>
 
-      <section className=" lg:mt-32 mt-20 ">
+      <section className=" lg:mt-24 mt-20 ">
         <Testimonials />
       </section>  
 
-      <section className=" lg:mt-32 mt-20 wrapper">
+      <section className=" lg:mt-24 mt-20 wrapper">
         <Pricing />
       </section>
 
-      <section className=" lg:mt-32 mt-20 wrapper">
+      <section className=" lg:mt-24 mt-20 wrapper">
         <News />
       </section>  
 
@@ -61,18 +66,20 @@ function App() {
         <Services />
       </section>
   
-      <section className=" lg:mt-32 mt-20 ">
+      <section className=" lg:mt-24 mt-20 ">
         <Contact />
       </section>
 
       
-      <section className=" lg:mt-32 mt-20 wrapper">
+      <section className=" lg:mt-24 mt-20 wrapper">
         <FAQ />
       </section>
 
-      <section className=" lg:mt-32 mt-20 ">
+     
+
+      <section className=" lg:mt-24 mt-20 ">
         <Footer />
-      </section> */}
+      </section>  */}
     </main>
   );
 }

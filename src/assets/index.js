@@ -1,4 +1,3 @@
-import heroImage from "./heroImage.jpg";
 import carOne from "../assets/car-one.svg";
 import carTwo from "../assets/car-two.svg";
 import carThree from "../assets/car-three.svg";
@@ -12,5 +11,5 @@ import testiTwo from "../assets/testimonial (2).jpg";
 import testiThree from "../assets/testimonial (3).jpg";
 
 
-export {heroImage, carOne, carThree, carTwo, newsOne, newsThree, newsTwo, newsFour,newsPage, testiOne, testiTwo, testiThree 
+export { carOne, carThree, carTwo, newsOne, newsThree, newsTwo, newsFour,newsPage, testiOne, testiTwo, testiThree 
 }

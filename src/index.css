@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;800;900&family=Nunito:wght@300&family=Poppins:wght@300;400&family=Roboto&family=Tilt+Neon&family=Young+Serif&display=swapp");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;800;900&family=Nunito:wght@300&family=Open+Sans:wght@700&family=Poppins:wght@300;400&family=Roboto&family=Tilt+Neon&family=Young+Serif&display=swap");
 
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,6 +13,25 @@
     box-shadow: 0 0 1px #50b14b,
     0 0 20px #4aa545;
   }
+}
+
+
+@layer components{
+  .size-selector input:checked + label{
+      @apply bg-primary-green text-white;
+  } 
+  .color-selector input:checked + label{
+      @apply ring-1 ring-yellow-300;
+  }
+  
+  .input-box{
+      @apply block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400  focus:border-[#ff0000]  focus:ring-[#ff0000]
+  }
+
+  .rememberme-selector input:checked{
+      @apply bg-[#ff0000];
+  }
+
 }
 
 
@@ -26,7 +47,7 @@
 }
 
 .wrapper {
-  @apply max-w-[1368px] lg:px-28 px-4 mx-auto;
+  @apply max-w-[1368px] lg:px-28 px-16 mx-auto;
 }
 
 .head_text {
@@ -38,18 +59,10 @@
 }
 
 
-
-.link {
-  @apply text-light-gray  hover:border-b-2 hover:border-primary-green transition-all duration-300 ease-in cursor-pointer;
-}
-
 .btn_base {
   @apply capitalize  items-center justify-center  font-semibold  rounded-md;
 }
 
-.primary_btn {
-  @apply rounded-[4px] text-white uppercase tracking-widest font-bold border-2 border-transparent hover:text-primary-black hover:bg-white;
-}
 
 .input {
   @apply border border-green-400 bg-white-green text-gray-600 font-medium text-sm shadow-lg shadow-green-800/5 ring-4 ring-transparent outline-none placeholder:text-green-300 focus:border-transparent  transition-all ease-in duration-300  gap-3;

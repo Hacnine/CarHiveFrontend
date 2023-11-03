@@ -23,8 +23,15 @@ module.exports = withMT({
      
 
       backgroundImage: {
-        'hero-img':  "url('/src/assets/heroImage.jpg')",
+        'hero-img':  "url('/src/assets/heroImage.svg')",
         'sevices': "url('/src/assets/servces-background.jpg')",
+        'about-bg': "url('/src/assets/about-bg.jpg')",
+        'testimonial-1': "url('/src/assets/testimonial (1).jpg')",
+        'testimonial-2': "url('/src/assets/testimonial (2).jpg')",
+        'testimonial-3': "url('/src/assets/testimonial (3).jpg')",
+        'singlecar': "url('/src/assets/singlecarbg.svg')",
+
+
       },
       
       fontFamily: {
@@ -33,19 +40,12 @@ module.exports = withMT({
         open: ["Open Sans", "sans-serif"],
       },
       colors: {
-        "primary-black": "#222",
         "primary-green": "#1fc916",
         "light-green": "#1ecb15",
+        "deep-green": "#179510",
         "slate-blue":"#031b4e",
         "white-green": "#eafae8ff",
-        "secondary-green": "#EDF3E0",
-        "accent-green": "#fdc4a7ff",
-        "light-gray": "#686868",
-        "dark-gray": "#414141",
-        "subtitle-gray": "#686868",
-        "lightest-gray": "#F9F9F9",
-        "accent-gray": "#E1E1E1",
-        "secondary-gray": "#E4E4E4",
+        
       },
       screens: {
         sm: "740px",
@@ -64,7 +64,9 @@ module.exports = withMT({
       display:['group-focus']
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 });
 
 // /** @type {import('tailwindcss').Config} */

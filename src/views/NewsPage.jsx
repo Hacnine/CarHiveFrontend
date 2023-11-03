@@ -9,11 +9,12 @@ import {
   tags,
 } from "../constants/index_two";
 import Comments from "../components/Comments";
-import CustomInput from "../components/CustomInput";
+import CommentForm from "../components/CommentForm";
 import SocialNetwork from "../components/SocialNetwork";
 import RecentPosts from "../components/RecentPosts";
 import Tags from "../components/Tags";
 import Title from "../components/Title";
+import Header from '../components/Header'
 
 const NewsPage = () => {
   const [email, setEmail] = useState("");
@@ -21,19 +22,14 @@ const NewsPage = () => {
 
   return (
     <div>
-      <div className=" bg-blue-gray-200 bg-hero-img    ">
-        <Navigation />
-        <h1 className="head_text  text-white-green  text-center pt-24 font-serif pb-16">
-          Our services are now all over the country.
-        </h1>
-      </div>
+      <Header title={"Our services are now all over the country."}/>
       <div className="mx-auto wrapper sm:flex sm:flex-row flex-col sm:gap-10">
         <div className="sm:w-[65%] flex flex-col flex-1  my-16 space-x-6">
           {/* image */}
           <img
             src={newsPage}
             alt="truck image"
-            className=" pb-12 w-[99%] h-[30%]"
+            className=" pb-12 w-[90%] h-[20%]"
           />
 
           {/* Description */}
@@ -61,7 +57,7 @@ const NewsPage = () => {
             <div className=" pb-6">
               {newsForm.map((items, index) => (
                 <div key={index}>
-                  <CustomInput
+                  <CommentForm
                     type={items.type}
                     label={items.label}
                     className={items.className}

@@ -1,25 +1,30 @@
 import React from "react";
 
-const Title = ({ title, border, para, contact, links, textColor }) => {
+const Title = ({ title, border, para, contact, links, textColor, fontSize, paraTextColor, customBorder }) => {
   return (
     <div className=" ">
       <div>
         <p
           className={`${
             textColor ? `${textColor}` : "text-slate-blue "
-          } font-open pb-1 text-lg`}
+          } font-open pb-1 ${fontSize ? `${fontSize}`: 'text-lg'}`}
         >
           {title}
         </p>
 
         {border ? (
-          <div className="border-b-2 border-primary-green w-5 h-[2px] my-2" />
+          <div className={`border-b-2 border-primary-green w-10  h-[2px] my-2`} />
+        ) : (
+          <></>
+        )}
+         {customBorder ? (
+          <div className={`border-b-2 border-primary-green ${customBorder}  h-[2px] my-2`} />
         ) : (
           <></>
         )}
       </div>
       {para ? (
-        <p className=" text-sm  font-light leading-5 text-white-green tracking-wide ">
+        <p className={`${paraTextColor? `${paraTextColor}`: 'text-white-green'} text-sm  font-light leading-5  tracking-wide `}>
           {" "}
           {para}{" "}
         </p>

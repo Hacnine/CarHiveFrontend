@@ -9,13 +9,15 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 
-const CarCard = ({ name, imgSrc, Icon, price, number, summary }) => {
+const CarCard = ({ name, imgSrc, Icon, price, number, summary, wideHeight }) => {
   
   return (
   
     <div className="p-2 border border-gray-300 rounded-lg w-fit shadow-md">
       <div className="relative overflow-hidden ">
-      <img src={imgSrc} alt="car image" className=" md:w-[320px] h-44 w-[700px] object-cover rounded transition-transform transform scale-100 hover:scale-110 ease-in duration-500" />
+
+      {/* md:w-[238px] md:h-[134px] */}
+      <img src={imgSrc} alt="car image" className={`${wideHeight? `${wideHeight}`: 'md:w-[320px] h-44 w-[700px]'}  object-cover rounded transition-transform transform scale-100 hover:scale-110 ease-in duration-500`} />
       </div>
 
       <div className="flex  justify-between mt-4 px-5">

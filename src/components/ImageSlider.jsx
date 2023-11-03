@@ -1,41 +1,26 @@
 
 import React, { useEffect, useState } from 'react';
-import { heroImage } from '../assets';
+import DatePicker from 'react-datepicker';
 
-const ImageSlider = () => {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const topCrop = -scrollY * 0.4; // Adjust the factor to control the cropping
-
+ const ImageSlider = () => {
+  const [selectedDate, setSelectedDate] = useState(null);
 
   return (
-    <div
-      className="relative h-screen bg-cover bg-center"
-      style={{ backgroundImage: "" }}
-    >
-        <div
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-transform"
-        style={{
-          transform: `translate(-50%, calc(-50% + ${topCrop}px))`,
-        }}
-      >
-        <img src={heroImage} className='w-full'/>
-        
-      </div>
-    </div>
+    <DatePicker
+      selected={selectedDate}
+      onChange={date => setSelectedDate(date)}
+      customInput={<CustomDateInput />} // You can use a custom input component
+      dateFormat="MM/dd/yyyy" // Customize the date format
+    />
   );
-};
+}
 
+function CustomDateInput({ value, onClick }) {
+  return (
+    <button className="custom-date-input" onClick={onClick}>
+      {value || 'Select a date'}
+      <i className="custom-calendar-icon">📅</i>
+    </button>
+  );
+}
 export default ImageSlider;

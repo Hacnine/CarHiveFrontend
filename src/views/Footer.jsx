@@ -1,35 +1,32 @@
-import logo from "../assets/logo.svg";
-import facebookIcon from "../assets/facebook-icon.svg";
-import twitterIcon from "../assets/twitter-icon.svg";
-import instagramIcon from "../assets/instagram-icon.svg";
-import linkedinIcon from "../assets/linkedin-icon.svg";
-import youtubeIcon from "../assets/facebook-icon.svg";
+import logo from "../assets/logo-footer.svg";
 import Title from "../components/Title";
-import SocialNetwork from "../components/SocialNetwork";
 import { contactInfo, newsIcons, quickLinks } from "../constants/index_two";
 
 const Footer = () => {
   return <section>
     <div className="flex flex-wrap flex-col md:justify-between md:flex-row md:items-center items-start  space-y-12  bg-gray-900 pt-10 pb-5  wrapper ">
    
+ 
+
+   <div className="md:h-60 w-[75%] md:w-1/4">
+   <img src={logo} alt="logo" />
+
+   <Title title={"Let's Begin Your Journey With Carhive..."}  textColor={"text-white-green"} />
+   </div>
+
    <div className=" md:h-60  md:w-1/4 gap-2  ">
-     <img src={logo} alt="logo" />
      <Title title={"Social Network"} textColor={"text-white"} border/>
 
-     <div className="flex items-center  space-x-2 ">
-     {newsIcons.map((items, index) =>(
+     <div className="flex items-center  space-x-1 ">
+     {newsIcons.slice(0, 4).map((items, index) =>(
        <div
-       className={`w-8 h-8 flex items-center justify-center rounded bg-blue-gray-900 hover:bg-blue-gray-800 hover:transition-colors ease-in hover:duration-200`} key={index}
+       className={`w-10 h-10 flex items-center justify-center rounded bg-blue-gray-900 hover:bg-blue-gray-800 hover:transition-colors ease-in hover:duration-200`} key={index}
      >
        <items.Icon className="text-primary-green px-[2px]" />
      </div>
      ))}
      </div>
 
-   </div>
-
-   <div className="md:h-60 w-[75%] md:w-1/4">
-   <Title title={"About Us"} border textColor={"text-white-green"} para={"Where quality meets affordability. We understand the importance of a smooth and enjoyable journey without the burden of excessive costs. That's why we have meticulously crafted our offerings to provide you with top-notch vehicles at minimum expense."}/>
    </div>
 
    <div className=" md:w-1/4 md:h-60  ">

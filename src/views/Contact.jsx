@@ -1,5 +1,3 @@
-import contactPattern from "../assets/contact-pattern.svg";
-
 import { PrimaryButton } from "../components";
 import { contact_us } from "../constants/index_three";
 

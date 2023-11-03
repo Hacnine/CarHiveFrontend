@@ -1,4 +1,4 @@
-import { FaFacebookF, FaFacebookMessenger, FaGoogle, FaInstagram, FaLinkedin, FaPhone, FaSearchLocation, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaFacebookMessenger, FaGoogle, FaInstagram, FaLinkedin, FaPhone, FaQuora, FaReddit, FaRedditAlien, FaSearchLocation, FaTwitter, FaYoutube } from "react-icons/fa";
 import {HiOutlineMail,HiOutlineLocationMarker } from "react-icons/hi";
 import {IoCallOutline} from "react-icons/io5";
 import { BsFillCalendarWeekFill } from "react-icons/bs";
@@ -18,14 +18,16 @@ export const contactInfo = [
   {Icon:IoCallOutline , info:"+1 333 9296"},
   {Icon:HiOutlineMail , info: "contact@example.com"},
 ]
-
 export const newsIcons = [
-  {Icon:FaFacebookF, bg:'bg-blue-600'},
   {Icon: FaTwitter , bg:'bg-blue-700'},
-  {Icon:FaLinkedin , bg:'bg-blue-800'},
   {Icon:FaGoogle , bg:'bg-red-600'},
   {Icon:FaInstagram,bg:' bg-brown-600'},
-  {Icon:FaYoutube,bg:' bg-red-600'}
+  {Icon:FaYoutube,bg:' bg-red-600'},
+  {Icon:FaLinkedin , bg:'bg-blue-800'},
+  {Icon:FaRedditAlien ,bg:' bg-red-900'},
+  {Icon:FaFacebookF, bg:'bg-blue-600'},
+  {Icon:FaQuora, bg:' bg-orange-600'}
+
 
 ]
 
