@@ -42,7 +42,11 @@ const Navigation = ({paddingB, background}) => {
         <div className=" ">
           <div className=" flex  items-center  justify-between gap-6">
              
-            <img src={logo} alt="site logo"   className="boject-cover h-full sm:w-[200px] w-[120px]" />
+           
+            <div className=" flex items-center justify-center flex-col">
+            <img src={logo} alt="site logo"   className="oject-cover h-full sm:w-[200px] w-[120px] " />
+              <div className=" -translate-y-12 h-7 sm:w-[190px] w-[120px] rounded-2xl shadow-md shadow-primary-green"></div>
+            </div>
 
 
             {/* Nav Items */}

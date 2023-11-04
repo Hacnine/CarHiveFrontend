@@ -19,6 +19,13 @@ import van from "../assets/van.svg";
 import bus from "../assets/bus.svg";
 import carsports from "../assets/carsports.svg";
 import car from "../assets/car.svg";
+import car16 from  '../assets/car-16.jpg'
+import carLexus from  '../assets/car-16-lexus.jpg'
+import Bugatti from  '../assets/Bugatti.jpg'
+import carAstonMartin from  '../assets/car-14.jpg'
+import carBentleyContinentalGT from  '../assets/car-17.jpg'
+import car2017BentleyContinentalGT from  '../assets/car-6.jpg'
+
 import { MdOutlineAccountBox } from "react-icons/md";
 import { PiBagSimpleBold } from "react-icons/pi";
 import { BsCarFront, BsFillMapFill, BsFillPinMapFill } from "react-icons/bs";
@@ -52,6 +59,91 @@ export const reviews = [
 ];
 
 export const carNames = [
+
+
+  {
+    name: "Aston Martin",
+    imgSrc: carAstonMartin,
+    Icon: AiTwotoneHeart,
+    number: 64,
+    price: "$230",
+
+    summary: [
+      {
+        number: "5",
+        Icon: MdOutlineAccountBox,
+      },
+      {
+        number: "2",
+        Icon: PiBagSimpleBold,
+      },
+      {
+        number: "4",
+        Icon: GiCarDoor,
+      },
+      {
+        number: "Sedan",
+        Icon: BsCarFront,
+      },
+    ],
+  },
+
+  {
+    name: "Bentley Continental",
+    imgSrc:car2017BentleyContinentalGT,
+    Icon: AiTwotoneHeart,
+    number: 64,
+    price: "$230",
+
+    summary: [
+      {
+        number: "5",
+        Icon: MdOutlineAccountBox,
+      },
+      {
+        number: "2",
+        Icon: PiBagSimpleBold,
+      },
+      {
+        number: "4",
+        Icon: GiCarDoor,
+      },
+      {
+        number: "Sedan",
+        Icon: BsCarFront,
+      },
+    ],
+  },
+
+
+
+  {
+    name: "Bentley Continental",
+    imgSrc:carBentleyContinentalGT,
+    Icon: AiTwotoneHeart,
+    number: 64,
+    price: "$230",
+
+    summary: [
+      {
+        number: "5",
+        Icon: MdOutlineAccountBox,
+      },
+      {
+        number: "2",
+        Icon: PiBagSimpleBold,
+      },
+      {
+        number: "4",
+        Icon: GiCarDoor,
+      },
+      {
+        number: "GT",
+        Icon: BsCarFront,
+      },
+    ],
+  },
+  
   {
     name: "BMW X3",
     imgSrc: carOne,
@@ -146,8 +238,8 @@ export const carNames = [
     ],
   },
   {
-    name: "Ford Explorer",
-    imgSrc: carThree,
+    name: "Bugatti Chiron",
+    imgSrc: Bugatti,
     Icon: AiTwotoneHeart,
     number: 64,
     price: "$230",
@@ -171,6 +263,64 @@ export const carNames = [
       },
     ],
   },
+
+  
+
+  {
+    name: "Jeep Grand Cherokee",
+    imgSrc: car16,
+    Icon: AiTwotoneHeart,
+    number: 64,
+    price: "$230",
+
+    summary: [
+      {
+        number: "5",
+        Icon: MdOutlineAccountBox,
+      },
+      {
+        number: "2",
+        Icon: PiBagSimpleBold,
+      },
+      {
+        number: "4",
+        Icon: GiCarDoor,
+      },
+      {
+        number: "SUV",
+        Icon: BsCarFront,
+      },
+    ],
+  },
+
+  {
+    name: "Lexus",
+    imgSrc: carLexus,
+    Icon: AiTwotoneHeart,
+    number: 64,
+    price: "$230",
+
+    summary: [
+      {
+        number: "5",
+        Icon: MdOutlineAccountBox,
+      },
+      {
+        number: "2",
+        Icon: PiBagSimpleBold,
+      },
+      {
+        number: "4",
+        Icon: GiCarDoor,
+      },
+      {
+        number: "Sedan",
+        Icon: BsCarFront,
+      },
+    ],
+  },
+
+  
 ];
 export const vehicleTypes = [
   {

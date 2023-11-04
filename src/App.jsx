@@ -20,13 +20,19 @@ import Booking from "./views/Booking";
 import SingleCarPage from "./views/SingleCarPage";
 import { useState } from "react";
 import CarsForRentalPage from "./views/CarsForRentalPage";
+import { Slider } from "@material-tailwind/react";
 
 function App() {
-  
+  const [sliderValue, setSliderValue] = useState(50);
+
+  const handleSliderChange = (value) => {
+    setSliderValue(value);
+  };
 
   return (
     <main className="">
-      <CarsForRentalPage/>
+    
+      <CarsForRentalPage />
 
       {/* <Practise/> */}
       {/* <ImageSlider /> */}
@@ -37,7 +43,6 @@ function App() {
       <Booking/> */}
       {/* <SingleCarPage /> */}
 
- 
       {/* <section className="">
         <Hero />
       </section>
