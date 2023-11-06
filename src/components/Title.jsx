@@ -1,6 +1,6 @@
 import React from "react";
 
-const Title = ({ title, border, para, contact, links, textColor, fontSize, paraTextColor, customBorder }) => {
+const Title = ({ title, border, para, contact, links, textColor, fontSize, paraTextColor, customBorder, }) => {
   return (
     <div className=" ">
       <div>
@@ -33,7 +33,7 @@ const Title = ({ title, border, para, contact, links, textColor, fontSize, paraT
           {contact.map((items, index) => (
             <div className="flex  items-start justify-start" key={index}>
               <items.Icon className="text-primary-green" />
-              <p className="pl-3 text-white-green text-sm hover:text-primary-green">{items.info}</p>
+              <p className={`pl-3 ${paraTextColor? `${paraTextColor}`: 'text-white-green'}  text-sm hover:text-primary-green"`}>{items.info}</p>
             </div>
           ))}
         </div>

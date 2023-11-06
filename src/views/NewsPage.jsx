@@ -50,7 +50,7 @@ const NewsPage = () => {
           {/* Form Section */}
 
           <div className="w-full pt-12 font-sans font-bold ">
-            <h4 className=" font-open text-xl text-black pb-7">
+            <h4 className="text-slate-blue text-3xl font-open font-bold pb-7">
               Leave A Comment
             </h4>
 

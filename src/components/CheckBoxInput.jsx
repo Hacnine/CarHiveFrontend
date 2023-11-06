@@ -4,7 +4,7 @@ import React from "react";
 const CheckBoxInput = ({ filledName, title }) => {
   return (
     <div>
-      <h4 className="text-slate-blue font-open text-lg line">
+      <h4 className="text-slate-blue font-open text-lg pb-2">
         {title}
       </h4>
       <div className="">

@@ -30,6 +30,7 @@ module.exports = withMT({
         'testimonial-2': "url('/src/assets/testimonial (2).jpg')",
         'testimonial-3': "url('/src/assets/testimonial (3).jpg')",
         'singlecar': "url('/src/assets/singlecarbg.svg')",
+        'login': "url('/src/assets/singlecarbg.jpg')",
 
 
       },
@@ -41,7 +42,7 @@ module.exports = withMT({
       },
       colors: {
         "primary-green": "#1fc916",
-        "light-green": "#1ecb15",
+        "light-green": "#1dd213",
         "deep-green": "#179510",
         "slate-blue":"#031b4e",
         "white-green": "#eafae8ff",

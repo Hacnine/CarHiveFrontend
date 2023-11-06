@@ -18,21 +18,43 @@ import ImageSlider from "./components/ImageSlider";
 import NewsPage from "./views/NewsPage";
 import Booking from "./views/Booking";
 import SingleCarPage from "./views/SingleCarPage";
-import { useState } from "react";
 import CarsForRentalPage from "./views/CarsForRentalPage";
 import { Slider } from "@material-tailwind/react";
+import ContactPage from "./views/ContactPage";
+import Signin from "./views/Signin";
+import LoginRegisterContainer from "./views/LoginRegisterContainer";
+
+
+import { useState, useContext } from "react";
+import { AppContext,useGlobalContext } from "./Context";
 
 function App() {
-  const [sliderValue, setSliderValue] = useState(50);
 
-  const handleSliderChange = (value) => {
-    setSliderValue(value);
-  };
+  const {signInBtn, setSignInBtn } = useGlobalContext(AppContext);
+
 
   return (
     <main className="">
-    
-      <CarsForRentalPage />
+      {/* <p className="text-green-500">Count: {count}</p>
+      <p>Name: {name}</p>
+      <p>Is Logged In: {isLoggedIn ? "Yes" : "No"}</p>
+
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
+
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}/>
+
+      <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
+        Toggle Logged In
+      </button> */}
+      <LoginRegisterContainer/>
+      {/* <Signin/> */}
+      {/* <CarsForRentalPage />
+      <ContactPage/> */}
 
       {/* <Practise/> */}
       {/* <ImageSlider /> */}

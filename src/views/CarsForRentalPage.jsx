@@ -37,27 +37,27 @@ const CarsForRentalPage = () => {
     <div className=" ">
       <Header title={"Cars"} bg={"bg-singlecar"} />
 
-      <div className="flex items-start justify-center md:flex-row flex-col gap-5  border-red-300 pt-24 wrapper md:space-y-0 space-y-10">
+      <div className="flex items-start justify-center md:flex-row flex-col gap-5  border-red-300 border border-gray-400/60 wrapper md:space-y-0 space-y-10">
         <div className=" pt-2 space-y-9 md:w-[261px] w-full">
           <div className=" rounded-md  border boder-gray-500 shadow px-4 py-6 ">
             <CheckBoxInput filledName={vehicleType} title={"Vahicle Type"} />
           </div>
 
-          <div className=" rounded-md  border boder-gray-500 shadow px-4 py-6 ">
+          <div className=" rounded-md  border border-gray-400/60  shadow px-4 py-6 ">
             <CheckBoxInput
               filledName={engineCapacity}
               title={"Engine Capacity"}
             />
           </div>
-          <div className=" rounded-md  border boder-gray-500 shadow px-4 py-6 ">
+          <div className=" rounded-md  border border-gray-400/60  shadow px-4 py-6 ">
             <CheckBoxInput filledName={carBodyType} title={"Car Body Type"} />
           </div>
 
-          <div className="rounded-md border boder-gray-500 shadow px-4 py-6 ">
+          <div className="rounded-md border border-gray-400/60  shadow px-4 py-6 ">
             <CheckBoxInput filledName={carSeats} title={"Car Seats"} />
           </div>
 
-          <div className="md:w-[261px] w-full py-6 px-4 border border-gray-200 shadow space-y-1 ">
+          <div className="md:w-[261px] w-full py-6 px-4 border border-gray-400/60  shadow space-y-1 ">
             <h4 className="text-slate-blue font-open text-lg line">
               Price ($)
             </h4>

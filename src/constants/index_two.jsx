@@ -18,6 +18,12 @@ export const contactInfo = [
   {Icon:IoCallOutline , info:"+1 333 9296"},
   {Icon:HiOutlineMail , info: "contact@example.com"},
 ]
+
+export const contactInfoTwo = [
+  {Icon:HiOutlineLocationMarker , info: "100 Mainstreet Center, Sydney"},
+  {Icon:IoCallOutline , info:"+61 333 9296"},
+  {Icon:HiOutlineMail , info: "contact@example.com"},
+]
 export const newsIcons = [
   {Icon: FaTwitter , bg:'bg-blue-700'},
   {Icon:FaGoogle , bg:'bg-red-600'},
@@ -32,11 +38,38 @@ export const newsIcons = [
 ]
 
 export const newsForm = [
-  {label: "Email", type:"email" ,className:"w-full h-10 rounded-md border-green-300 focus:ring-green-100"},
-  {label:"Name", type:"name", className:"w-full h-10 rounded-md border-green-300 focus:ring-green-100"},
-  {label:"Message" , type: "textarea",className: "w-full h-52 rounded-md border-green-300 focus:ring-blue-700"},
+  {label:"Name", type:"name", },
 
+  {label: "Email", type:"email" ,},
+  
+  {label:"Phone Number", type:"name", },
 
+]
+
+export const signUpForm = [
+  {label:"Name", type:"name", },
+  
+  {label:"User Name", type:"name", },
+
+  {label: "Email", type:"email" ,},
+  
+  {label:"Phone Number", type:"number", },
+
+  {label:"Password", type:"password", },
+
+  {label:"Re-enter Password:", type:"password", },
+
+]
+
+export const message = [
+  {label:"Message" , type: "textarea",className: "w-full h-52 rounded-md border-green-300 focus:ring-blue-100"},
+]
+
+export const address = [
+  {address:"08 W 36th St, New York, NY 10001"},
+  {address:"08 W 36th St, New York, NY 10001"},
+  {address:"08 W 36th St, New York, NY 10001"},
+  {address:"08 W 36th St, New York, NY 10001"},
 ]
 
 export const news = [

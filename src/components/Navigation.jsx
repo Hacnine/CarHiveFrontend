@@ -14,7 +14,7 @@ const Navigation = ({paddingB, background}) => {
   const openDrawer = () => {
     setOpen(true);
   };
-  const logInIcon = <RiLoginCircleFill className="text-white mr-2" />;
+  const logInIcon = <RiLoginCircleFill className="text-white " />;
 
   const closeDrawer = () => {
     setOpen(false);
@@ -45,7 +45,7 @@ const Navigation = ({paddingB, background}) => {
            
             <div className=" flex items-center justify-center flex-col">
             <img src={logo} alt="site logo"   className="oject-cover h-full sm:w-[200px] w-[120px] " />
-              <div className=" -translate-y-12 h-7 sm:w-[190px] w-[120px] rounded-2xl shadow-md shadow-primary-green"></div>
+              <div className=" -translate-y-12 sm:h-7 h-9 sm:w-[184px] w-[120px] sm:rounded-2xl rounded-2xl shadow-md shadow-primary-green"></div>
             </div>
 
 
@@ -100,7 +100,7 @@ const Navigation = ({paddingB, background}) => {
 
         
             <PrimaryButton
-              className={"lg:flex hidden   glow-green"}
+              className={"lg:flex hidden   glow-green "}
               buttonName={" Sign in "}
               icon={logInIcon}
             />
