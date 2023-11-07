@@ -27,6 +27,7 @@ import LoginRegisterContainer from "./views/LoginRegisterContainer";
 
 import { useState, useContext } from "react";
 import { AppContext,useGlobalContext } from "./Context";
+import AboutUs from "./views/AboutUs";
 
 function App() {
 
@@ -35,23 +36,10 @@ function App() {
 
   return (
     <main className="">
-      {/* <p className="text-green-500">Count: {count}</p>
-      <p>Name: {name}</p>
-      <p>Is Logged In: {isLoggedIn ? "Yes" : "No"}</p>
 
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-      
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
-
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}/>
-
-      <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
-        Toggle Logged In
-      </button> */}
-      <LoginRegisterContainer/>
+      <AboutUs/>
+   
+      {/* <LoginRegisterContainer/> */}
       {/* <Signin/> */}
       {/* <CarsForRentalPage />
       <ContactPage/> */}
@@ -65,7 +53,7 @@ function App() {
       <Booking/> */}
       {/* <SingleCarPage /> */}
 
-      {/* <section className="">
+    {/*   <section className="">
         <Hero />
       </section>
 

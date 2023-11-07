@@ -13,7 +13,7 @@ const Footer = () => {
               alt="site logo"
               className=" "
             />
-            <div className="  -translate-y-10 h-9 sm:w-[192px] w-[190px] sm:rounded-2xl rounded-2xl shadow-md shadow-white-green"></div>
+            {/* <div className="  -translate-y-10 h-9 sm:w-[192px] w-[190px] sm:rounded-2xl rounded-2xl shadow-md shadow-white-green"></div> */}
           </div>
 
           <Title

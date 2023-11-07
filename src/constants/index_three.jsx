@@ -16,6 +16,19 @@ import { SiAirbrakedotio } from "react-icons/si";
 import { FaCalendar } from "react-icons/fa";
 import { PiEngineFill } from "react-icons/pi";
 
+import Director5 from "../assets/Director5.svg"
+import Director1 from "../assets/Director1.svg"
+import Director2 from "../assets/Director2.svg"
+import Director3 from "../assets/Director3.svg"
+
+
+export const directors = [
+  {img: Director5,name:'Fynley Wilkinson', title:'Chef Director Officer'},
+  {img:Director1 ,name:'Peter Welsh', title:'Chief Technology Officer',},
+  {img:Director2 ,name:'John Shepard', title:'Chief Executive Officer',},
+  {img:Director3 ,name:'Robyn Peel', title:'Director of Finance'},
+]
+
 export const vehicleType = [
     {item: "Car"},
     {item: "Van"},

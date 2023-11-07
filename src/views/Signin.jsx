@@ -34,8 +34,8 @@ const Signin = ({ open, onClose, children }) => {
         />
         <PrimaryButton
           buttonName={"Sign Up"}
-          className={"ring-2 ring-inset   ring-slate-blue w-full font-extrabold"}
-          textColor={'text-slate-blue '}
+          className={"ring-2 ring-inset   ring-blue-500 w-full font-extrabold"}
+          textColor={'text-blue-500 '}
           shadow
           scale
         />
@@ -53,7 +53,7 @@ const Signin = ({ open, onClose, children }) => {
 
       <PrimaryButton
         buttonName={"Sign In"}
-        className={"bg-primary-green w-full font-extrabold"}
+        className={"bg-primary-green w-full  mt-4 font-extrabold"}
         shadow
         scale
       />
@@ -65,7 +65,7 @@ const Signin = ({ open, onClose, children }) => {
         <div className="absolute left-0  w-full bg-gray-400 p-[.5px]"></div>
       </div>
 
-      <div className=" space-y-3">
+      <div className=" space-y-4">
         <PrimaryButton
           buttonName={"Google"}
           className={"bg-red-400 w-full px-7"}

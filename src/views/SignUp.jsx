@@ -23,8 +23,8 @@ const SignUp = () => {
         
         <PrimaryButton
           buttonName={"Sign Up"}
-          className={"ring-2 ring-inset   ring-slate-blue w-full font-extrabold"}
-          textColor={'text-slate-blue '}
+          className={"ring-2 ring-inset   ring-blue-500 w-full font-extrabold"}
+          textColor={'text-blue-500 '}
           shadow
           scale
         />

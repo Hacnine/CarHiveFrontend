@@ -24,13 +24,16 @@ module.exports = withMT({
 
       backgroundImage: {
         'hero-img':  "url('/src/assets/heroImage.svg')",
+        'hero-two':  "url('/src/assets/office-bg.jpg')",
         'sevices': "url('/src/assets/servces-background.jpg')",
+        'feature': "url('/src/assets/feature.png')",
         'about-bg': "url('/src/assets/about-bg.jpg')",
         'testimonial-1': "url('/src/assets/testimonial (1).jpg')",
         'testimonial-2': "url('/src/assets/testimonial (2).jpg')",
         'testimonial-3': "url('/src/assets/testimonial (3).jpg')",
         'singlecar': "url('/src/assets/singlecarbg.svg')",
         'login': "url('/src/assets/singlecarbg.jpg')",
+        'office':  "url('/src/assets/office-bg.jpg')",
 
 
       },
