@@ -17,7 +17,7 @@ const SingleCarPage = () => {
   return (
     <div className="w-full h-full ">
       <Header
-        title={"Vachile Fleet"}
+        title={"Vahicle Fleet"}
         bg={"bg-singlecar"}
       />
       <div className=" pt-8 mx-auto lg:px-28 px-6 grid md:grid-cols-3 grid-cols-2  sm:gap-10  border-red-800 w-full sm:ml-0 ml-1 h-full">

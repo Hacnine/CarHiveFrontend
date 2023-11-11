@@ -28,6 +28,8 @@ import LoginRegisterContainer from "./views/LoginRegisterContainer";
 import { useState, useContext } from "react";
 import { AppContext,useGlobalContext } from "./Context";
 import AboutUs from "./views/AboutUs";
+import Dashboard from "./views/ProfilePages/Dashboard";
+import ProfileContainer from "./views/ProfilePages/ProfileContainer";
 
 function App() {
 
@@ -36,8 +38,13 @@ function App() {
 
   return (
     <main className="">
+      
+{/* <SingleCarPage />  */}
 
-      <AboutUs/>
+      {/* <Dashboard/> */}
+      <ProfileContainer/>
+
+      {/* <AboutUs/> */}
    
       {/* <LoginRegisterContainer/> */}
       {/* <Signin/> */}

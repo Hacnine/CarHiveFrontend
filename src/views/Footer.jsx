@@ -6,15 +6,13 @@ const Footer = () => {
   return (
     <section>
       <div className="flex flex-wrap flex-col md:justify-between md:flex-row md:items-center items-start  space-y-12  bg-gray-900 pt-10 pb-5  wrapper ">
-        <div className="md:h-60 w-[75%] md:w-1/4">
-          <div className=" flex items-center justify-center flex-col">
+        <div className="md:h-60 w-[75%] md:w-1/4 mx-auto">
             <img
               src={logo}
               alt="site logo"
-              className=" "
+              className=" hover:scale-105 transition-all duration-500 ease-in mb-3 mr-3"
             />
-            {/* <div className="  -translate-y-10 h-9 sm:w-[192px] w-[190px] sm:rounded-2xl rounded-2xl shadow-md shadow-white-green"></div> */}
-          </div>
+           
 
           <Title
             title={"Let's Begin Your Journey With Carhive..."}

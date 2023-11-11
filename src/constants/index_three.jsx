@@ -21,6 +21,12 @@ import Director1 from "../assets/Director1.svg"
 import Director2 from "../assets/Director2.svg"
 import Director3 from "../assets/Director3.svg"
 
+export const qualityCategory = [
+  {buttonName:'LUXURY', descripion:'We offer a meticulously curated collection of the most sought-after luxury vehicles on the market. Whether you prefer the sporty allure of a high-performance sports car, the sophistication of a sleek and luxurious sedan, or the versatility of a premium SUV, we have the perfect car to match your discerning taste.'},
+  {buttonName:'COMFORT', descripion:"We prioritize your comfort and convenience throughout your journey. We understand that a comfortable ride can make a world of difference, whether you're embarking on a business trip or enjoying a leisurely vacation. That's why we offer a wide range of well-maintained, comfortable cars that cater to your specific needs."},
+  {buttonName:'PRESTIGE', descripion:" We understand that prestige goes beyond luxury. It's about making a statement, embracing sophistication, and indulging in the finer things in life. That's why we offer an exclusive selection of prestigious cars that exude elegance, style, and status."},
+]
+
 
 export const directors = [
   {img: Director5,name:'Fynley Wilkinson', title:'Chef Director Officer'},

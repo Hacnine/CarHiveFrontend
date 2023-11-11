@@ -9,11 +9,24 @@ import {
   GiDoorway,
   GiTreeDoor,
   GiDoorRingHandle,
+  GiAirZigzag,
+  GiSteeringWheel,
 } from "react-icons/gi";
 import { SiPowerpages } from "react-icons/si";
 import { HiNewspaper } from "react-icons/hi";
-import { TbBrandBooking, TbClock } from "react-icons/tb";
+import { TbBrandBooking, TbCalendarEvent, TbClock } from "react-icons/tb";
 import busIcon from "../assets/bus-icon.svg";
+import {
+  BsBag,
+  BsCarFront,
+  BsFillCarFrontFill,
+  BsFuelPumpDiesel,
+  BsSpeedometer,
+} from "react-icons/bs";
+import { ImMakeGroup } from "react-icons/im";
+import { SiAirbrakedotio } from "react-icons/si";
+import { PiEngineFill } from "react-icons/pi";
+
 
 import van from "../assets/van.svg";
 import bus from "../assets/bus.svg";
@@ -28,12 +41,10 @@ import car2017BentleyContinentalGT from  '../assets/car-6.jpg'
 
 import { MdOutlineAccountBox } from "react-icons/md";
 import { PiBagSimpleBold } from "react-icons/pi";
-import { BsCarFront, BsFillMapFill, BsFillPinMapFill } from "react-icons/bs";
+import {BsFillMapFill, BsFillPinMapFill } from "react-icons/bs";
 
 import { HiLocationMarker } from "react-icons/hi";
-import { TbCalendarEvent } from "react-icons/tb";
 import { carOne, carThree, carTwo } from "../assets";
-
 export const reviews = [
   {
     image: carOne,
@@ -58,6 +69,10 @@ export const reviews = [
   },
 ];
 
+export const carSpecification = [
+  
+];
+
 export const carNames = [
 
 
@@ -68,23 +83,22 @@ export const carNames = [
     number: 64,
     price: "$230",
 
-    summary: [
-      {
-        number: "5",
-        Icon: MdOutlineAccountBox,
-      },
-      {
-        number: "2",
-        Icon: PiBagSimpleBold,
-      },
-      {
-        number: "4",
-        Icon: GiCarDoor,
-      },
-      {
-        number: "Sedan",
-        Icon: BsCarFront,
-      },
+    carSpecification: [
+      { Icon: MdOutlineAccountBox,Feature:"Seat",type:"4"},
+  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+  { Icon: BsBag, Feature: "Luggage", type: "4" },
+  { Icon: ImMakeGroup, Feature: "Type", type: "Sedan" },
+
+  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+  { Icon: BsCarFront, Feature: "Body", type: "" },
+  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+  { Icon: FaCalendar, Feature: "Year", type: "2022" },
+  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
 
@@ -95,23 +109,22 @@ export const carNames = [
     number: 64,
     price: "$230",
 
-    summary: [
-      {
-        number: "5",
-        Icon: MdOutlineAccountBox,
-      },
-      {
-        number: "2",
-        Icon: PiBagSimpleBold,
-      },
-      {
-        number: "4",
-        Icon: GiCarDoor,
-      },
-      {
-        number: "Sedan",
-        Icon: BsCarFront,
-      },
+    carSpecification: [
+      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
+  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+  { Icon: BsBag, Feature: "Luggage", type: "4" },
+  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+
+  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+  { Icon: BsCarFront, Feature: "Body", type: "" },
+  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+  { Icon: FaCalendar, Feature: "Year", type: "2022" },
+  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
 
@@ -124,23 +137,22 @@ export const carNames = [
     number: 64,
     price: "$230",
 
-    summary: [
-      {
-        number: "5",
-        Icon: MdOutlineAccountBox,
-      },
-      {
-        number: "2",
-        Icon: PiBagSimpleBold,
-      },
-      {
-        number: "4",
-        Icon: GiCarDoor,
-      },
-      {
-        number: "GT",
-        Icon: BsCarFront,
-      },
+    carSpecification: [
+      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
+  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+  { Icon: BsBag, Feature: "Luggage", type: "4" },
+  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+
+  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+  { Icon: BsCarFront, Feature: "Body", type: "" },
+  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+  { Icon: FaCalendar, Feature: "Year", type: "2022" },
+  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
   
@@ -150,39 +162,22 @@ export const carNames = [
     Icon: AiTwotoneHeart,
     number: 74,
     price: "$320",
-    summary: [
-      {
-        number: "5",
-        Icon: MdOutlineAccountBox,
-      },
-      {
-        number: "2",
-        Icon: PiBagSimpleBold,
-      },
-      {
-        number: "4",
-        Icon: GiCarDoor,
-      },
-      {
-        number: "Sedan",
-        Icon: BsCarFront,
-      },
-      // {
-      //   number: "",
-      //   Icon: GiHobbitDoor,
-      // },
-      // {
-      //   number: "",
-      //   Icon: GiDoorway,
-      // },
-      // {
-      //   number: "",
-      //   Icon: GiDoorRingHandle,
-      // },
-      // {
-      //   number: "",
-      //   Icon: GiTreeDoor,
-      // },
+    carSpecification: [
+      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
+      { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+      { Icon: BsBag, Feature: "Luggage", type: "4" },
+      { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+    
+      { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+      { Icon: BsCarFront, Feature: "Body", type: "" },
+      { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+      { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+      { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+      { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+      { Icon: FaCalendar, Feature: "Year", type: "2022" },
+      { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+      { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+      { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
   {
@@ -192,23 +187,23 @@ export const carNames = [
     number: 94,
     price: "$367",
 
-    summary: [
-      {
-        number: "5",
-        Icon: MdOutlineAccountBox,
-      },
-      {
-        number: "2",
-        Icon: PiBagSimpleBold,
-      },
-      {
-        number: "4",
-        Icon: GiCarDoor,
-      },
-      {
-        number: "Sedan",
-        Icon: BsCarFront,
-      },
+    carSpecification: [
+      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
+      { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+      { Icon: BsBag, Feature: "Luggage", type: "4" },
+      { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+    
+      { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+      { Icon: BsCarFront, Feature: "Body", type: "" },
+      { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+      { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+      { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+      { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+      { Icon: FaCalendar, Feature: "Year", type: "2022" },
+      { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+      { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+      { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
+
     ],
   },
   {
@@ -218,23 +213,22 @@ export const carNames = [
     number: 64,
     price: "$230",
 
-    summary: [
-      {
-        number: "5",
-        Icon: MdOutlineAccountBox,
-      },
-      {
-        number: "2",
-        Icon: PiBagSimpleBold,
-      },
-      {
-        number: "4",
-        Icon: GiCarDoor,
-      },
-      {
-        number: "Sedan",
-        Icon: BsCarFront,
-      },
+    carSpecification: [
+      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
+  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+  { Icon: BsBag, Feature: "Luggage", type: "4" },
+  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+
+  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+  { Icon: BsCarFront, Feature: "Body", type: "" },
+  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+  { Icon: FaCalendar, Feature: "Year", type: "2022" },
+  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
   {
@@ -244,23 +238,22 @@ export const carNames = [
     number: 64,
     price: "$230",
 
-    summary: [
-      {
-        number: "5",
-        Icon: MdOutlineAccountBox,
-      },
-      {
-        number: "2",
-        Icon: PiBagSimpleBold,
-      },
-      {
-        number: "4",
-        Icon: GiCarDoor,
-      },
-      {
-        number: "Sedan",
-        Icon: BsCarFront,
-      },
+    carSpecification: [
+      { Icon: MdOutlineAccountBox,Feature:"Seat",type:"4"},
+  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+  { Icon: BsBag, Feature: "Luggage", type: "4" },
+  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+
+  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+  { Icon: BsCarFront, Feature: "Body", type: "" },
+  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+  { Icon: FaCalendar, Feature: "Year", type: "2022" },
+  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
 
@@ -273,23 +266,22 @@ export const carNames = [
     number: 64,
     price: "$230",
 
-    summary: [
-      {
-        number: "5",
-        Icon: MdOutlineAccountBox,
-      },
-      {
-        number: "2",
-        Icon: PiBagSimpleBold,
-      },
-      {
-        number: "4",
-        Icon: GiCarDoor,
-      },
-      {
-        number: "SUV",
-        Icon: BsCarFront,
-      },
+    carSpecification: [
+      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
+      { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+      { Icon: GiCarDoor, Feature: "Luggage", type: "4" },
+      { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+    
+      { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+      { Icon: BsCarFront, Feature: "Body", type: "" },
+      { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+      { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+      { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+      { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+      { Icon: FaCalendar, Feature: "Year", type: "2022" },
+      { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+      { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+      { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
 
@@ -300,23 +292,116 @@ export const carNames = [
     number: 64,
     price: "$230",
 
-    summary: [
-      {
-        number: "5",
-        Icon: MdOutlineAccountBox,
-      },
-      {
-        number: "2",
-        Icon: PiBagSimpleBold,
-      },
-      {
-        number: "4",
-        Icon: GiCarDoor,
-      },
-      {
-        number: "Sedan",
-        Icon: BsCarFront,
-      },
+    carSpecification: [
+      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
+  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+  { Icon: GiCarDoor, Feature: "Luggage", type: "4" },
+  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+
+  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+  { Icon: BsCarFront, Feature: "Body", type: "" },
+  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+  { Icon: FaCalendar, Feature: "Year", type: "2022" },
+  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
+    ],
+  },
+
+  
+];
+
+export const favCars = [
+
+
+
+  {
+    name: "Bentley Continental",
+    imgSrc:car2017BentleyContinentalGT,
+    Icon: AiTwotoneHeart,
+    number: 64,
+    price: "$230",
+
+    carSpecification: [
+      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
+  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+  { Icon: BsBag, Feature: "Luggage", type: "4" },
+  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+
+  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+  { Icon: BsCarFront, Feature: "Body", type: "" },
+  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+  { Icon: FaCalendar, Feature: "Year", type: "2022" },
+  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
+    ],
+  },
+
+
+
+
+ 
+
+
+  {
+    name: "Bugatti Chiron",
+    imgSrc: Bugatti,
+    Icon: AiTwotoneHeart,
+    number: 64,
+    price: "$230",
+
+    carSpecification: [
+      { Icon: MdOutlineAccountBox,Feature:"Seat",type:"4"},
+  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+  { Icon: BsBag, Feature: "Luggage", type: "4" },
+  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+
+  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+  { Icon: BsCarFront, Feature: "Body", type: "" },
+  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+  { Icon: FaCalendar, Feature: "Year", type: "2022" },
+  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
+    ],
+  },
+
+  
+
+
+  {
+    name: "Lexus",
+    imgSrc: carLexus,
+    Icon: AiTwotoneHeart,
+    number: 64,
+    price: "$230",
+
+    carSpecification: [
+      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
+  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+  { Icon: GiCarDoor, Feature: "Luggage", type: "4" },
+  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+
+  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+  { Icon: BsCarFront, Feature: "Body", type: "" },
+  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+  { Icon: FaCalendar, Feature: "Year", type: "2022" },
+  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
 

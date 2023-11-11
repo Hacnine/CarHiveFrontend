@@ -9,6 +9,7 @@ import { serviceCard } from "../constants";
 import { ServiceCard } from "../components";
 import feature from '../assets/feature.png'
 import CallUs from "../components/CallUs";
+import QualityForClients from "../components/QualityForClients";
 
 const AboutUs = () => {
   const { isDark, setIsDark } = useGlobalContext(AppContext);
@@ -53,7 +54,7 @@ const AboutUs = () => {
           <h1 className="head_text py-10 text-white-green w-full   font-serif">Board of <span className="text-primary-green">Directors</span>
           </h1>
 
-          <div className="flex items-center justify-center pb-10">
+          <div className=" grid md:grid-cols-4 grid-cols-2  pb-10">
           {directors.map((items, index)=>
           (
             <div className="mx-auto" key={index}>
@@ -63,17 +64,14 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className=" mx-auto w-full relative">
-        <h1 className="head_text py-10 text-slate-blue w-full   font-serif ">Features Hilight 
+        <div className="lg:px-28 px-16 mx-auto w-full relative ">
+        <h1 className=" py-10 text-slate-blue w-full  text-5xl   font-bold  font-serif ">Features Hilight 
           </h1>
 
-          <div className="flex items-center justify-center ">
-            <img src={feature} alt=""
-            width={900} />
-          </div>
+          
 
-          <div className=" flex items-center justify-between absolute top-28 left-0 right-0">
-          <div className=" lg:px-28 px-16 ">
+          <div className=" flex items-center justify-between sm:flex-row flex-col  ">
+          <div className="w-full z-50 ">
           {serviceCard.slice(0,2).map((item, index) => (
             <div
               key={index}
@@ -87,24 +85,30 @@ const AboutUs = () => {
       
 
           {/* <div className=""> */}
-          <div className="lg:px-28 px-16">
+          <div className="w-full z-50">
           {serviceCard.slice(2,4).map((item, index) => (
             <div
               key={index}
-              className="w-full flex items-center justify-between "
+              className=" "
             >
               <ServiceCard className={'justify-end items-end text-end'} {...item} />
             </div>
           ))}
           </div>
           </div>
+
+          <div className="absolute top-28 left-0 right-0 sm:flex items-center justify-center  hidden">
+            <img src={feature} alt=""
+            width={900} />
+          </div>
           
         </div>
+        <QualityForClients/>
 
-        <div className="mt-[700px] bg-deep-green  py-16 flex justify-between items-center lg:px-28 ">
+        {/* mt-[700px] */}
+        <div className=" bg-deep-green  py-16 flex justify-between items-center lg:px-28 px-16">
         <CallUs/>
         </div>
-
         <Footer/>
  
     </div>

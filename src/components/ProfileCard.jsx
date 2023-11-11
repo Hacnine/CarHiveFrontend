@@ -4,7 +4,7 @@ import { newsIcons } from "../constants/index_two";
 
 const ProfileCard = ({ img, name, title  }) => {
   return (
-    <div>
+    <div className="p-1">
       <div className=" w-fit">
        <div className="rounded-md relative overflow-hidden">
        <img src={img} alt="profile image" className="hover:cursor-pointer rounded-md transition-all hover:scale-105 ease-in duration-300 border-black" />
@@ -23,9 +23,9 @@ const ProfileCard = ({ img, name, title  }) => {
        </div>
         
        <div className=" flex items-center justify-center flex-col ">
-        <h4 className="text-white-green text-lg mt-5 mb-1 font-bold font-open">{name}
+        <h4 className="text-slate- blue text-lg mt-5 mb-1 font-bold font-open">{name}
        </h4>
-       <p className="text-gray-300 text-sm font-open">{title}</p>
+       <p className="text-gray-700 text-sm font-open">{title}</p>
         </div>
       
 
