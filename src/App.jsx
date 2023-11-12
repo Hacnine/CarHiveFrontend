@@ -41,7 +41,6 @@ function App() {
       
 {/* <SingleCarPage />  */}
 
-      {/* <Dashboard/> */}
       <ProfileContainer/>
 
       {/* <AboutUs/> */}

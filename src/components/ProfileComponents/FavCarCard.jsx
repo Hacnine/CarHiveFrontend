@@ -12,7 +12,7 @@ const FavCarCard = ({
 }) => {
   return (
     <div>
-      <div className="p-2 border border-gray-300 rounded-lg w-fit shadow-md sm:flex items-center gap-8 justify-center">
+      <div className="p-4 border border-gray-300 rounded-lg w-fit shadow-md sm:flex items-center gap-8 justify-center">
         <div className=" overflow-hidden ">
           <img
             src={imgSrc}

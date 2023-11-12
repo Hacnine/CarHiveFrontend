@@ -34,7 +34,7 @@ const OrderInfoCard = ({
                   ? "bg-deep-green text-white"
                   : status === "cancelled"
                   ? "bg-red-600 text-white"
-                  : "text-gray-900"
+                  : "text-gray-700"
               } w-20 rounded-xl  font-semibold font-open px-1 py-[2px] text-xs  text-center    -black`}
             >
               {status}

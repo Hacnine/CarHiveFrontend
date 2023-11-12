@@ -56,7 +56,7 @@ export default function PrimaryButton ({className,textColor, onOpen, buttonName,
   return (
     <div>
       <a href={url}>
-      <button className={` ${rounded? `${rounded}` : 'rounded-md font-semibold'} capitalize  items-center justify-center     ${shadow? `${shadow}`: 'shadow-md shadow-green-800'} tracking-[1px] font-serif ${className} 
+      <button className={` ${rounded? `${rounded}` : 'rounded font-semibold'} capitalize  items-center justify-center     ${shadow? `${shadow}`: 'shadow-md shadow-green-800'} tracking-[1px] font-serif ${className} 
       ${textColor ? `${textColor}` : 'text-white'} ${padding ? `${padding}`: `px-4 py-2 text-sm`} ${scale? "":"hover:scale-105 transition-all duration-500 ease-in "}`}
       
       onClick={clickHandler} ><div className="flex items-center justify-center"> <span className="pr-2">{icon}</span> {buttonName}</div></button>

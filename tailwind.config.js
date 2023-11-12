@@ -25,6 +25,7 @@ module.exports = withMT({
       backgroundImage: {
         'hero-img':  "url('/src/assets/heroImage.svg')",
         'hero-two':  "url('/src/assets/office-bg.jpg')",
+        'profile':  "url('/src/assets/profile-bg.svg')",
         'sevices': "url('/src/assets/servces-background.jpg')",
         'feature': "url('/src/assets/feature.png')",
         'about-bg': "url('/src/assets/about-bg.jpg')",
@@ -42,6 +43,9 @@ module.exports = withMT({
         neon: ["Tilt Neon", "sans-serif"],
         young: ["Young Serif", "serif"],
         open: ["Open Sans", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
+
       },
       colors: {
         "primary-green": "#1fc916",

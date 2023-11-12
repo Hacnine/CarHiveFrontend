@@ -1,6 +1,6 @@
 import { Textarea } from "@material-tailwind/react";
 
-const CommentForm = ({ id, type, label, placeholder, onChange, className }) => {
+const CommentForm = ({ id, type, label, placeholder, onChange, className, visibleLable}) => {
  
   let contentToRender;
 
@@ -18,18 +18,22 @@ const CommentForm = ({ id, type, label, placeholder, onChange, className }) => {
     type={type}
     placeholder={label}
     onChange={onChange}
-    className={`${className} px-2 w-full h-10 rounded-md border-green-300 focus:ring-green-100 input placeholder:font-bold font-open`}
+    className={`${className} px-2 w-full h-10 rounded-md focus:ring-green-100 input placeholder:font-bold font-open`}
   />;
   }
 
   return (
-    <div className=" py-2 border">
-      {/* <label
+    <div className=" py-2">
+      {visibleLable? 
+      
+      <label
         htmlFor={id}
         className=" text-blue-gray-900 text-sm font-medium text leading-9 font-open"
       >
         {label}
-      </label> */}
+      </label>
+      :null}
+      
 
       {contentToRender}
       
