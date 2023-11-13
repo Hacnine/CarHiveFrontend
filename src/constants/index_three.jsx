@@ -110,7 +110,7 @@ export const testimonials = [
     title: "Smooth and Cost-Effective Travel with CarHive",
     comment:
       "CarHive has made my travels a breeze. I highly recommend them for your next adventure!",
-    commentor: "Nabil Afnan",
+    commentor: "Sabbir Ahmed",
   },
   {
     img: "bg-testimonial-2",
@@ -124,7 +124,7 @@ export const testimonials = [
     title: "Trustworthy and Transparent, Highly Recommended",
     comment:
       "CarHive has been my go-to choice.No hidden fees, no surprises - just smooth journeys. I trust CarHive for all my travel needs.",
-    commentor: "Hasan Jamil",
+    commentor: "Hasan Jabir",
   },
 ];
 

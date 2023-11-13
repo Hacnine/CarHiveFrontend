@@ -14,15 +14,14 @@ import {
   Testimonials,
   Footer,
 } from "./views";
-import ImageSlider from "./components/ImageSlider";
 import NewsPage from "./views/NewsPage";
 import Booking from "./views/Booking";
 import SingleCarPage from "./views/SingleCarPage";
 import CarsForRentalPage from "./views/CarsForRentalPage";
 import { Slider } from "@material-tailwind/react";
 import ContactPage from "./views/ContactPage";
-import Signin from "./views/Signin";
-import LoginRegisterContainer from "./views/LoginRegisterContainer";
+import Signin from "./views/SignInUp/Signin";
+import LoginRegisterContainer from "./views/SignInUp/LoginRegisterContainer";
 
 
 import { useState, useContext } from "react";
@@ -33,7 +32,6 @@ import ProfileContainer from "./views/ProfilePages/ProfileContainer";
 
 function App() {
 
-  const {signInBtn, setSignInBtn } = useGlobalContext(AppContext);
 
 
   return (
@@ -41,7 +39,7 @@ function App() {
       
 {/* <SingleCarPage />  */}
 
-      <ProfileContainer/>
+      {/* <ProfileContainer/> */}
 
       {/* <AboutUs/> */}
    
@@ -57,33 +55,33 @@ function App() {
       <NewsPage/>
       </section>
       <Booking/> */}
-      {/* <SingleCarPage /> */}
+      <SingleCarPage />
 
-    {/*   <section className="">
-        <Hero />
+     <section className=" ">
+        <Hero/>
       </section>
 
-      <section className=" lg:mt-24 mt-[620px]">
+      <section className=" lg:mt-24 mt-14">
         <RentingProcess />
       </section>
 
-      <section className=" lg:mt-24 mt-20 wrapper">
+      <section className=" lg:mt-24  mt-14 wrapper">
         <CarsForRental />
       </section>
 
-      <section className=" lg:mt-24 mt-20 ">
+      <section className=" lg:mt-24 mt-14">
         <Testimonials />
       </section>  
 
-      <section className=" lg:mt-24 mt-20 wrapper">
+      <section className=" lg:mt-24 mt-14 wrapper">
         <Pricing />
       </section>
 
-      <section className=" lg:mt-24 mt-20 wrapper">
+      <section className=" lg:mt-24 mt-14 wrapper">
         <News />
       </section>  
 
-     <section className=" mt-10 ">
+     <section className=" mt-14 ">
         <Services />
       </section>
   
@@ -100,7 +98,7 @@ function App() {
 
       <section className=" lg:mt-24 mt-20 ">
         <Footer />
-      </section>  */}
+      </section>  
     </main>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { newsForm, signUpForm } from "../../constants/index_two";
-import CommentForm from "../../components/CommentForm";
+import CommentForm from "../../components/News/CommentForm";
 import EditProfileForm from "../../components/ProfileComponents/EditProfileForm";
 import Notifications from "./Notifications";
 const Profile = ({ setData }) => {

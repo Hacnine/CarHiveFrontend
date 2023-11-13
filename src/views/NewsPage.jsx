@@ -8,10 +8,10 @@ import {
   news,
   tags,
 } from "../constants/index_two";
-import Comments from "../components/Comments";
-import CommentForm from "../components/CommentForm";
-import SocialNetwork from "../components/SocialNetwork";
-import RecentPosts from "../components/RecentPosts";
+import Comments from "../components/News/Comments";
+import CommentForm from "../components/News/CommentForm";
+import SocialNetwork from "../components/News/SocialIcons";
+import RecentPosts from "../components/News/RecentPosts";
 import Tags from "../components/Tags";
 import Title from "../components/Title";
 import Header from '../components/Header'

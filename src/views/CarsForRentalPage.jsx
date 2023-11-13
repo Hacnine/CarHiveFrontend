@@ -8,7 +8,7 @@ import {
   engineCapacity,
   vehicleType,
 } from "../constants/index_three";
-import CheckBoxInput from "../components/CheckBoxInput";
+import CheckBoxInput from "../components/CarsForRental/CheckBoxInput";
 import Header from "../components/Header";
 import { carNames } from "../constants";
 import { CarCard } from "../components";

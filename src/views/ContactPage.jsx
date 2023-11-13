@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import { LabelInput, PrimaryButton } from "../components";
-import CommentForm from "../components/CommentForm";
+import CommentForm from "../components/News/CommentForm";
 import {
   address,
   contactInfo,
@@ -10,7 +10,7 @@ import {
   newsForm,
 } from "../constants/index_two";
 import Footer from "./Footer";
-import Address from "../components/Address";
+import Address from "../components/Footer/Address";
 import Title from "../components/Title";
 
 const ContactPage = () => {

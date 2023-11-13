@@ -1,12 +1,12 @@
-import BlogPost from "./BlogPost";
-import CarCard from "./CarCard";
-import LabelInput from "./LabelInput";
-import Navigation from "./Navigation";
-import PricingCard from "./PricingCard";
+import BlogPost from "./News/BlogPost";
+import CarCard from "./HomeComponents/CarCard";
+import LabelInput from "./HomeComponents/LabelInput";
+import Navigation from "./HomeComponents/Navigation";
+import PricingCard from "./HomeComponents/PricingCard";
 import PrimaryButton from "./PrimaryButton";
-import ServiceCard from "./ServiceCard";
-import Step from "./Step";
-import CarCarSlider from "./CarCarSlider";
+import ServiceCard from "./HomeComponents/ServiceCard";
+import Step from "./HomeComponents/Step";
+import CarCarSlider from "./HomeComponents/CarCarSlider";
 
 export {
   BlogPost,

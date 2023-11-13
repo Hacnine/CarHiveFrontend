@@ -1,11 +1,11 @@
 import { Navigation } from "../components";
-import BookingCard from "../components/BookingCard";
+import BookingCard from "../components/Booking/BookingCard";
 import Header from "../components/Header";
-import NumberCard from "../components/NumberCard";
+import NumberCard from "../components/AboutUs/NumberCard";
 import { booking_intro, numBerCard } from "../constants/index_three";
 import Footer from "./Footer";
-import Hero from "./Hero";
-import RentingProcess from "./RentingProcess";
+import Hero from "./HomePage/Hero";
+import RentingProcess from "./HomePage/RentingProcess";
 
 const Booking = () => {
   return (

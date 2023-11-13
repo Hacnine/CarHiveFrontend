@@ -30,9 +30,7 @@ export const newsIcons = [
   {Icon:FaInstagram,bg:' bg-brown-600'},
   {Icon:FaYoutube,bg:' bg-red-600'},
   {Icon:FaLinkedin , bg:'bg-blue-800'},
-  {Icon:FaRedditAlien ,bg:' bg-red-900'},
   {Icon:FaFacebookF, bg:'bg-blue-600'},
-  {Icon:FaQuora, bg:' bg-orange-600'}
 
 
 ]

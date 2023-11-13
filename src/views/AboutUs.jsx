@@ -2,14 +2,14 @@ import React from "react";
 import Footer from "./Footer";
 import Header from "../components/Header";
 import { booking_intro, directors, numBerCard } from "../constants/index_three";
-import NumberCard from "../components/NumberCard";
+import NumberCard from "../components/AboutUs/NumberCard";
 import { AppContext, useGlobalContext } from "../Context";
-import ProfileCard from "../components/ProfileCard";
+import ProfileCard from "../components/AboutUs/ProfileCard";
 import { serviceCard } from "../constants";
 import { ServiceCard } from "../components";
 import feature from '../assets/feature.png'
-import CallUs from "../components/CallUs";
-import QualityForClients from "../components/QualityForClients";
+import CallUs from "../components/AboutUs/CallUs";
+import QualityForClients from "../components/AboutUs/QualityForClients";
 
 const AboutUs = () => {
   const { isDark, setIsDark } = useGlobalContext(AppContext);

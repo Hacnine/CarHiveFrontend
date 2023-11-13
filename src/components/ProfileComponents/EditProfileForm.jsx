@@ -1,7 +1,7 @@
 import { signUpForm } from "../../constants/index_two";
-import CommentForm from "../CommentForm";
+import CommentForm from "../News/CommentForm";
 import React, { useState } from "react";
-import DropDownForm from "../DropDownForm";
+import DropDownForm from "./DropDownForm";
 import PrimaryButton from "../PrimaryButton";
 
 const EditProfileForm = ({ visible }) => {

@@ -3,13 +3,14 @@ import Header from "../components/Header";
 import { carOne } from "../assets";
 import carPrevOne from "../assets/carPrevOne (1).svg";
 import { carSpecification, previewCarCard } from "../constants/index_three";
-import PreviewCarCard from "../components/PreviewCarCard";
-import BookingFormCard from "../components/BookingFormCard";
+import PreviewCarCard from "../components/SIngleCarPage/PreviewCarCard";
+import BookingFormCard from "../components/Booking/BookingFormCard";
 import Footer from "./Footer";
 import Title from "../components/Title";
 import { PrimaryButton } from "../components";
-import SocialNetwork from "../components/SocialNetwork";
+import SocialNetwork from "../components/News/SocialIcons";
 import { newsIcons } from "../constants/index_two";
+import CarSpecification from "../components/SIngleCarPage/CarSpecification";
       // w-[315px] h-[225px] md:w-[651px] md:h-[440px]  w-[90%] h-[70%]
 const SingleCarPage = () => {
   const [bigCarImage, setBigCarImage] = useState(carPrevOne);
@@ -51,14 +52,10 @@ const SingleCarPage = () => {
             <Title title={"Vehicle Overview"} fontSize={'text-3xl'} customBorder={'w-1/4'}/>
             <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 mx-auto gap-8 pt-7">
               {carSpecification.map((items, index)=>(
-                <div className="flex items-center justify-start border" key={index}>
-                  <div className="flex items-center justify-center p-2 border border-blue-gray-900 rounded-md">
-                  <items.Icon className="text-blue-gray-900 w-10 h-10" />
-                </div>
+                <div className="flex items-center justify-start " key={index}>
+                 
 
-                <div className="text-start font-bold ml-3">
-                <Title title={items.Feature} fontSize={'text-lg'} para={items.type} textColor={'text-blue-gray-900'} paraTextColor={'text-blue-gray-900'}/>
-                </div>
+                <CarSpecification items={items}/>
                 </div>
               ))}
             </div>

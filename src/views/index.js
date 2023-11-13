@@ -1,13 +1,13 @@
-import CarsForRental from "./CarsForRental";
-import Contact from "./Contact";
-import FAQ from "./FAQ";
+import CarsForRental from "./HomePage/CarsForRental";
+import Contact from "./HomePage/Contact";
+import FAQ from "./HomePage/FAQ";
 import Footer from "./Footer";
-import Hero from "./Hero";
-import News from "./News";
-import Pricing from "./Pricing";
-import RentingProcess from "./RentingProcess";
-import Services from "./Services";
-import Testimonials from "./Testimonials";
+import Hero from "./HomePage/Hero";
+import News from "./HomePage/News";
+import Pricing from "./HomePage/Pricing";
+import RentingProcess from "./HomePage/RentingProcess";
+import Services from "./HomePage/Services";
+import Testimonials from "./HomePage/Testimonials";
 export {
   CarsForRental,
   Contact,

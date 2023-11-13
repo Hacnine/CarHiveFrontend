@@ -1,5 +1,5 @@
 import React from 'react'
-import Navigation from './Navigation'
+import Navigation from './HomeComponents/Navigation'
 
 const Header = ({title, height, bg, bgColor }) => {
   
