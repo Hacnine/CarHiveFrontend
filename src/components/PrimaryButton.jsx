@@ -1,15 +1,19 @@
 import { AppContext,useGlobalContext } from "../Context";
-
+import { useNavigate  } from 'react-router-dom';
 
 export default function PrimaryButton ({className,textColor, onOpen, buttonName, icon, padding,shadow, signUpVisible,  scale, url, rounded}) {
   
   const {signInBtn, setSignInBtn,setQualityDescription, comfort ,setComfort, prestige ,setPrestige} = useGlobalContext(AppContext);
 
+  const signInLink = useNavigate();
 
   function signIn(){
     // {onOpen? onOpen(): null}
 
-    setSignInBtn(true)
+    setSignInBtn(true);
+    signInLink('/signin');
+    // console.log('Allah')
+
     
   }
 
@@ -23,7 +27,6 @@ export default function PrimaryButton ({className,textColor, onOpen, buttonName,
     setQualityDescription(true);
     setComfort(false);
     setPrestige(false);
-    console.log('Allah')
 
   }
 

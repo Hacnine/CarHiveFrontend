@@ -4,7 +4,7 @@ import { newsForm, signUpForm } from "../../constants/index_two";
 import CommentForm from "../../components/News/CommentForm";
 import EditProfileForm from "../../components/ProfileComponents/EditProfileForm";
 import Notifications from "./Notifications";
-const Profile = ({ setData }) => {
+const Profile = ({ setTitle }) => {
   const [visible, setVisible] = useState("Profile");
 
   const handleClick = ({}) => {
@@ -13,8 +13,10 @@ const Profile = ({ setData }) => {
 
   useEffect(() => {
     const dataToSend = "Profile";
-    setData(dataToSend);
-  }, []);
+
+    setTitle(dataToSend);
+    console.log(typeof setData)
+  }, [setTitle]);
   return (
  
       <div className="px-7 py-7 bg-white-green rounded-md">

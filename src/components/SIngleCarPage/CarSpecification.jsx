@@ -12,8 +12,8 @@ const CarSpecification = ({items}) => {
           title={items.Feature}
           fontSize={"text-lg"}
           para={items.type}
-          textColor={"text-blue-gray-900"}
-          paraTextColor={"text-blue-gray-900 font-semibold font-roboto"}
+          textColor={"text-gray-700"}
+          paraTextColor={"text-gray-600 font-semibold font-roboto"}
         />
       </div>
     </>

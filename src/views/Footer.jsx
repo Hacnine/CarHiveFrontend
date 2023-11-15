@@ -29,7 +29,7 @@ const Footer = () => {
                 className={`w-10 h-10 flex items-center justify-center rounded bg-blue-gray-900 hover:bg-blue-gray-800 hover:transition-colors ease-in hover:duration-200`}
                 key={index}
               >
-                <items.Icon className="text-primary-green px-[2px]" />
+                <items.Icon className="text-primary-green " />
               </div>
             ))}
           </div>

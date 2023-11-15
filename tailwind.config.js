@@ -43,8 +43,7 @@ module.exports = withMT({
         neon: ["Tilt Neon", "sans-serif"],
         young: ["Young Serif", "serif"],
         open: ["Open Sans", "sans-serif"],
-        roboto: ["Roboto", "sans-serif"],
-        lato: ["Lato", "sans-serif"],
+       
 
       },
       colors: {

@@ -1,4 +1,3 @@
-import BlogPost from "./News/BlogPost";
 import CarCard from "./HomeComponents/CarCard";
 import LabelInput from "./HomeComponents/LabelInput";
 import Navigation from "./HomeComponents/Navigation";
@@ -9,7 +8,6 @@ import Step from "./HomeComponents/Step";
 import CarCarSlider from "./HomeComponents/CarCarSlider";
 
 export {
-  BlogPost,
   CarCard,
   CarCarSlider,
   LabelInput,

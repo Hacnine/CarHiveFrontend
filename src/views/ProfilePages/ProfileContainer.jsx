@@ -16,6 +16,8 @@ const ProfileContainer = () => {
   const setData = (data) => {
     setTitle(data);
   };
+
+  console.log(typeof setData);
   
 
   return (
@@ -48,17 +50,25 @@ const ProfileContainer = () => {
               </div>
 
               <div className="md:w-[70%] w-full">
+                {activeLink ===0? 
                 <div>
                 <Dashboard setData={setData}/>
                 </div>
-
+                : activeLink ===1? 
                 <div>
-                <Profile setData={setData}/>
+                <Profile setTitle={setData}/>  
                 </div>
-
+                :activeLink ===2? 
                 <div>
                   <Orders setData={setData}/>
                 </div>
+                :null
+                }
+                
+
+                
+
+                
                
               </div>
             

@@ -21,7 +21,7 @@ const Dashboard = ({setData}) => {
     <div className="sm:space-y-5 gap-10  flex flex-col items-center justify-center ">
       <div className="grid sm:grid-cols-4 sm:mt-0 mt-14 grid-cols-2 iten w-full ">
         {summary.map((items, index) => (
-          <div className="px-2 ">
+          <div className="px-2 " key={index}>
             <SummaryCard {...items} />
           </div>
         ))}

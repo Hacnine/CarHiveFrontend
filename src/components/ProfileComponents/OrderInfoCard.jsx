@@ -10,7 +10,7 @@ const OrderInfoCard = ({
   status,
   index
 }) => {
-  console.log(index)
+  
   return (
    
     <div>

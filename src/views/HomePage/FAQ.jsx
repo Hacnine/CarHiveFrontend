@@ -56,7 +56,7 @@ const FAQ = () => {
               <AccordionHeader onClick={() => handleOpen(val + index)} className="font-medium text-md">
                 {items.questions}
               </AccordionHeader>
-              <AccordionBody>{items.ans}</AccordionBody>
+              <AccordionBody className=" text-base  text-gray-800">{items.ans}</AccordionBody>
             </Accordion>
           ))}
         </div>

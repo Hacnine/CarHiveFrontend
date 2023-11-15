@@ -10,7 +10,7 @@ const RecentOrder = () => {
       </h4>
 
       {orders.map((items, index) => (
-        <div className="mt-3">
+        <div className="mt-3"  key={index}>
             <OrderInfoCard index={index} {...items} />
         </div>
       ))}

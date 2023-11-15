@@ -12,9 +12,10 @@ import Comments from "../components/News/Comments";
 import CommentForm from "../components/News/CommentForm";
 import SocialNetwork from "../components/News/SocialIcons";
 import RecentPosts from "../components/News/RecentPosts";
-import Tags from "../components/Tags";
+import Tags from "../components/News/Tags";
 import Title from "../components/Title";
 import Header from '../components/Header'
+import Footer from "./Footer";
 
 const NewsPage = () => {
   const [email, setEmail] = useState("");
@@ -97,6 +98,7 @@ const NewsPage = () => {
           {/* Recent Posts End */}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

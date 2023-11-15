@@ -76,7 +76,7 @@ export const  engineCapacity=[
 
 export const carSpecification = [
   { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
-  { Icon: BsCarFront, Feature: "Body", type: "" },
+  { Icon: BsCarFront, Feature: "Body", type: "Hatchback " },
   { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "BMW x3" },
   { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
   { Icon: GiCarDoor, Feature: "Door", type: "4 Doors" },

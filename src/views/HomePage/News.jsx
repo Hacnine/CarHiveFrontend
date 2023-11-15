@@ -1,4 +1,4 @@
-import { BlogPost, PrimaryButton } from "../../components";
+import { PrimaryButton } from "../../components";
 import { news } from "../../constants/index_two";
 
 const News = () => {

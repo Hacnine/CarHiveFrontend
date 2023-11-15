@@ -21,7 +21,7 @@ const BookingCard = () => {
       <div className="flex justify-center  lg:justify-end  w-full lg:mt-3 mt-7 s">
         <PrimaryButton
           className={"lg:w-full flex w-64    bg-primary-green "}
-          buttonName={"Find A Vehicle "}
+          buttonName={"Find A Vehicle"}
           icon={buttonIcon}
         />
       </div>

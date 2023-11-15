@@ -1,5 +1,13 @@
-import { FaBeer, Fa500Px, FaAccusoft, FaRoad, FaTrophy, FaCar, FaCalendar } from "react-icons/fa";
-import {PiMaskHappyFill, PiNotepadFill} from "react-icons/pi"
+import {
+  FaBeer,
+  Fa500Px,
+  FaAccusoft,
+  FaRoad,
+  FaTrophy,
+  FaCar,
+  FaCalendar,
+} from "react-icons/fa";
+import { PiMaskHappyFill, PiNotepadFill } from "react-icons/pi";
 
 import { AiFillHome, AiTwotoneCar, AiTwotoneHeart } from "react-icons/ai";
 import { RiAccountPinCircleFill, RiSecurePaymentFill } from "react-icons/ri";
@@ -15,7 +23,7 @@ import {
 import { SiPowerpages } from "react-icons/si";
 import { HiNewspaper } from "react-icons/hi";
 import { TbBrandBooking, TbCalendarEvent, TbClock } from "react-icons/tb";
-import busIcon from "../assets/bus-icon.svg";
+
 import {
   BsBag,
   BsCarFront,
@@ -27,21 +35,20 @@ import { ImMakeGroup } from "react-icons/im";
 import { SiAirbrakedotio } from "react-icons/si";
 import { PiEngineFill } from "react-icons/pi";
 
-
 import van from "../assets/van.svg";
 import bus from "../assets/bus.svg";
 import carsports from "../assets/carsports.svg";
 import car from "../assets/car.svg";
-import car16 from  '../assets/car-16.jpg'
-import carLexus from  '../assets/car-16-lexus.jpg'
-import Bugatti from  '../assets/Bugatti.jpg'
-import carAstonMartin from  '../assets/car-14.jpg'
-import carBentleyContinentalGT from  '../assets/car-17.jpg'
-import car2017BentleyContinentalGT from  '../assets/car-6.jpg'
+import car16 from "../assets/car-16.jpg";
+import carLexus from "../assets/car-16-lexus.jpg";
+import Bugatti from "../assets/Bugatti.jpg";
+import carAstonMartin from "../assets/car-14.jpg";
+import carBentleyContinentalGT from "../assets/car-17.jpg";
+import car2017BentleyContinentalGT from "../assets/car-6.jpg";
 
 import { MdOutlineAccountBox } from "react-icons/md";
 import { PiBagSimpleBold } from "react-icons/pi";
-import {BsFillMapFill, BsFillPinMapFill } from "react-icons/bs";
+import { BsFillMapFill, BsFillPinMapFill } from "react-icons/bs";
 
 import { HiLocationMarker } from "react-icons/hi";
 import { carOne, carThree, carTwo } from "../assets";
@@ -69,13 +76,9 @@ export const reviews = [
   },
 ];
 
-export const carSpecification = [
-  
-];
+export const carSpecification = [];
 
 export const carNames = [
-
-
   {
     name: "Aston Martin",
     imgSrc: carAstonMartin,
@@ -84,78 +87,76 @@ export const carNames = [
     price: "$230",
 
     carSpecification: [
-      { Icon: MdOutlineAccountBox,Feature:"Seat",type:"4"},
-  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
-  { Icon: BsBag, Feature: "Luggage", type: "4" },
-  { Icon: ImMakeGroup, Feature: "Type", type: "Sedan" },
+      { Icon: MdOutlineAccountBox, Feature: "Seat", type: "4" },
+      { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+      { Icon: BsBag, Feature: "Luggage", type: "4" },
+      { Icon: ImMakeGroup, Feature: "Type", type: "Sedan" },
 
-  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
-  { Icon: BsCarFront, Feature: "Body", type: "" },
-  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
-  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
-  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
-  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
-  { Icon: FaCalendar, Feature: "Year", type: "2022" },
-  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
-  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
-  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
+      { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+      { Icon: BsCarFront, Feature: "Body", type: "" },
+      { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+      { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+      { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+      { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+      { Icon: FaCalendar, Feature: "Year", type: "2022" },
+      { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+      { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+      { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
 
   {
     name: "Bentley Continental",
-    imgSrc:car2017BentleyContinentalGT,
+    imgSrc: car2017BentleyContinentalGT,
     Icon: AiTwotoneHeart,
     number: 64,
     price: "$230",
 
     carSpecification: [
-      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
-  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
-  { Icon: BsBag, Feature: "Luggage", type: "4" },
-  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+      { Icon: MdOutlineAccountBox, Feature: "Seat", type: "4" },
+      { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+      { Icon: BsBag, Feature: "Luggage", type: "4" },
+      { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
 
-  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
-  { Icon: BsCarFront, Feature: "Body", type: "" },
-  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
-  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
-  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
-  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
-  { Icon: FaCalendar, Feature: "Year", type: "2022" },
-  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
-  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
-  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
+      { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+      { Icon: BsCarFront, Feature: "Body", type: "" },
+      { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+      { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+      { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+      { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+      { Icon: FaCalendar, Feature: "Year", type: "2022" },
+      { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+      { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+      { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
-
-
 
   {
     name: "Bentley Continental",
-    imgSrc:carBentleyContinentalGT,
+    imgSrc: carBentleyContinentalGT,
     Icon: AiTwotoneHeart,
     number: 64,
     price: "$230",
 
     carSpecification: [
-      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
-  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
-  { Icon: BsBag, Feature: "Luggage", type: "4" },
-  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+      { Icon: MdOutlineAccountBox, Feature: "Seat", type: "4" },
+      { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+      { Icon: BsBag, Feature: "Luggage", type: "4" },
+      { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
 
-  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
-  { Icon: BsCarFront, Feature: "Body", type: "" },
-  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
-  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
-  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
-  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
-  { Icon: FaCalendar, Feature: "Year", type: "2022" },
-  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
-  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
-  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
+      { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+      { Icon: BsCarFront, Feature: "Body", type: "" },
+      { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+      { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+      { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+      { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+      { Icon: FaCalendar, Feature: "Year", type: "2022" },
+      { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+      { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+      { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
-  
+
   {
     name: "BMW X3",
     imgSrc: carOne,
@@ -163,11 +164,11 @@ export const carNames = [
     number: 74,
     price: "$320",
     carSpecification: [
-      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
+      { Icon: MdOutlineAccountBox, Feature: "Seat", type: "4" },
       { Icon: GiCarDoor, Feature: "Doors", type: "4" },
       { Icon: BsBag, Feature: "Luggage", type: "4" },
       { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
-    
+
       { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
       { Icon: BsCarFront, Feature: "Body", type: "" },
       { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
@@ -188,11 +189,11 @@ export const carNames = [
     price: "$367",
 
     carSpecification: [
-      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
+      { Icon: MdOutlineAccountBox, Feature: "Seat", type: "4" },
       { Icon: GiCarDoor, Feature: "Doors", type: "4" },
       { Icon: BsBag, Feature: "Luggage", type: "4" },
       { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
-    
+
       { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
       { Icon: BsCarFront, Feature: "Body", type: "" },
       { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
@@ -203,7 +204,6 @@ export const carNames = [
       { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
       { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
       { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
-
     ],
   },
   {
@@ -214,21 +214,21 @@ export const carNames = [
     price: "$230",
 
     carSpecification: [
-      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
-  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
-  { Icon: BsBag, Feature: "Luggage", type: "4" },
-  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+      { Icon: MdOutlineAccountBox, Feature: "Seat", type: "4" },
+      { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+      { Icon: BsBag, Feature: "Luggage", type: "4" },
+      { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
 
-  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
-  { Icon: BsCarFront, Feature: "Body", type: "" },
-  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
-  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
-  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
-  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
-  { Icon: FaCalendar, Feature: "Year", type: "2022" },
-  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
-  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
-  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
+      { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+      { Icon: BsCarFront, Feature: "Body", type: "" },
+      { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+      { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+      { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+      { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+      { Icon: FaCalendar, Feature: "Year", type: "2022" },
+      { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+      { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+      { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
   {
@@ -239,25 +239,23 @@ export const carNames = [
     price: "$230",
 
     carSpecification: [
-      { Icon: MdOutlineAccountBox,Feature:"Seat",type:"4"},
-  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
-  { Icon: BsBag, Feature: "Luggage", type: "4" },
-  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+      { Icon: MdOutlineAccountBox, Feature: "Seat", type: "4" },
+      { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+      { Icon: BsBag, Feature: "Luggage", type: "4" },
+      { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
 
-  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
-  { Icon: BsCarFront, Feature: "Body", type: "" },
-  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
-  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
-  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
-  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
-  { Icon: FaCalendar, Feature: "Year", type: "2022" },
-  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
-  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
-  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
+      { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+      { Icon: BsCarFront, Feature: "Body", type: "" },
+      { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+      { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+      { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+      { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+      { Icon: FaCalendar, Feature: "Year", type: "2022" },
+      { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+      { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+      { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
-
-  
 
   {
     name: "Jeep Grand Cherokee",
@@ -267,11 +265,11 @@ export const carNames = [
     price: "$230",
 
     carSpecification: [
-      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
+      { Icon: MdOutlineAccountBox, Feature: "Seat", type: "4" },
       { Icon: GiCarDoor, Feature: "Doors", type: "4" },
       { Icon: GiCarDoor, Feature: "Luggage", type: "4" },
       { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
-    
+
       { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
       { Icon: BsCarFront, Feature: "Body", type: "" },
       { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
@@ -293,62 +291,51 @@ export const carNames = [
     price: "$230",
 
     carSpecification: [
-      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
-  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
-  { Icon: GiCarDoor, Feature: "Luggage", type: "4" },
-  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+      { Icon: MdOutlineAccountBox, Feature: "Seat", type: "4" },
+      { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+      { Icon: GiCarDoor, Feature: "Luggage", type: "4" },
+      { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
 
-  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
-  { Icon: BsCarFront, Feature: "Body", type: "" },
-  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
-  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
-  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
-  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
-  { Icon: FaCalendar, Feature: "Year", type: "2022" },
-  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
-  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
-  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
+      { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+      { Icon: BsCarFront, Feature: "Body", type: "" },
+      { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+      { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+      { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+      { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+      { Icon: FaCalendar, Feature: "Year", type: "2022" },
+      { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+      { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+      { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
-
-  
 ];
 
 export const favCars = [
-
-
-
   {
     name: "Bentley Continental",
-    imgSrc:car2017BentleyContinentalGT,
+    imgSrc: car2017BentleyContinentalGT,
     Icon: AiTwotoneHeart,
     number: 64,
     price: "$230",
 
     carSpecification: [
-      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
-  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
-  { Icon: BsBag, Feature: "Luggage", type: "4" },
-  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+      { Icon: MdOutlineAccountBox, Feature: "Seat", type: "4" },
+      { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+      { Icon: BsBag, Feature: "Luggage", type: "4" },
+      { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
 
-  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
-  { Icon: BsCarFront, Feature: "Body", type: "" },
-  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
-  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
-  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
-  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
-  { Icon: FaCalendar, Feature: "Year", type: "2022" },
-  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
-  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
-  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
+      { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+      { Icon: BsCarFront, Feature: "Body", type: "" },
+      { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+      { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+      { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+      { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+      { Icon: FaCalendar, Feature: "Year", type: "2022" },
+      { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+      { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+      { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
-
-
-
-
- 
-
 
   {
     name: "Bugatti Chiron",
@@ -358,26 +345,23 @@ export const favCars = [
     price: "$230",
 
     carSpecification: [
-      { Icon: MdOutlineAccountBox,Feature:"Seat",type:"4"},
-  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
-  { Icon: BsBag, Feature: "Luggage", type: "4" },
-  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+      { Icon: MdOutlineAccountBox, Feature: "Seat", type: "4" },
+      { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+      { Icon: BsBag, Feature: "Luggage", type: "4" },
+      { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
 
-  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
-  { Icon: BsCarFront, Feature: "Body", type: "" },
-  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
-  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
-  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
-  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
-  { Icon: FaCalendar, Feature: "Year", type: "2022" },
-  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
-  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
-  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
+      { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+      { Icon: BsCarFront, Feature: "Body", type: "" },
+      { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+      { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+      { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+      { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+      { Icon: FaCalendar, Feature: "Year", type: "2022" },
+      { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+      { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+      { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
-
-  
-
 
   {
     name: "Lexus",
@@ -387,25 +371,23 @@ export const favCars = [
     price: "$230",
 
     carSpecification: [
-      { Icon: MdOutlineAccountBox, Feature:"Seat",type:"4"},
-  { Icon: GiCarDoor, Feature: "Doors", type: "4" },
-  { Icon: GiCarDoor, Feature: "Luggage", type: "4" },
-  { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
+      { Icon: MdOutlineAccountBox, Feature: "Seat", type: "4" },
+      { Icon: GiCarDoor, Feature: "Doors", type: "4" },
+      { Icon: GiCarDoor, Feature: "Luggage", type: "4" },
+      { Icon: ImMakeGroup, Feature: "Brand", type: "Nissan" },
 
-  { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
-  { Icon: BsCarFront, Feature: "Body", type: "" },
-  { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
-  { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
-  { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
-  { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
-  { Icon: FaCalendar, Feature: "Year", type: "2022" },
-  { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
-  { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
-  { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
+      { Icon: GiAirZigzag, Feature: "AC", type: "Air Condition" },
+      { Icon: BsCarFront, Feature: "Body", type: "" },
+      { Icon: BsFuelPumpDiesel, Feature: "Fuel Type", type: "Hybrid" },
+      { Icon: BsSpeedometer, Feature: "Mileage", type: "16km" },
+      { Icon: GiSteeringWheel, Feature: "Drivetrian", type: "Front Wheel" },
+      { Icon: SiAirbrakedotio, Feature: "Brake", type: "Front Wheel" },
+      { Icon: FaCalendar, Feature: "Year", type: "2022" },
+      { Icon: PiEngineFill, Feature: "Engine", type: "Hybrid" },
+      { Icon: BsFillCarFrontFill, Feature: "Gear Box", type: "Automatic" },
+      { Icon: BsFillCarFrontFill, Feature: "VIN", type: "45456444" },
     ],
   },
-
-  
 ];
 export const vehicleTypes = [
   {
@@ -451,48 +433,49 @@ export const data = [
 ];
 
 export const navLinks2 = [
-  { title: "Home", icon: AiFillHome, links: [{ name: "", link: "" }] },
-  { title: "Booking", icon: TbBrandBooking, links: [{ name: "", link: "" }] },
+  { title: "Home", icon: AiFillHome,link:"/home", links: [{ name: "", link: "" }] },
+  { title: "Booking", icon: TbBrandBooking,link:"/booking", links: [{ name: "", link: "" }] },
+
+  {
+    title: "Cars",
+    icon: AiTwotoneCar,link:"/cars",
+    links: [
+      // { name: "", link: "" },
+      { name: "", link: "/" },
+      { name: "", link: "/" },
+    ],
+  }, 
   {
     title: "Account",
-    icon: RiAccountPinCircleFill,
+    icon: RiAccountPinCircleFill,link:"/account/dashboard",
     links: [
-      { name: "Dashboard", link: "/" },
-      { name: "Profile", link: "/" },
-      { name: "Orders", link: "/" },
-      { name: "Favorites", link: "/" },
+      { name: "Dashboard", link: "/account/dashboard" },
+      { name: "Profile", link: "/account/Profile" },
+      { name: "Orders", link: "/account/orders" },
+      { name: "Favorites", link: "/account/FavoriteCars" },
     ],
   },
 
   {
     title: "Pages",
-    icon: SiPowerpages,
+    icon: SiPowerpages,link:"",
     links: [
-      { name: "About Us", link: "/" },
-      { name: "Contact", link: "/" },
-      { name: "Login", link: "/" },
-      { name: "Register", link: "/" },
-      { name: "Page 404", link: "/" },
+      { name: "About Us", link: "/aboutus" },
+      { name: "Contact", link: "/contact" },
+      { name: "Sign In", link: "/signin" },
+      { name: "Sign Up", link: "/signup" },
+      { name: "Page 404", link: "/404" },
     ],
   },
 
   {
     title: "News",
     icon: HiNewspaper,
+    link:"/news",
 
     links: [
       { name: "Standard", link: "/" },
       { name: "Grid", link: "/" },
-    ],
-  },
-
-  {
-    title: "Cars",
-    icon: AiTwotoneCar,
-    links: [
-      // { name: "", link: "" },
-      { name: "Cars List", link: "/" },
-      { name: "Cars Single", link: "/" },
     ],
   },
 ];
@@ -503,136 +486,129 @@ export const formItems = [
   {
     label: "Pick Up Location",
     placeholder: "Enter your pickup location",
-    Icon:HiLocationMarker ,
-    tag:"Location",
-    timeList: [
-      { time: "" }
-    ]
-    
+    Icon: HiLocationMarker,
+    tag: "Location",
+    timeList: [{ time: "" }],
   },
   {
     label: "Drop Off Location",
     placeholder: "Enter your dropoff location",
-    Icon:HiLocationMarker ,
-    tag:"Location",
-    timeList: [
-      { time: "" }
-    ]
-
+    Icon: HiLocationMarker,
+    tag: "Location",
+    timeList: [{ time: "" }],
   },
 
   {
     label: "Pick Up Date & Time",
     placeholder: "Select a date and time.",
-    Icon:TbClock,
-    tag:"DateTime",
+    Icon: TbClock,
+    tag: "DateTime",
     timeList: [
-  { time: "00:00" },
-  { time: "00:30" },
-  { time: "01:00" },
-  { time: "01:30" },
-  { time: "02:00" },
-  { time: "02:30" },
-  { time: "03:00" },
-  { time: "03:30" },
-  { time: "04:00" },
-  { time: "04:30" },
-  { time: "05:00" },
-  { time: "05:30" },
-  { time: "06:00" },
-  { time: "06:30" },
-  { time: "07:00" },
-  { time: "07:30" },
-  { time: "08:00" },
-  { time: "08:30" },
-  { time: "09:00" },
-  { time: "09:30" },
-  { time: "10:00" },
-  { time: "10:30" },
-  { time: "11:00" },
-  { time: "11:30" },
-  { time: "12:00" },
-  { time: "12:30" },
-  { time: "13:00" },
-  { time: "13:30" },
-  { time: "14:00" },
-  { time: "14:30" },
-  { time: "15:00" },
-  { time: "15:30" },
-  { time: "16:00" },
-  { time: "16:30" },
-  { time: "17:00" },
-  { time: "17:30" },
-  { time: "18:00" },
-  { time: "18:30" },
-  { time: "19:00" },
-  { time: "19:30" },
-  { time: "20:00" },
-  { time: "20:30" },
-  { time: "21:00" },
-  { time: "21:30" },
-  { time: "22:00" },
-  { time: "22:30" },
-  { time: "23:00" },
-  { time: "23:30" },
-]
-
+      { time: "00:00" },
+      { time: "00:30" },
+      { time: "01:00" },
+      { time: "01:30" },
+      { time: "02:00" },
+      { time: "02:30" },
+      { time: "03:00" },
+      { time: "03:30" },
+      { time: "04:00" },
+      { time: "04:30" },
+      { time: "05:00" },
+      { time: "05:30" },
+      { time: "06:00" },
+      { time: "06:30" },
+      { time: "07:00" },
+      { time: "07:30" },
+      { time: "08:00" },
+      { time: "08:30" },
+      { time: "09:00" },
+      { time: "09:30" },
+      { time: "10:00" },
+      { time: "10:30" },
+      { time: "11:00" },
+      { time: "11:30" },
+      { time: "12:00" },
+      { time: "12:30" },
+      { time: "13:00" },
+      { time: "13:30" },
+      { time: "14:00" },
+      { time: "14:30" },
+      { time: "15:00" },
+      { time: "15:30" },
+      { time: "16:00" },
+      { time: "16:30" },
+      { time: "17:00" },
+      { time: "17:30" },
+      { time: "18:00" },
+      { time: "18:30" },
+      { time: "19:00" },
+      { time: "19:30" },
+      { time: "20:00" },
+      { time: "20:30" },
+      { time: "21:00" },
+      { time: "21:30" },
+      { time: "22:00" },
+      { time: "22:30" },
+      { time: "23:00" },
+      { time: "23:30" },
+    ],
   },
   {
     label: "Drop Up Date & Time",
     placeholder: "Select dates and time.",
-    Icon:TbClock,
-    tag:"DateTime",
+    Icon: TbClock,
+    tag: "DateTime",
     timeList: [
-  { time: "00:00" },
-  { time: "00:30" },
-  { time: "01:00" },
-  { time: "01:30" },
-  { time: "02:00" },
-  { time: "02:30" },
-  { time: "03:00" },
-  { time: "03:30" },
-  { time: "04:00" },
-  { time: "04:30" },
-  { time: "05:00" },
-  { time: "05:30" },
-  { time: "06:00" },
-  { time: "06:30" },
-  { time: "07:00" },
-  { time: "07:30" },
-  { time: "08:00" },
-  { time: "08:30" },
-  { time: "09:00" },
-  { time: "09:30" },
-  { time: "10:00" },
-  { time: "10:30" },
-  { time: "11:00" },
-  { time: "11:30" },
-  { time: "12:00" },
-  { time: "12:30" },
-  { time: "13:00" },
-  { time: "13:30" },
-  { time: "14:00" },
-  { time: "14:30" },
-  { time: "15:00" },
-  { time: "15:30" },
-  { time: "16:00" },
-  { time: "16:30" },
-  { time: "17:00" },
-  { time: "17:30" },
-  { time: "18:00" },
-  { time: "18:30" },
-  { time: "19:00" },
-  { time: "19:30" },
-  { time: "20:00" },
-  { time: "20:30" },
-  { time: "21:00" },
-  { time: "21:30" },
-  { time: "22:00" },
-  { time: "22:30" },
-  { time: "23:00" },
-  { time: "23:30" },
-]
+      { time: "00:00" },
+      { time: "00:30" },
+      { time: "01:00" },
+      { time: "01:30" },
+      { time: "02:00" },
+      { time: "02:30" },
+      { time: "03:00" },
+      { time: "03:30" },
+      { time: "04:00" },
+      { time: "04:30" },
+      { time: "05:00" },
+      { time: "05:30" },
+      { time: "06:00" },
+      { time: "06:30" },
+      { time: "07:00" },
+      { time: "07:30" },
+      { time: "08:00" },
+      { time: "08:30" },
+      { time: "09:00" },
+      { time: "09:30" },
+      { time: "10:00" },
+      { time: "10:30" },
+      { time: "11:00" },
+      { time: "11:30" },
+      { time: "12:00" },
+      { time: "12:30" },
+      { time: "13:00" },
+      { time: "13:30" },
+      { time: "14:00" },
+      { time: "14:30" },
+      { time: "15:00" },
+      { time: "15:30" },
+      { time: "16:00" },
+      { time: "16:30" },
+      { time: "17:00" },
+      { time: "17:30" },
+      { time: "18:00" },
+      { time: "18:30" },
+      { time: "19:00" },
+      { time: "19:30" },
+      { time: "20:00" },
+      { time: "20:30" },
+      { time: "21:00" },
+      { time: "21:30" },
+      { time: "22:00" },
+      { time: "22:30" },
+      { time: "23:00" },
+      { time: "23:30" },
+    ],
   },
 ];
 
@@ -641,31 +617,28 @@ export const steps = [
     title: "Choose a vehicle",
     description:
       "Unlock unparalleled adventures and memorable journeys with our vast fleet of vehicles tailored to suit every need, taste, and destination.",
-      Icon:FaCar
+    Icon: FaCar,
   },
-  
+
   {
     title: "Pick location & date",
     description:
       "Pick your ideal location and date, and let us take you on a journey filled with convenience, flexibility, and unforgettable experiences.",
-      Icon:FaCalendar,
+    Icon: FaCalendar,
   },
   {
     title: "Book your car",
     description:
       "Secure your reservation with ease, unlocking a world of possibilities and embarking on your next adventure with confidence.",
-      Icon:PiNotepadFill
+    Icon: PiNotepadFill,
   },
   {
     title: "Sit back & relax",
     description:
       "Hassle-free convenience as we take care of every detail, allowing you to unwind and embrace a journey filled comfort.",
-      Icon:PiMaskHappyFill
+    Icon: PiMaskHappyFill,
   },
 ];
-
-
-
 
 export const essentialPlanOptions = [
   "Economy and compact car options.",
@@ -703,24 +676,24 @@ export const serviceCard = [
     title: "First Class Services",
     description:
       "Where luxury meets exceptional care, creating unforgettable moments and exceeding your every expectation.",
-    Icon:FaTrophy,
+    Icon: FaTrophy,
   },
   {
     title: "24/7 Road Assistance ",
     description:
       "Reliable support when you need it most, keeping you on the move with confidence and peace of mind.",
-    Icon:FaRoad,
+    Icon: FaRoad,
   },
   {
     title: "Free Pick-Up & Drop-Off",
     description:
       "Enjoy free pickup and drop-off services, adding an extra layer of ease to your car rental experience.",
-  Icon:BsFillPinMapFill,
+    Icon: BsFillPinMapFill,
   },
   {
     title: "Secured Payment",
     description:
       "Our secured payment services ensure your financial transactions are always safe and protected.",
-    Icon:RiSecurePaymentFill,
+    Icon: RiSecurePaymentFill,
   },
 ];
