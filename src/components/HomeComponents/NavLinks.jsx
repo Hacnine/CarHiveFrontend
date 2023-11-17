@@ -1,6 +1,7 @@
-import React from 'react'
+import "../../views/customcss.css";
+
 import { navLinks2 } from '../../constants'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { IoMdArrowDropdown } from 'react-icons/io'
 import { AppContext, useGlobalContext } from '../../Context';
 
@@ -8,10 +9,7 @@ const NavLinks = () => {
   const {signInBtn, setSignInBtn } = useGlobalContext(AppContext);
 
   function signIn(){
-    // {onOpen? onOpen(): null}
-
     setSignInBtn(true)
-    
   }
 
   function signUp(){
@@ -28,7 +26,9 @@ const NavLinks = () => {
                   className="relative flex justify-between items-center gap-1 rounded group"
                   key={key}
                 >
-                  <Link to={section.link}>{section.title}</Link>
+                  {/* <NavLink className={ 'active:text-primary-green'} to={section.link}>{section.title}</NavLink> */}
+
+                  <NavLink  to={section.link} className=" hover:text-primary-green" >{section.title}</NavLink>
                   <p className=""></p>
                   {section.title !== "Home" && section.title !== "Booking" && section.title !== "News"  && section.title !== "Cars" ? (
                     <>

@@ -1,9 +1,11 @@
 import React from 'react'
 import Navigation from './HomeComponents/Navigation'
+import { Outlet } from 'react-router-dom'
 
 const Header = ({title, height, bg, bgColor }) => {
   
   return (
+    <>
     <div className={`${bg?  `${bg}`: 'bg-hero-img'}   bg-cover bg-center bg-no-repeat w-full `}>
       <div className="wrapper">
       <Navigation />
@@ -15,6 +17,8 @@ const Header = ({title, height, bg, bgColor }) => {
         </h1>
         </div>
       </div>
+      <Outlet/>
+    </>
   )
 }
 

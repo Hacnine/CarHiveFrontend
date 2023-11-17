@@ -5,8 +5,8 @@ import { contactInfo, newsIcons, quickLinks } from "../constants/index_two";
 const Footer = () => {
   return (
     <section>
-      <div className="flex flex-wrap flex-col md:justify-between md:flex-row md:items-center items-start  space-y-12  bg-gray-900 pt-10 pb-5  wrapper ">
-        <div className="md:h-60 w-[75%] md:w-1/4 mx-auto">
+      <div className="flex flex-wrap flex-col md:justify-between md:flex-row md:items-center items-center  space-y-12  bg-gray-900 pt-10 pb-5  wrapper  ">
+        <div className="md:h-60 w-[75%] md:w-1/4 ">
             <img
               src={logo}
               alt="site logo"
@@ -23,7 +23,7 @@ const Footer = () => {
         <div className=" md:h-60  md:w-1/4 gap-2  ">
           <Title title={"Social Network"} textColor={"text-white"} border />
 
-          <div className="flex items-center  space-x-1 ">
+          <div className="flex items-center  space-x-1 hover:cursor-pointer ">
             {newsIcons.slice(0, 5).map((items, index) => (
               <div
                 className={`w-10 h-10 flex items-center justify-center rounded bg-blue-gray-900 hover:bg-blue-gray-800 hover:transition-colors ease-in hover:duration-200`}

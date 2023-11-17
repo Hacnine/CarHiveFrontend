@@ -5,21 +5,18 @@ export default function PrimaryButton ({className,textColor, onOpen, buttonName,
   
   const {signInBtn, setSignInBtn,setQualityDescription, comfort ,setComfort, prestige ,setPrestige} = useGlobalContext(AppContext);
 
-  const signInLink = useNavigate();
+  const navigateLink = useNavigate();
 
   function signIn(){
-    // {onOpen? onOpen(): null}
-
     setSignInBtn(true);
-    signInLink('/signin');
-    // console.log('Allah')
-
-    
-  }
+    navigateLink('/signin'); }
 
   function signUp(){
-
     setSignInBtn(false)
+  }
+
+  function contactUsBtn(){
+    navigateLink('/contact');
   }
 
   function luxuryBtn(){
@@ -52,7 +49,8 @@ export default function PrimaryButton ({className,textColor, onOpen, buttonName,
   ["Sign Up"].includes(buttonName) ? signUp: 
   ["LUXURY"].includes(buttonName) ? luxuryBtn : 
   ["COMFORT"].includes(buttonName) ? comfortBtn:
-  ["PRESTIGE"].includes(buttonName) ? prestigeBtn : null;
+  ["PRESTIGE"].includes(buttonName) ? prestigeBtn : 
+  ["CONTACT US"].includes(buttonName) ? contactUsBtn:null;
 
 
 

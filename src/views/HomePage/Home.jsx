@@ -11,7 +11,7 @@ import {
   Services,
   Testimonials,
   Footer,
-} from "./index";
+} from "../index";
 
 const Home = () => {
   return (

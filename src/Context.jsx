@@ -9,12 +9,13 @@ const AppProvider = ({ children }) => {
     const [isDark, setIsDark] = useState(false);
     const[luxury ,setLuxury] = useState(true);
     const[comfort ,setComfort] = useState(false);
-
     const[prestige ,setPrestige] = useState(false);
+    const [activeLink, setActiveLink] = useState(0);
+    const [title, setTitle] = useState('');
 
   
     return (
-      <AppContext.Provider value={{  signInBtn, setSignInBtn, isDark, setIsDark ,qualityDescription: luxury,setQualityDescription: setLuxury, comfort ,setComfort, prestige ,setPrestige}}>
+      <AppContext.Provider value={{  signInBtn, setSignInBtn, isDark, setIsDark ,qualityDescription: luxury,setQualityDescription: setLuxury, comfort ,setComfort, prestige ,setPrestige,activeLink, setActiveLink,title, setTitle}}>
         {children}
       </AppContext.Provider>
     );

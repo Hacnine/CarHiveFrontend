@@ -53,7 +53,7 @@ const CarCarSlider = () => {
         },
       },
       {
-        breakpoint: 570,
+        breakpoint: 670,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

@@ -458,7 +458,7 @@ export const navLinks2 = [
 
   {
     title: "Pages",
-    icon: SiPowerpages,link:"",
+    icon: SiPowerpages,link:"..",
     links: [
       { name: "About Us", link: "/aboutus" },
       { name: "Contact", link: "/contact" },

@@ -4,7 +4,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { BiSolidSun } from "react-icons/bi";
 import { BsMoonFill, BsMoonStarsFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { TbMenuDeep } from "react-icons/tb";
+import { TbBrandBooking, TbMenuDeep } from "react-icons/tb";
 import { navLinks2 } from "../../constants";
 import PrimaryButton from "../PrimaryButton";
 import { RiLoginCircleFill } from "react-icons/ri";
@@ -16,13 +16,18 @@ import modeDark from "../../assets/modeDark.svg";
 
 import modeLight from "../../assets/modeLight.svg";
 import NavLinks from "./NavLinks";
+import ProfileCard from "../ProfileComponents/ProfileCard";
+import { profile } from "../../constants/index_four";
 
 const Navigation = ({ paddingB, background }) => {
+  const booking = <TbBrandBooking className='text-primary-green w-8 h-8'/>
   const [open, setOpen] = useState(false);
   const { isDark, setIsDark } = useGlobalContext(AppContext);
 
   const openDrawer = () => {
     setOpen(true);
+
+
   };
   const logInIcon = <RiLoginCircleFill className="text-white " />;
 
@@ -69,7 +74,7 @@ const Navigation = ({ paddingB, background }) => {
             </div>
           </div>
 
-          <div className="flex items-center gap-6 justify-end w-48">
+          <div className="flex items-center gap-6 justify-end w-48 md:mr:0 mr-12">
             {isDark ? (
               <BsMoonFill
                 className="w-10 h-10 p-3 transition-colors ease-in duration-700 text-blue-600 hover:text-blue-400 bg-blue-600/30 rounded-full hover:cursor-pointer mr-5 "
@@ -86,9 +91,21 @@ const Navigation = ({ paddingB, background }) => {
               />
             )}
             <PrimaryButton
-              className={"lg:flex hidden   glow-green "}
+              className={"lg:flex hidden glow-green "}
               buttonName={"Sign In"}
             />
+           <div className="hidden  items-center">
+           <PrimaryButton
+              className={" text-red-600  bg-tranparent "} shadow
+              icon={booking} textColor={' text-red-600'}
+            />
+            {profile.slice(0).map((items, index)=>(
+              <div key={index}>
+            <ProfileCard img={items.img} justImg />
+              </div>
+              
+            ))}
+           </div>
           </div>
         </div>
       </div>

@@ -25,9 +25,6 @@ const BookingFormCard = ({ grid }) => {
           ))}
         </div>
       </div>
-
-     
-
     </div>
   );
 };

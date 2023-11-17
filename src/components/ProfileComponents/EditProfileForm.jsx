@@ -6,7 +6,7 @@ import PrimaryButton from "../PrimaryButton";
 
 const EditProfileForm = ({ visible }) => {
   return (
-    <div>
+    <div className="w-full ">
       <div className="grid sm:grid-cols-2 gap-3 text-sm mt-5">
         {visible === "Profile"
           ? signUpForm.map((items, index) => (

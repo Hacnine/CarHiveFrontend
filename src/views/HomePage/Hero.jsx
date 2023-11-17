@@ -13,10 +13,10 @@ const Hero = () => {
         alt="cover-image"
         className=" min-w-full min-h-screen flex-1 object-cover"
       /> */}
-      <div className=" lg:top-36 top-38 flex items-center flex-col">
+      <div className="  flex items-center flex-col">
       <Navigation/>
 
-        <div className=" wrapper  pb-10 ">
+        <div className=" wrapper mt-10  pb-10 ">
           <h1 className="head_text  text-white-green font-serif text-center">
           Looking for a <span className="text-primary-green"> vehicle</span>? You're at the right place. 
           </h1>
