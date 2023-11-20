@@ -26,16 +26,12 @@ const LabelInput = ({ label, placeholder, Icon, tag, timeList }) => {
 
       {tag !== "Location" && visibility ? (
         <div className="max-h-96 overflow-y-auto absolute z-10  right-0 top-0 bg-white border border-gray-400 p-3 tracking-widest w-24  rounded-lg hover:cursor-pointer ">
-          {timeList
-
-            .map((time, index) => (
+          {timeList.map((time, index) => (
               <ul className="  text-left border" key={index}>
                 <li
                   className=" text-slate-blue font-bold font-open text-md  hover:bg-green-600 text-center divide-y-2 divide-gray-800"
                   onClick={() => (
-                    handleOptionClick(time.time), setVisibility(false)
-                  )}
-                >
+                    handleOptionClick(time.time), setVisibility(false))}>
                   {time.time}
                 </li>
               </ul>
@@ -62,8 +58,7 @@ const LabelInput = ({ label, placeholder, Icon, tag, timeList }) => {
           {tag !== 'Location'? <p className=" font-bold text-slate-blue">{displayText}</p>: <p className=" font-bold text-slate-blue"></p>}
           <Icon
             className="text-slate-blue p-2  w-10 h-14  border-slate-blue hover:cursor-pointer"
-            onClick={() => setVisibility(!visibility)}
-          />
+            onClick={() => setVisibility(!visibility)}/>
         </span>
 
       </div>

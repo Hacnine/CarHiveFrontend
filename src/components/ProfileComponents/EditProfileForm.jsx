@@ -23,12 +23,11 @@ const EditProfileForm = ({ visible }) => {
 
         {visible === "Profile" ? (
           <>
-            <DropDownForm
+            {/* <DropDownForm
               label={"Language"}
               menuItemDes={"Select your prefered language"}
               menuItemOne={"English"}
               menuItemTwo={"Bangla"}
-              menuItemThree={"Arabic"}
             />
 
             <DropDownForm
@@ -36,7 +35,7 @@ const EditProfileForm = ({ visible }) => {
               menuItemDes={"Select your prefered time fomat"}
               menuItemOne={"24 Hour"}
               menuItemTwo={"12 Hour"}
-            />
+            /> */}
             <PrimaryButton className={'bg-primary-green mt-5'} buttonName={'Update Profile'} />
           </>
         ) : null}

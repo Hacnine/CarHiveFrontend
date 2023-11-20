@@ -13,21 +13,10 @@ import { AppContext, useGlobalContext } from "../../Context";
 const ProfileContainer = () => {
   const {activeLink, setActiveLink, title, setTitle} = useGlobalContext(AppContext);
 
-
-  const setData = (data) => {
-    setTitle(data);
-  };
-
-  console.log(typeof setData);
-  
-
   return (
     <div>
       <Header title={title} bg={ 'bg-profile'}/>
-      <div className="wrapper my-20 ">
-       
-            
-      </div>
+      
       <Footer/>
     </div>
   )

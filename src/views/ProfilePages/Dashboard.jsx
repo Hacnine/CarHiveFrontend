@@ -24,7 +24,7 @@ const Dashboard = () => {
 
   return (
     // <div>
-    <div className="flex items-start justify-between flex-col md:flex-row gap-8 wrapper">
+    <div className="flex items-start justify-between flex-col md:flex-row gap-8 wrapper mt-24">
       <div className="md:w-[30%] bg-white-green rounded-md px-7 py-7 w-full ">
         <ProfileLinks />
       </div>

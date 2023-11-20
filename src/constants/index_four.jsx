@@ -214,9 +214,9 @@ export const profile = [
 ];
 
 export const profileLinks = [
-  { linkName: "Dashbord", Icon: FaHome, link: "/dashboard" },
-  { linkName: "Profile", Icon: MdAccountCircle, link: "/profile" },
-  { linkName: "Orders", Icon: FaCalendar, link: "/orders" },
-  { linkName: "Favorite Cars", Icon: FaCar, link: "/favorite-cars" },
-  { linkName: "Sign Out", Icon: FaSignOutAlt, link: "/sign-out" },
+  { linkName: "Dashbord", Icon: FaHome, link: "/account/dashboard" },
+  { linkName: "Profile", Icon: MdAccountCircle, link: "/account/profile" },
+  { linkName: "Orders", Icon: FaCalendar, link: "/account/orders" },
+  { linkName: "Favorite Cars", Icon: FaCar, link: "/account/favorite-cars" },
+  { linkName: "Sign Out", Icon: FaSignOutAlt, link: "/account/sign-out" },
 ];

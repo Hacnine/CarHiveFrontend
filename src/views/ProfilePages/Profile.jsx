@@ -25,7 +25,7 @@ useEffect(() => {
 
 
   return (
-    <div className="flex items-start justify-between flex-col md:flex-row gap-8 wrapper">
+    <div className="flex items-start justify-between flex-col md:flex-row gap-8 wrapper mt-24">
       <div className=" bg-white-green rounded-md px-7 py-7 md:w-[30%] w-full ">
         <ProfileLinks />
       </div>
