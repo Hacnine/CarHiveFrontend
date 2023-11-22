@@ -4,38 +4,40 @@ import { MdDeleteOutline } from "react-icons/md";
 import { FiMinus } from "react-icons/fi";
 import { FiPlus } from "react-icons/fi";
 import Scrollbars from "react-custom-scrollbars-2";
+import { useContext } from "react";
+import { CartContext } from "../../views/Booking/booking";
 
-const BookingList = ({ id, title, description, price, img, quantity }) => {
+const BookingList = ({ id, title, description, price, img,quantity }) => {
+const {removeItem, incrementQuantity, decrementQuantity } = useContext(CartContext);
   return (
-    <div>
+    <div className=" "> 
       <div className="flex items-center mb-4">
         <input
           type="checkbox"
           name="checkbox"
           className="text-deep-green rounded focus:ring-0 cursor-pointer border-2 border-primary-green mr-2"
-          id={`${id}`}
-        />
-        <img src={img} alt="Car 1" className="w-20 h-16 object-cover rounded" />
+          id={`${id}`}/>
+        <img src={img} alt="Booking Car" className="w-20 h-16 object-cover rounded" />
         <div className="ml-4">
           <div className="text-lg font-extralight font-open text-slate-blue">
             {title}
           </div>
           <div className="text-gray-600 font-open text-sm">
-            Daily Rental: ${price}
+            Daily Rental: <span className=" text-slate-blue">${price*quantity}</span>
           </div>
         </div>
         <div className="flex items-center justify-center flex-col ml-auto ">
-          <BiHeart className="text-gray-400 w-5 h-5 cursor-pointer" />
-          <MdDeleteOutline className="text-gray-400 w-5 h-5 cursor-pointer" />
+          <BiHeart className="text-orange-900 w-5 h-5 cursor-pointer" />
+          <MdDeleteOutline className="text-orange-900 w-5 h-5 cursor-pointer" onClick={()=>(removeItem(id))}/>
         </div>
         <div className="ml-2  flex items-center justify-center font-serif">
-          <FiPlus className="w-7 h-7 text-deep-green rounded bg-blue-gray-100/40 p-1 hover:cursor-pointer " />
+          <FiPlus className="w-7 h-7 text-deep-green rounded bg-blue-gray-100/40 p-1 hover:cursor-pointer " onClick={()=>(incrementQuantity(id))} />
           <input
             type="text"
             className="w-9 h-9 border border-transparent bg-white-green hover:cursor-pointer hover:border-gray-400 focus:border-gray-300 font-semibold text-sm"
-            value={quantity}
+            placeholder={quantity}
           />
-          <FiMinus className="w-7 h-7 text-deep-green rounded bg-blue-gray-100/40 p-1 hover:cursor-pointer" />
+          <FiMinus className="w-7 h-7 text-deep-green rounded bg-blue-gray-100/40 p-1 hover:cursor-pointer"  onClick={()=>(decrementQuantity(id,quantity))}/>
         </div>
         {/* <button className="ml-auto text-red-500">Remove</button> */}
       </div>
