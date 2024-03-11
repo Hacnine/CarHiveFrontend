@@ -5,6 +5,8 @@ import OrderInfoCard from "../../components/ProfileComponents/OrderInfoCard";
 import OrderContainer from "../../components/ProfileComponents/OrderContainer";
 import ProfileLinks from "../../components/ProfileComponents/ProfileLinks";
 import { AppContext, useGlobalContext } from "../../Context";
+import Header from "../../components/Header";
+import Footer from "../Footer";
 
 const Orders = () => {
   const { activeLink, setActiveLink, title, setTitle } =
@@ -18,7 +20,9 @@ const Orders = () => {
 
 
   return (
-    <div className="flex items-start justify-between flex-col md:flex-row gap-8 wrapper mt-24">
+    <div>
+      <Header title={'Orders'} />
+      <div className="flex items-start justify-between flex-col md:flex-row gap-8 wrapper my-20">
       <div className=" bg-white-green rounded-md px-7 py-7 md:w-[30%] w-full ">
         <ProfileLinks />
       </div>
@@ -37,6 +41,9 @@ const Orders = () => {
       </div>
       </div>
     </div>
+      <Footer/>
+    </div>
+
   );
 };
 

@@ -8,6 +8,8 @@ import ProfileCard from "../../components/ProfileComponents/ProfileCard";
 import { useState } from "react";
 import ProfileLinks from "../../components/ProfileComponents/ProfileLinks";
 import { AppContext, useGlobalContext } from "../../Context";
+import Header from "../../components/Header";
+import Footer from "../Footer";
 
 const Dashboard = () => {
   const { activeLink, setActiveLink, title, setTitle } =
@@ -23,8 +25,9 @@ const Dashboard = () => {
   // };
 
   return (
-    // <div>
-    <div className="flex items-start justify-between flex-col md:flex-row gap-8 wrapper mt-24">
+    <div className="max-w-[1367px] mx-auto">
+      <Header/>
+    <div className="flex items-start justify-between flex-col md:flex-row gap-8 wrapper my-20">
       <div className="md:w-[30%] bg-white-green rounded-md px-7 py-7 w-full ">
         <ProfileLinks />
       </div>
@@ -64,6 +67,9 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </div>
+
   );
 };
 

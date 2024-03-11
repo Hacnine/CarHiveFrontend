@@ -50,7 +50,7 @@ const LabelInput = ({ label, placeholder, Icon, tag, timeList }) => {
         ) : (
           <input
             type="text"
-            className=" placeholder:text-xs  placeholder:font-open w-full h-full bg-transparent border-transparent outline-none"
+            className=" placeholder:text-xs  placeholder:font-open w-full h-full bg-transparent border-transparent border-none focus:ring-0 outline-none"
           />
         )}
 

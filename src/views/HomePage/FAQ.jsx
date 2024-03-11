@@ -46,9 +46,10 @@ const FAQ = () => {
           </h1>
       </div>
       <div className="lg:flex lg:justify-between gap-4">
-        <div className=" lg:w-1/2">
+        <div className=" lg:w-1/2" >
           {Faq.map((items, index) => (
-            <Accordion
+            <div key={index}>
+              <Accordion
               className=""
               open={open === val + index}
               icon={<Icon id={val + index} open={open} />}
@@ -58,12 +59,14 @@ const FAQ = () => {
               </AccordionHeader>
               <AccordionBody className=" text-base  text-gray-800">{items.ans}</AccordionBody>
             </Accordion>
+            </div>
           ))}
         </div>
 
         <div className="lg:w-1/2">
           {Faq_2.map((items, index) => (
-            <Accordion
+            <div key={index}>
+              <Accordion
               className=""
               open={open === val_2 + index}
               icon={<Icon id={val_2 + index} open={open} />}
@@ -73,6 +76,7 @@ const FAQ = () => {
               </AccordionHeader>
               <AccordionBody className="w-[90%] leading-6 ">{items.ans}</AccordionBody>
             </Accordion>
+            </div>
           ))}
         </div>
       </div>

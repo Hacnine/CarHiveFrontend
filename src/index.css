@@ -29,13 +29,6 @@
       @apply ring-1 ring-yellow-300;
   }
   
-  .input-box{
-      @apply block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400  focus:border-[#ff0000]  focus:ring-[#ff0000]
-  }
-
-  .rememberme-selector input:checked{
-      @apply bg-[#ff0000];
-  }
 
 }
 
@@ -52,7 +45,7 @@
 }
 
 .wrapper {
-  @apply max-w-[1368px] lg:px-28 px-16 mx-auto;
+  @apply max-w-[1368px] sm:px-[24px] md:px-[48px] px-[16px] mx-auto;
 }
 
 .head_text {

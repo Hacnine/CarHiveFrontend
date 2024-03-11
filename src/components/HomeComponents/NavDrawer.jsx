@@ -1,31 +1,37 @@
-import { Button, Drawer, Navbar } from "@material-tailwind/react";
 import { navLinks, navLinks2 } from "../../constants";
 import logo from "../../assets/logo.svg";
 import { IoClose } from "react-icons/io5";
 import { IoMdArrowDropdown } from "react-icons/io";
 import PrimaryButton from "../PrimaryButton";
+import { Drawer } from "@mui/material";
 
 const NavDrawer = ({ open, closeDrawer }) => {
   return (
     <div>
       <Drawer
+        anchor={"left"}
         open={open}
         onClose={closeDrawer}
         className="pt-5 pb-10 bg-white-green "
+        sx={{
+          "& .MuiDrawer-paper": {
+            width: 370,
+          },
+        }}
       >
         <div className="flex items-center justify-between px-4 py-3 bg-white-green border-b border-gray-200 pb-6 mb-8 z-50">
           <div className="flex items-center">
             <img src={logo} alt="site logo" height={1} width={100} />
           </div>
           <div className="flex items-center">
-            <Button
+            <button
               color="white"
               size="sm"
               onClick={closeDrawer}
               className=" bg-red-600"
             >
               <IoClose className="text-white" />
-            </Button>
+            </button>
           </div>
         </div>
         {/* Nav Items */}

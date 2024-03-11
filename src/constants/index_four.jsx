@@ -7,6 +7,7 @@ import {
   BsFillCalendar2MinusFill,
   BsFillCalendar2CheckFill,
 } from "react-icons/bs";
+import { TbBrandBooking } from "react-icons/tb";
 
 export const scheduledOrders = [
   {
@@ -215,6 +216,7 @@ export const profile = [
 
 export const profileLinks = [
   { linkName: "Dashbord", Icon: FaHome, link: "/account/dashboard" },
+  { linkName: "Rental", Icon: TbBrandBooking, link: "/account/rental" },
   { linkName: "Profile", Icon: MdAccountCircle, link: "/account/profile" },
   { linkName: "Orders", Icon: FaCalendar, link: "/account/orders" },
   { linkName: "Favorite Cars", Icon: FaCar, link: "/account/favorite-cars" },

@@ -13,10 +13,6 @@ import { AiFillHome, AiTwotoneCar, AiTwotoneHeart } from "react-icons/ai";
 import { RiAccountPinCircleFill, RiSecurePaymentFill } from "react-icons/ri";
 import {
   GiCarDoor,
-  GiHobbitDoor,
-  GiDoorway,
-  GiTreeDoor,
-  GiDoorRingHandle,
   GiAirZigzag,
   GiSteeringWheel,
 } from "react-icons/gi";
@@ -47,8 +43,7 @@ import carBentleyContinentalGT from "../assets/car-17.jpg";
 import car2017BentleyContinentalGT from "../assets/car-6.jpg";
 
 import { MdOutlineAccountBox } from "react-icons/md";
-import { PiBagSimpleBold } from "react-icons/pi";
-import { BsFillMapFill, BsFillPinMapFill } from "react-icons/bs";
+import {  BsFillPinMapFill } from "react-icons/bs";
 
 import { HiLocationMarker } from "react-icons/hi";
 import { carOne, carThree, carTwo } from "../assets";
@@ -450,6 +445,7 @@ export const navLinks2 = [
     icon: RiAccountPinCircleFill,link:"/account/dashboard",
     links: [
       { name: "Dashboard", link: "/account/dashboard" },
+      { name:"Rental", link:"/account/rental"},
       { name: "Profile", link: "/account/Profile" },
       { name: "Orders", link: "/account/orders" },
       { name: "Favorites", link: "/account/FavoriteCars" },

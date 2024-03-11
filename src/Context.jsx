@@ -12,10 +12,12 @@ const AppProvider = ({ children }) => {
     const[prestige ,setPrestige] = useState(false);
     const [activeLink, setActiveLink] = useState(0);
     const [title, setTitle] = useState('');
+    const [totalItem, setTotalItem] = useState(0);
+    const rentalLink = '/CarHive/account/rental';
 
   
     return (
-      <AppContext.Provider value={{  signInBtn, setSignInBtn, isDark, setIsDark ,qualityDescription: luxury,setQualityDescription: setLuxury, comfort ,setComfort, prestige ,setPrestige,activeLink, setActiveLink,title, setTitle}}>
+      <AppContext.Provider value={{  signInBtn, setSignInBtn, isDark, setIsDark ,qualityDescription: luxury,setQualityDescription: setLuxury, comfort ,setComfort, prestige ,setPrestige,activeLink, setActiveLink,title, setTitle, totalItem, setTotalItem,rentalLink}}>
         {children}
       </AppContext.Provider>
     );

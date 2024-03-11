@@ -16,6 +16,9 @@ const ProfileContainer = () => {
   return (
     <div>
       <Header title={title} bg={ 'bg-profile'}/>
+      <div>
+        
+      </div>
       
       <Footer/>
     </div>

@@ -1,6 +1,6 @@
 import CarCard from "./HomeComponents/CarCard";
 import LabelInput from "./HomeComponents/LabelInput";
-import Navigation from "./HomeComponents/Navigation";
+import Navigation from "./HomeComponents/Navbar";
 import PricingCard from "./HomeComponents/PricingCard";
 import PrimaryButton from "./PrimaryButton";
 import ServiceCard from "./HomeComponents/ServiceCard";

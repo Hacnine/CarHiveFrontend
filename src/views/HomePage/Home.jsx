@@ -15,7 +15,7 @@ import {
 
 const Home = () => {
   return (
-    <main className="">
+    <main className="max-w-[1367px] mx-auto">
     
     <section className=" ">
        <Hero/>
@@ -53,12 +53,6 @@ const Home = () => {
      <section className=" lg:mt-24 mt-20 wrapper">
        <FAQ />
      </section>
-
-    
-
-     <section className=" lg:mt-24 mt-20 ">
-       <Footer />
-     </section>  
    </main>
   )
 }

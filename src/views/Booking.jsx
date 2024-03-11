@@ -9,11 +9,11 @@ import RentingProcess from "./HomePage/RentingProcess";
 
 const Booking = () => {
   return (
-    <div className="  ">
+    <section className=" max-w-[1367px] mx-auto">
       <Header title={"Booking"} />
       {/* <Hero /> */}
 
-      <div className=" -translate-y-10 mx-auto flex items-center justify-center">
+      <div className=" -translate-y-10 mx-auto flex items-center justify-center wrapper">
         <BookingCard />
       </div>
       <RentingProcess />
@@ -40,11 +40,7 @@ const Booking = () => {
         
       </div>
       </div>
-
-      <div className="pt-20">
-      <Footer/>
-      </div>
-    </div>
+    </section>
   );
 };
 

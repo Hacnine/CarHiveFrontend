@@ -1,7 +1,6 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FcPrevious, FcNext } from "react-icons/fc";
 import { MdOutlineNavigateNext, MdNavigateBefore } from "react-icons/md";
 import { carNames } from "../../constants";
 import CarCard from "./CarCard";

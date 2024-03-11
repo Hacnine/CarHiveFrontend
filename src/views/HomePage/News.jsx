@@ -18,7 +18,7 @@ const News = () => {
 
         <div className="lg:flex lg:justify-between lg:items-center lg:gap-6">
           {news.slice(0, 3).map((items, index) => (
-            <div className="mx-auto max-w-[400px]">
+            <div className="mx-auto max-w-[400px]" key={index}>
               <img
                 src={items.img}
                 alt="Travel Image"

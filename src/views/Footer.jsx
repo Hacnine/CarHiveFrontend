@@ -4,9 +4,9 @@ import { contactInfo, newsIcons, quickLinks } from "../constants/index_two";
 
 const Footer = () => {
   return (
-    <section>
+    <section className="lg:mt-24 mt-20">
       <div className="flex flex-wrap flex-col md:justify-between md:flex-row md:items-center items-center  space-y-12  bg-gray-900 pt-10 pb-5  wrapper  ">
-        <div className="md:h-60 w-[75%] md:w-1/4 ">
+        <div className="md:h-60 w-[75%] md:w-1/4  w-full">
             <img
               src={logo}
               alt="site logo"
@@ -20,7 +20,7 @@ const Footer = () => {
           />
         </div>
 
-        <div className=" md:h-60  md:w-1/4 gap-2  ">
+        <div className=" md:h-60  md:w-1/4 gap-2  w-full ">
           <Title title={"Social Network"} textColor={"text-white"} border />
 
           <div className="flex items-center  space-x-1 hover:cursor-pointer ">
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className=" md:w-1/4 md:h-60  ">
+        <div className=" md:w-1/4 md:h-60  w-full ">
           <Title
             title={"Contact Info"}
             textColor={"text-white-green"}
@@ -44,7 +44,7 @@ const Footer = () => {
           />
         </div>
 
-        <div className="md:h-60">
+        <div className="md:h-60  md:w-fit w-full">
           <Title
             title={"Quick Links"}
             textColor={"text-white-green"}

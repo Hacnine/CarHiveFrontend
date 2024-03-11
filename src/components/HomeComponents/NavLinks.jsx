@@ -52,7 +52,7 @@ const NavLinks = () => {
                               {item.title === 'Sign Up'? 
                               
                               <Link to={item.link} onClick={signUp}>{item.name}</Link>
-                            : item.name === 'Dashboard' || item.name === 'Profile' || item.name === 'Orders' || item.name === 'Favorites'?  
+                            : item.name === 'Dashboard' || item.name === 'Rental' || item.name === 'Profile' || item.name === 'Orders' || item.name === 'Favorites'?  
                             <Link to={item.link} onClick={()=>(setActiveLink(index))}>{item.name}</Link>:
                             <Link to={item.link}>{item.name}</Link>
                               

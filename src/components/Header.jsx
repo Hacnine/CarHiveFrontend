@@ -1,12 +1,12 @@
 import React from 'react'
-import Navigation from './HomeComponents/Navigation'
+import Navigation from './HomeComponents/Navbar'
 import { Outlet } from 'react-router-dom'
 
 const Header = ({title, height, bg, bgColor }) => {
   
   return (
     <>
-    <div className={`${bg?  `${bg}`: 'bg-hero-img'}   bg-cover bg-center bg-no-repeat w-full `}>
+    <div className={`${bg?  `${bg}`: 'bg-hero-img'} max-w-[1367px] mx-auto  bg-cover bg-center bg-no-repeat w-full `}>
       <div className="wrapper">
       <Navigation />
       </div>
@@ -17,7 +17,7 @@ const Header = ({title, height, bg, bgColor }) => {
         </h1>
         </div>
       </div>
-      <Outlet/>
+      {/* <Outlet/> */}
     </>
   )
 }

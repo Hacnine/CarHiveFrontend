@@ -22,7 +22,7 @@ const NewsPage = () => {
 
 
   return (
-    <div>
+    <div className="max-w-[1367px] mx-auto">
       <Header title={"Our services are now all over the country."}/>
       <div className="mx-auto wrapper sm:flex sm:flex-row flex-col sm:gap-10">
         <div className="sm:w-[65%] flex flex-col flex-1  my-16 space-x-6">

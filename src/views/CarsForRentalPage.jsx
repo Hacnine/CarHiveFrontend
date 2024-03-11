@@ -34,10 +34,10 @@ const CarsForRentalPage = () => {
   };
 
   return (
-    <div className=" ">
+    <div className="max-w-[1367px] mx-auto ">
       <Header title={"Cars"} bg={"bg-singlecar"} />
 
-      <div className="flex items-start justify-center md:flex-row flex-col gap-5  border-red-300 border border-gray-400/60 wrapper md:space-y-0 space-y-10">
+      <div className="flex items-start justify-center md:flex-row flex-col gap-5   wrapper md:space-y-0 space-y-10 mb-10 ">
         <div className=" pt-2 space-y-9 md:w-[261px] w-full">
           <div className=" rounded-md  border boder-gray-500 shadow px-4 py-6 ">
             <CheckBoxInput filledName={vehicleType} title={"Vahicle Type"} />
@@ -53,12 +53,12 @@ const CarsForRentalPage = () => {
             <CheckBoxInput filledName={carBodyType} title={"Car Body Type"} />
           </div>
 
-          <div className="rounded-md border border-gray-400/60  shadow px-4 py-6 ">
+          <div className="rounded-md border border-gray-400/60  shadow px-4 py-6">
             <CheckBoxInput filledName={carSeats} title={"Car Seats"} />
           </div>
 
-          <div className="md:w-[261px] w-full py-6 px-4 border border-gray-400/60  shadow space-y-1 ">
-            <h4 className="text-slate-blue font-open text-lg line">
+          <div className="md:w-[261px] w-full py-6 px-4 border border-gray-400/60  shadow space-y-1 rounded-md">
+            <h4 className="text-slate-blue font-open text-lg line ">
               Price ($)
             </h4>
             <h5
@@ -77,7 +77,7 @@ const CarsForRentalPage = () => {
                   min={0}
                   max={2000}
                   color="customSliderTrack"
-                  valueLabelFormat={(value) => `${value}%`}
+                  valueLabelFormat={(value) => `${value}`}
                 />
               </div>
             </ThemeProvider>
