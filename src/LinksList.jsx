@@ -19,7 +19,7 @@ import { AppContext, useGlobalContext } from "./Context";
 const LinksList = () => {
   const { rentalLink } = useGlobalContext(AppContext);
   return (
-    <>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -41,7 +41,7 @@ const LinksList = () => {
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 };
 
