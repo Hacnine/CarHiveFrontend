@@ -1,4 +1,3 @@
-import filled from "@material-tailwind/react/theme/components/timeline/timelineIconColors/filled";
 import React from "react";
 
 const CheckBoxInput = ({ filledName, title }) => {
