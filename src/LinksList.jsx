@@ -10,7 +10,6 @@ import Profile from "./views/ProfilePages/Profile";
 import Home from "./views/HomePage/Home";
 import Booking from "./views/Booking";
 import AboutUs from "./views/AboutUs";
-import Navbar from "./components/HomeComponents/Navbar";
 import Footer from "./views/Footer";
 import LoginRegisterContainer from "./views/SignInUp/LoginRegisterContainer";
 import ErrorPage from "./views/ErrorPage";
