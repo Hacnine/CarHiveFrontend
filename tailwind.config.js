@@ -58,10 +58,7 @@ export default{
         lg: "1100px",
         // xl: "1100px",
         "wide": "1440px",
-
-
       },
-      
     },
   },
   variants:{

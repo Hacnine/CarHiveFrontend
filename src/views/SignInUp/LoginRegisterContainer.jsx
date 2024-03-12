@@ -29,7 +29,6 @@ const LoginRegisterContainer = () => {
       
       
 
-      <Footer />
     </div>
   );
 };

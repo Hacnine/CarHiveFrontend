@@ -98,7 +98,6 @@ const NewsPage = () => {
           {/* Recent Posts End */}
         </div>
       </div>
-      <Footer/>
     </div>
   );
 };

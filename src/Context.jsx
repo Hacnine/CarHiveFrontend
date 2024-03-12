@@ -13,7 +13,7 @@ const AppProvider = ({ children }) => {
     const [activeLink, setActiveLink] = useState(0);
     const [title, setTitle] = useState('');
     const [totalItem, setTotalItem] = useState(0);
-    const rentalLink = '/CarHive/account/rental';
+    const rentalLink = '/account/rental';
 
   
     return (

@@ -1,7 +1,6 @@
 import { useState } from "react";
-
 import { PricingCard } from "../../components";
-import { Switch } from "@material-tailwind/react";
+import { Switch } from "@mui/material";
 
 const Pricing = () => {
   const [switchVal, setSwitchVal] = useState(false);
@@ -30,13 +29,24 @@ const Pricing = () => {
           onChange={() => setSwitchVal((prev) => !prev)}
           id="custom-switch-component"
           // ripple={false}
-          className="h-full w-full checked:bg-primary-green"
+          className="h-full w-full checked:bg-primary-green/30"
           containerProps={{
             className: "w-11 h-6",
           }}
           circleProps={{
             className: "before:hidden left-0.5 border-none",
           }}
+          sx={{
+            '& .MuiSwitch-switchBase.Mui-checked': {
+              color: "#179510",
+              '&:hover': {
+                backgroundColor: "bg-primary-green/30",
+              },
+            },
+            '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+              backgroundColor: "#179510",
+            },}}
+         
         />
 
         <p

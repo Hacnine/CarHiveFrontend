@@ -12,7 +12,7 @@ const NavDrawer = ({ open, closeDrawer }) => {
         anchor={"left"}
         open={open}
         onClose={closeDrawer}
-        className="pt-5 pb-10 bg-white-green "
+        className="pt-5 pb-10  "
         sx={{
           "& .MuiDrawer-paper": {
             width: 370,
