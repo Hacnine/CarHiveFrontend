@@ -54,7 +54,7 @@ const Navigation = ({ paddingB, background }) => {
           id="navbar"
           className={` ${paddingB} w-full  z-30 ${color} ${background}  max-w-[1367px] mx-auto border-black`}
         >
-          <div className="w-full  ">
+          <div className="w-full">
             <div className=" flex  items-center  justify-between gap-6">
               <Link to="/">
                 <img
