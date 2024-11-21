@@ -20,7 +20,6 @@ const ProfileContainer = () => {
         
       </div>
       
-      <Footer/>
     </div>
   )
 }

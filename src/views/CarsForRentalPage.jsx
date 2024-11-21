@@ -95,7 +95,6 @@ const CarsForRentalPage = () => {
         </div>
       </div>
 
-      <Footer/>
     </div>
   );
 };

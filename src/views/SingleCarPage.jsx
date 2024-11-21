@@ -88,7 +88,6 @@ const SingleCarPage = () => {
         </div>
       </div>
       <div className="pt-52">
-      <Footer/>
 
       </div>
 

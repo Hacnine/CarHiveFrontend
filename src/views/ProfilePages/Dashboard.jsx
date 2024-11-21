@@ -9,7 +9,6 @@ import { useState } from "react";
 import ProfileLinks from "../../components/ProfileComponents/ProfileLinks";
 import { AppContext, useGlobalContext } from "../../Context";
 import Header from "../../components/Header";
-import Footer from "../Footer";
 
 const Dashboard = () => {
   const { activeLink, setActiveLink, title, setTitle } =
@@ -67,7 +66,6 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
-    <Footer/>
     </div>
 
   );

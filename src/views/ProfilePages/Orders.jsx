@@ -41,7 +41,6 @@ const Orders = () => {
       </div>
       </div>
     </div>
-      <Footer/>
     </div>
 
   );
