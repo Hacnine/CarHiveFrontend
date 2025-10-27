@@ -1,99 +1,53 @@
-import { BsFacebook } from "react-icons/bs";
-import { AiFillGoogleCircle } from "react-icons/ai";
-import { newsForm, signUpForm } from "../../constants/index_two";
-import CommentForm from "../../components/News/CommentForm";
-import { PrimaryButton } from "../../components";
+import React, { useState } from 'react';
+import { BsFacebook } from 'react-icons/bs';
+import { AiFillGoogleCircle } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
+import { useRegisterMutation } from '../../app/services/bookingsApi.js';
+import PrimaryButton from '../../components/PrimaryButton';
 
 const SignUp = () => {
-  const googleLogo = (
-    <AiFillGoogleCircle className="text-white-green w-6 h-6" />
-  );
+  const googleLogo = <AiFillGoogleCircle className="text-white-green w-6 h-6" />;
   const facebookLogo = <BsFacebook className="text-white-green w-6 h-6" />;
 
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [register, { isLoading }] = useRegisterMutation();
+  const navigate = useNavigate();
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    try {
+  const res = await register({ name, email, password }).unwrap();
+  const token = res?.data?.token ?? res?.token;
+  if (token) localStorage.setItem('token', token);
+      navigate('/account/dashboard');
+    } catch (err) {
+      console.error(err);
+      alert(err?.data?.message || 'Registration failed');
+    }
+  }
+
   return (
-    <div className="w-[380px]  rounded-md shadow-md absolute left-0 right-0  top-20 bottom-0  h-[500px] px-12  pt-12 mx-auto bg-white-green">
-        <div className="flex justify-between items-center mb-3">
+    <div className="w-[380px] rounded-md shadow-md absolute left-0 right-0 top-20 bottom-0 h-[600px] px-8 pt-8 mx-auto bg-white-green">
+      <h2 className="text-xl font-semibold mb-4">Sign up</h2>
+      <form onSubmit={handleSubmit} className="space-y-3">
+        <input className="w-full p-2 border rounded" placeholder="Full name" value={name} onChange={e => setName(e.target.value)} />
+        <input className="w-full p-2 border rounded" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+        <input className="w-full p-2 border rounded" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} type="password" />
+        <PrimaryButton buttonName={isLoading ? 'Creating...' : 'Sign Up'} className={"bg-primary-green w-full mt-2 font-extrabold"} type="submit" />
+      </form>
 
-        <PrimaryButton
-          buttonName={"Sign In"}
-          className={"bg-primary-green w-full font-extrabold"}
-          shadow
-          scale
-        />
-        
-        <PrimaryButton
-          buttonName={"Sign Up"}
-          className={"ring-2 ring-inset   ring-blue-500 w-full font-extrabold"}
-          textColor={'text-blue-500 '}
-          shadow
-          scale
-        />
-   
-       
-
-
-        </div>
-
-        <div className=" flex items-center justify-center gap-2">
-          {signUpForm.slice(0, 2).map((items, index) => (
-            <div key={index} className="w-1/2">
-              <CommentForm type={items.type} label={items.label} />
-            </div>
-          ))}
-
-          
-        </div>
-        <div>
-        {signUpForm.slice(2, 4).map((items, index) => (
-            <div key={index} className="m">
-              <CommentForm type={items.type} label={items.label} />
-            </div>
-          ))}
-        </div>
-
-        <div className=" flex items-center justify-center gap-2 mb-4">
-          {signUpForm.slice(4, 6).map((items, index) => (
-            <div key={index} className="w-1/2">
-              <CommentForm type={items.type} label={items.label} />
-            </div>
-          ))}
-
-          
-        </div>
-
-        <PrimaryButton
-          buttonName={"Sign Up"}
-          className={"bg-primary-green w-full  font-extrabold"}
-          shadow
-          scale
-        />
-
-        <div className="mt-3 flex items-center justify-center relative  mb-3">
-          <div className="text-slate-blue font-open text center bg-white-green  px-3  text-[11px] font-bold  z-10">
-            or sign up with
-          </div>
-          <div className="absolute left-0  w-full bg-gray-400 p-[.5px]"></div>
-        </div>
-
-        <div className="flex items-center justify-center gap-5">
-          <PrimaryButton
-            buttonName={"Google"}
-            className={"bg-red-400 w-full px-7"}
-            icon={googleLogo}
-            shadow
-            scale
-          />
-
-          <PrimaryButton
-            buttonName={"Facebook"}
-            className={"bg-blue-600 w-full"}
-            icon={facebookLogo}
-            shadow
-            scale
-          />
-        </div>
-     
+      <div className="mt-6 flex items-center justify-center relative pb-7">
+        <div className="text-slate-blue font-open text center bg-white-green px-3 text-[11px] font-bold z-10">or sign up with</div>
+        <div className="absolute left-0 w-full bg-gray-400 p-[.5px]"></div>
       </div>
+
+      <div className="flex items-center justify-center gap-5">
+        <PrimaryButton buttonName={"Google"} className={"bg-red-400 w-full px-7"} icon={googleLogo} />
+        <PrimaryButton buttonName={"Facebook"} className={"bg-blue-600 w-full"} icon={facebookLogo} />
+      </div>
+    </div>
   );
 };
 

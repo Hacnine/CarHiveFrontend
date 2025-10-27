@@ -16,7 +16,7 @@ const ServiceCard = ({
       </span>
       <div className="sm:w-2/3 w-full ">
         <h4 className={`${titleColor} font-semibold font-open`}>{title}</h4>
-        <p className="text-gray-500 text-[14px]">{description}</p>
+        <p className="text-gray-200 text-[14px]">{description}</p>
       </div>
     </div>
   );

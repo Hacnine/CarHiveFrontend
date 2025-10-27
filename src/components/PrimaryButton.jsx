@@ -1,7 +1,7 @@
 import { AppContext,useGlobalContext } from "../Context";
 import { useNavigate  } from 'react-router-dom';
 
-export default function PrimaryButton ({className,textColor, buttonName, icon, padding,shadow,  scale, url, rounded,type}) {
+export default function PrimaryButton ({className,textColor, buttonName, icon, padding,shadow,  scale, url, rounded,type, onClick}) {
   
   const {setSignInBtn,setQualityDescription ,setComfort ,setPrestige} = useGlobalContext(AppContext);
 
@@ -44,7 +44,7 @@ export default function PrimaryButton ({className,textColor, buttonName, icon, p
 
   }
 
-  const clickHandler = 
+  const defaultClickHandler = 
   ["Sign In"].includes(buttonName) ? signIn : 
   ["Sign Up"].includes(buttonName) ? signUp: 
   ["LUXURY"].includes(buttonName) ? luxuryBtn : 
@@ -52,15 +52,17 @@ export default function PrimaryButton ({className,textColor, buttonName, icon, p
   ["PRESTIGE"].includes(buttonName) ? prestigeBtn : 
   ["CONTACT US"].includes(buttonName) ? contactUsBtn:null;
 
+  const clickHandler = onClick || defaultClickHandler;
+
 
 
   return (
     <div>
       <a href={url}>
-      <button className={` ${rounded? `${rounded}` : 'rounded font-semibold'} capitalize  items-center justify-center     ${shadow? `${shadow}`: 'shadow-md shadow-green-800'} tracking-[1px] font-serif ${className} 
-      ${textColor ? `${textColor}` : 'text-white'} ${padding ? `${padding}`: `px-4 py-2 text-sm`} ${scale? "":"hover:scale-105 transition-all duration-500 ease-in "}`}
+  <button className={` ${rounded? `${rounded}` : 'rounded font-semibold'} capitalize  items-center justify-center     ${shadow? `${shadow}`: 'shadow-md shadow-green-800'} tracking-[1px] font-serif ${className} 
+  ${textColor ? `${textColor}` : 'text-white'} ${padding ? `${padding}`: `px-4 py-2 text-sm`} ${scale? "":"hover:scale-105 transition-all duration-500 ease-in "}`}
       
-      onClick={clickHandler} type={type} ><div className="flex items-center justify-center"> <span className="pr-2">{icon}</span> {buttonName}</div></button>
+  onClick={clickHandler} type={type} ><div className="flex items-center justify-center"> <span className="pr-2">{icon}</span> {buttonName}</div></button>
       </a>
     </div>
   )

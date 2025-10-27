@@ -13,7 +13,6 @@ import NavDrawer from "./NavDrawer";
 import { AppContext, useGlobalContext } from "../../Context";
 
 import modeDark from "../../assets/modeDark.svg";
-
 import modeLight from "../../assets/modeLight.svg";
 import NavLinks from "./NavLinks";
 import ProfileCard from "../ProfileComponents/ProfileCard";
@@ -29,7 +28,7 @@ const Navigation = ({ paddingB, background }) => {
   const openDrawer = () => {
     setOpen(true);
   };
-  const logInIcon = <RiLoginCircleFill className="text-white " />;
+  const logInIcon = <RiLoginCircleFill className="text-white" />;
 
   const closeDrawer = () => {
     setOpen(false);

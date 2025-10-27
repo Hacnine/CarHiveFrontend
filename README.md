@@ -32,3 +32,24 @@ The following frameworks and libraries were used in this project:
 * **React Datepicker**
 * **Headless UI**
 * **Tailwind CSS**
+
+## TypeScript support (added)
+
+This frontend has been made TypeScript-ready. Files using TypeScript/TSX were added under `src/app/services` and `src/features/vehicles` (RTK Query service and simple vehicle list/detail UI).
+
+To finish setup locally run (from the `CarHiveFrontend` folder):
+
+```powershell
+npm install
+```
+
+Then start the dev server:
+
+```powershell
+npm run dev
+```
+
+Notes:
+- A `tsconfig.json` is included. The project uses `allowJs: true` so JS and TS can coexist during incremental migration.
+- If you want full TypeScript conversion, rename `.jsx` files to `.tsx` and add types gradually.
+

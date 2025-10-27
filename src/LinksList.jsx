@@ -10,12 +10,23 @@ import Orders from "./views/ProfilePages/Orders";
 import Profile from "./views/ProfilePages/Profile";
 import Home from "./views/HomePage/Home";
 import Booking from "./views/Booking";
+import BookingHoldForm from "./features/bookings/BookingHoldForm";
+import MyBookings from "./features/bookings/MyBookings";
 import AboutUs from "./views/AboutUs";
 import Footer from "./views/Footer";
 import LoginRegisterContainer from "./views/SignInUp/LoginRegisterContainer";
 import ErrorPage from "./views/ErrorPage";
 import Rental from "./views/RentalPage/Rental";
 import { AppContext, useGlobalContext } from "./Context";
+import VehicleList from "./features/vehicles/VehicleList";
+import VehicleDetail from "./features/vehicles/VehicleDetail";
+import LocationList from "./features/locations/LocationList";
+import LocationDetail from "./features/locations/LocationDetail";
+import VehicleReviews from "./features/reviews/VehicleReviews";
+import MyReviews from "./features/reviews/MyReviews";
+import AdminReviews from "./features/reviews/AdminReviews";
+import UsersList from "./features/users/UsersList";
+import UserDetail from "./features/users/UserDetail";
 
 const LinksList = () => {
   const { rentalLink } = useGlobalContext(AppContext);
@@ -25,7 +36,18 @@ const LinksList = () => {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/booking" element={<Booking />} />
-        <Route path="/cars" element={<CarsForRentalPage />} />
+  <Route path="/booking/hold" element={<BookingHoldForm />} />
+  <Route path="/account/bookings" element={<MyBookings />} />
+  <Route path="/cars" element={<CarsForRentalPage />} />
+  <Route path="/vehicles" element={<VehicleList />} />
+  <Route path="/vehicles/:id" element={<VehicleDetail />} />
+  <Route path="/locations" element={<LocationList />} />
+  <Route path="/locations/:id" element={<LocationDetail />} />
+  <Route path="/reviews/vehicle/:vehicleId" element={<VehicleReviews />} />
+  <Route path="/reviews/user" element={<MyReviews />} />
+  <Route path="/admin/reviews" element={<AdminReviews />} />
+  <Route path="/admin/users" element={<UsersList />} />
+  <Route path="/admin/users/:id" element={<UserDetail />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/singecar" element={<SingleCarPage />} />
         <Route path="/contact" element={<ContactPage />} />

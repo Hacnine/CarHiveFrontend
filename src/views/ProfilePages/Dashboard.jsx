@@ -19,6 +19,32 @@ const Dashboard = () => {
     setTitle(dataToSend);
   }, []);
 
+  const [dashboard, setDashboard] = useState(null);
+
+  useEffect(() => {
+    // Fetch dashboard summary and recent orders
+    const fetchDashboard = async () => {
+      try {
+  const base = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_URL) ? import.meta.env.VITE_API_URL : '';
+  const res = await fetch(`${base}/api/bookings/dashboard`, {
+          credentials: 'include',
+          headers: {
+            'Content-Type': 'application/json'
+            // Add Authorization header here if your app uses token auth, e.g.
+            // 'Authorization': `Bearer ${localStorage.getItem('token')}`
+          }
+        });
+        if (!res.ok) throw new Error('Failed to fetch dashboard');
+        const json = await res.json();
+        if (json && json.success) setDashboard(json.data);
+      } catch (err) {
+        console.warn('Could not load dashboard data', err);
+      }
+    };
+
+    fetchDashboard();
+  }, []);
+
   // const setData = (data) => {
   //   setTitle(data);
   // };
@@ -50,14 +76,26 @@ const Dashboard = () => {
 
         <div className="sm:space-y-5 gap-10  flex flex-col items-center justify-center ">
           <div className="grid sm:grid-cols-4 sm:mt-0 mt-14 grid-cols-2 iten w-full ">
-            {summary.map((items, index) => (
-              <div className="px-2 " key={index}>
-                <SummaryCard {...items} />
-              </div>
-            ))}
+            {(() => {
+              // Build displayed summary using fetched dashboard data if available
+              const displayed = dashboard
+                ? [
+                    { ...summary[0], number: String(dashboard.upcomingOrders || 0) },
+                    { ...summary[1], number: String(dashboard.coupons || 0) },
+                    { ...summary[2], number: String(dashboard.totalOrders || 0) },
+                    { ...summary[3], number: String(dashboard.cancelledOrders || 0) }
+                  ]
+                : summary;
+
+              return displayed.map((items, index) => (
+                <div className="px-2 " key={index}>
+                  <SummaryCard {...items} />
+                </div>
+              ));
+            })()}
           </div>
           <div className="w-full ml-4">
-            <RecentOrder />
+            <RecentOrder orders={dashboard ? dashboard.recentOrders : null} />
           </div>
 
           <div className="w-full ml-4">
