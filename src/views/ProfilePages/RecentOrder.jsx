@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import OrderInfoCard from "../../components/ProfileComponents/OrderInfoCard";
+import BookingWizard from "../BookingWizard";
 
 const formatDate = (iso) => {
   if (!iso) return "";
@@ -12,6 +13,7 @@ const formatDate = (iso) => {
 };
 
 const RecentOrder = ({ orders }) => {
+  const [showBookingDemo, setShowBookingDemo] = useState(false);
   // orders === null -> loading
   // orders === [] -> no recent orders
   // orders is array -> render
@@ -25,7 +27,10 @@ const RecentOrder = ({ orders }) => {
       {orders === null ? (
         <p className="mt-4 text-gray-600">Loading recent orders...</p>
       ) : Array.isArray(orders) && orders.length === 0 ? (
-        <p className="mt-4 text-gray-600">You have no recent orders.</p>
+        <div className="mt-4">
+          <p className="text-gray-600 mb-3">You have no recent orders.</p>
+          <button className="px-4 py-2 bg-blue-600 text-white rounded mr-2" onClick={() => setShowBookingDemo(s => !s)}>{showBookingDemo ? 'Hide' : 'Try booking demo'}</button>
+        </div>
       ) : (
         orders.map((raw, index) => {
           // Normalize backend shape to the props expected by OrderInfoCard
@@ -45,6 +50,12 @@ const RecentOrder = ({ orders }) => {
             </div>
           );
         })
+      )}
+
+      {showBookingDemo && (
+        <div className="mt-6">
+          <BookingWizard />
+        </div>
       )}
     </div>
   );

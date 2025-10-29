@@ -428,6 +428,7 @@ export const data = [
 ];
 
 export const navLinks2 = [
+  { title: "Search", icon: HiLocationMarker, link: "/search", links: [{ name: "", link: "" }] },
   { title: "Home", icon: AiFillHome,link:"/home", links: [{ name: "", link: "" }] },
   { title: "Booking", icon: TbBrandBooking,link:"/booking", links: [{ name: "", link: "" }] },
 

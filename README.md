@@ -1,55 +1,43 @@
 
 
-### ⭐ Project Name: **Carhive**
+### ⭐ Project Name: Carhive
 
-### 🚀 Live Preview: 
+### 🚀 Live Preview
 https://carhive.netlify.app
 
+### Short project description
+Carhive is a responsive, design-focused frontend for a car rental marketplace. It demonstrates a pixel-focused UI built with React, Vite and Tailwind CSS and includes pages for browsing vehicles, viewing details, and managing a rental list.
 
-### 📝 Project Description:
-**Carhive** is a fully responsive frontend project focused on car rental, emphasizing a pixel-perfect design. This site is crafted to adapt to any device, ensuring a seamless experience across all screen sizes. Users can view a list of cars and see detailed descriptions of car features, along with rental prices.
+This repository contains the frontend only — UI components, styles, and client-side features. Backend API integration and developer documentation are kept separate from this high-level project README.
 
-Users can also view comprehensive information about their rental list and have the ability to add or remove cars from it as needed. For a better understanding of this project, please visit the live preview link.
+### Key highlights
+- Clean, componentized React UI with Tailwind utilities
+- Responsive layouts and accessible components
+- Integration-ready patterns (RTK Query examples are present in the codebase)
+- TypeScript-ready areas for API services
+
+### Features
+- Sticky header
+- Sidebar navigation
+- Responsive car listing and detail views
+- Context-based global state for cart/rental list
+- Reusable UI components (buttons, cards, headers)
+
+### Tech stack
+- React (Vite)
+- Tailwind CSS
+- Material-UI (MUI) for some components
+- React Router DOM
+- RTK Query (example services)
+- React Datepicker, React Icons
+
+### TypeScript support
+Parts of the app (notably API services under `src/app/services` and some features) are prepared for TypeScript usage. The codebase remains primarily JavaScript, but can be migrated incrementally.
+
+### Where to find developer docs
+- Detailed integration instructions and API examples have been moved to the repository docs. If you need those docs added here again, tell me and I can either:
+  - restore a compact developer section in this README, or
+  - create a separate `docs/` folder (recommended) and add `docs/API.md` with full API integration details.
 
 
-### 🌟 Features
-• **Sticky Header**
-* **Sidebar**
-* **Fully Responsible**
-* **Add and Remove Option In Rentallist** 
-* **Context api**
-
-
-### 🛠️ Technologies and Frameworks
-The following frameworks and libraries were used in this project:
-
-* **React**
-* **vite**
-* **React Router DOM**
-* **Material-UI (MUI)**
-* **React Slick**
-* **React Icons**
-* **React Datepicker**
-* **Headless UI**
-* **Tailwind CSS**
-
-## TypeScript support (added)
-
-This frontend has been made TypeScript-ready. Files using TypeScript/TSX were added under `src/app/services` and `src/features/vehicles` (RTK Query service and simple vehicle list/detail UI).
-
-To finish setup locally run (from the `CarHiveFrontend` folder):
-
-```powershell
-npm install
-```
-
-Then start the dev server:
-
-```powershell
-npm run dev
-```
-
-Notes:
-- A `tsconfig.json` is included. The project uses `allowJs: true` so JS and TS can coexist during incremental migration.
-- If you want full TypeScript conversion, rename `.jsx` files to `.tsx` and add types gradually.
 

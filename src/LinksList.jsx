@@ -14,6 +14,7 @@ import BookingHoldForm from "./features/bookings/BookingHoldForm";
 import MyBookings from "./features/bookings/MyBookings";
 import AboutUs from "./views/AboutUs";
 import Footer from "./views/Footer";
+import SearchCompare from "./views/SearchCompare";
 import LoginRegisterContainer from "./views/SignInUp/LoginRegisterContainer";
 import ErrorPage from "./views/ErrorPage";
 import Rental from "./views/RentalPage/Rental";
@@ -43,6 +44,7 @@ const LinksList = () => {
   <Route path="/vehicles/:id" element={<VehicleDetail />} />
   <Route path="/locations" element={<LocationList />} />
   <Route path="/locations/:id" element={<LocationDetail />} />
+  <Route path="/search" element={<SearchCompare />} />
   <Route path="/reviews/vehicle/:vehicleId" element={<VehicleReviews />} />
   <Route path="/reviews/user" element={<MyReviews />} />
   <Route path="/admin/reviews" element={<AdminReviews />} />
