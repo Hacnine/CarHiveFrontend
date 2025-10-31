@@ -64,7 +64,7 @@ const LabelInput = ({ label, placeholder, Icon, tag, timeList,
             type="text"
             value={inputValue !== undefined ? inputValue : ""}
             onChange={onInputChange}
-            className=" placeholder:text-xs  placeholder:font-open w-full h-full bg-transparent border-transparent border-none focus:ring-0 outline-none box-border leading-tight appearance-none"
+            className=" placeholder:text-xs  placeholder:font-open w-full h-full bg-transparent border-transparent border-none focus:ring-0 outline-none box-border text-sm leading-tight appearance-none"
           />
         )}
 

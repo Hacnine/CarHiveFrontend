@@ -76,7 +76,7 @@ const BookingCard = () => {
   };
   return (
     // absolute md:top-56 top-60
-    <div className="    bg-white-green   md:w-[80%] w-[90%] lg:h-[350px] md:h-[170%]  shadow-lg  rounded-lg px-6   border-black pb-8 font-open">
+    <div className="    bg-white-green   md:w-[90%] w-[90%] lg:h-[350px] md:h-[170%]  shadow-lg  rounded-lg px-6   border-black pb-8 font-open">
       <div className="flex md:flex-col items-center justify-center lg:flex-row flex-col   border-blue-500  rounded-md  lg:px-6 sm:px-32 ">
         {/* <div className=" mt-14"> */}
 
