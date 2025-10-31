@@ -1,5 +1,5 @@
 import { Navigation } from "../components";
-import BookingCard from "../components/Booking/BookingCard";
+import BookingFormCard from "../components/Booking/BookingFormCard";
 import Header from "../components/Header";
 import NumberCard from "../components/AboutUs/NumberCard";
 import { booking_intro, numBerCard } from "../constants/index_three";
@@ -9,12 +9,12 @@ import RentingProcess from "./HomePage/RentingProcess";
 
 const Booking = () => {
   return (
-    <section className=" max-w-[1367px] mx-auto">
+  <section className="w-full mx-auto px-4">
       <Header title={"Booking"} />
       {/* <Hero /> */}
 
       <div className=" -translate-y-10 mx-auto flex items-center justify-center wrapper">
-        <BookingCard />
+        <BookingFormCard />
       </div>
       <RentingProcess />
       <div className=" bg-about-bg bg-cover bg-center bg-no-repeat">

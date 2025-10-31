@@ -20,7 +20,7 @@ const AboutUs = () => {
         isDark
           ? "bg-gradient-to-r from-[#0b1728ff] to-[#193d67ff]"
           : "bg-white mx-auto"
-      }  max-w-[1367px] mx-auto`}
+  }  w-full mx-auto px-4`}
     >
       <Header title={"About Us"} />
 

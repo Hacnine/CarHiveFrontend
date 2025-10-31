@@ -1,6 +1,10 @@
 import { formItems, vehicleTypes } from "../../constants";
+import { useGlobalContext } from '../../Context';
+
 
 const BookingCarCard = () => {
+  const { selectedVehicleType, setSelectedVehicleType } = useGlobalContext();
+
   return (
     <div className=" border-orange-500 mx-auto  lg:w-[50%] w-[95%]">
       <div className="mx-auto ">
@@ -13,8 +17,10 @@ const BookingCarCard = () => {
           {vehicleTypes.map((items, index) => (
             // lg:w-[118px] l g:h-[109px] md:w-36 md:h-24
 
-            <div
-              className="   w-[97%] h-[96%] bg-primary-green rounded-lg  flex  items-center justify-center flex-col  hover:scale-105 transition duration-700 font-bold text-sm sm:px-0 px-4"
+            <button
+              type="button"
+              onClick={() => setSelectedVehicleType(items.type)}
+              className={`w-[97%] h-[96%] rounded-lg flex items-center justify-center flex-col hover:scale-105 transition duration-200 font-bold text-sm sm:px-0 px-4 ${selectedVehicleType === items.type ? 'ring-4 ring-primary-green/40 bg-primary-green/95' : 'bg-primary-green'}`}
               key={index}
             >
               <img
@@ -25,7 +31,7 @@ const BookingCarCard = () => {
               <p className=" text-white-green -translate-y-3 ">
                 {items.type}
               </p>
-            </div>
+            </button>
           ))}
         </div>
       </div>

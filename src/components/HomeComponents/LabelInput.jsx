@@ -6,12 +6,21 @@ import "react-calendar/dist/Calendar.css";
 import "react-clock/dist/Clock.css";
 import "react-datepicker/dist/react-datepicker.css";
 
-const LabelInput = ({ label, placeholder, Icon, tag, timeList }) => {
+const LabelInput = ({ label, placeholder, Icon, tag, timeList,
+  // optional controlled props
+  inputValue, onInputChange,
+  selectedDate: controlledDate, onDateChange,
+  displayText: controlledDisplayText, setDisplayText: controlledSetDisplayText,
+}) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [visibility, setVisibility] = useState(false);
   const [displayText, setDisplayText] = useState("Time");
   const handleOptionClick = (option) => {
-    setDisplayText(option);
+    if (controlledSetDisplayText) {
+      controlledSetDisplayText(option);
+    } else {
+      setDisplayText(option);
+    }
   };
   let Pickers;
   const handleClick = () => {
@@ -39,25 +48,33 @@ const LabelInput = ({ label, placeholder, Icon, tag, timeList }) => {
         </div>
       ) : null}
 
-      <div className=" w-full h-10 flex items-center justify-between  gap-5 p-2 border border-slate-blue rounded-xl mt-3 overflow-clip font-open">
+      <div className=" w-full h-10 flex items-center justify-between  gap-5 px-3 py-2 border border-slate-blue rounded-xl mt-3 overflow-hidden font-open">
         {tag !== "Location" ? (
           <DatePicker
-            className="placeholder:text-xs text-slate-blue placeholder:font-open w-full h-full bg-transparent border-transparent outline-none"
-            selected={selectedDate}
-            onChange={(date) => setSelectedDate(date)}
+            className="placeholder:text-xs text-slate-blue placeholder:font-open w-full h-full bg-transparent border-transparent outline-none box-border leading-tight appearance-none"
+            selected={controlledDate !== undefined ? controlledDate : selectedDate}
+            onChange={(date) => {
+              if (onDateChange) onDateChange(date);
+              else setSelectedDate(date);
+            }}
             minDate={new Date()}
           />
         ) : (
           <input
             type="text"
-            className=" placeholder:text-xs  placeholder:font-open w-full h-full bg-transparent border-transparent border-none focus:ring-0 outline-none"
+            value={inputValue !== undefined ? inputValue : ""}
+            onChange={onInputChange}
+            className=" placeholder:text-xs  placeholder:font-open w-full h-full bg-transparent border-transparent border-none focus:ring-0 outline-none box-border leading-tight appearance-none"
           />
         )}
 
-        <span className={`border-l border-slate-blue ${tag !== 'Location'? 'pl-3': 'pl-14'}  h-16 w-24 flex items-center justify-center`}>
-          {tag !== 'Location'? <p className=" font-bold text-slate-blue">{displayText}</p>: <p className=" font-bold text-slate-blue"></p>}
+        <span className={`border-l border-slate-blue ${tag !== 'Location'? 'pl-3': 'pl-14'}  h-full w-24 flex items-center justify-center`}>
+          {tag !== 'Location'
+            ? <p className=" font-bold text-slate-blue">{controlledDisplayText !== undefined ? controlledDisplayText : displayText}</p>
+            : <p className=" font-bold text-slate-blue"></p>
+          }
           <Icon
-            className="text-slate-blue p-2  w-10 h-14  border-slate-blue hover:cursor-pointer"
+            className="text-slate-blue p-2  w-8 h-8 border-slate-blue hover:cursor-pointer"
             onClick={() => setVisibility(!visibility)}/>
         </span>
 
@@ -68,24 +85,3 @@ const LabelInput = ({ label, placeholder, Icon, tag, timeList }) => {
 
 export default LabelInput;
 
-// const LabelInput = ({ label, placeholder, icon }) => {
-//   return (
-//     <div className="flex items-center flex-col lg:justify-between  max-w-full lg:w-full pt-4">
-//       <div className="w-full ">
-//         <label className="font-bold text-sm text-gray-800">{label}</label>
-
-//         <div className=" w-full flex items-center justify-between min-w-max  gap-5 p-2 border  border-gray-400 rounded-xl mt-3">
-//           <input
-//             type="text"
-//             placeholder={placeholder}
-//             className=" placeholder:text-sm  outline-none sm:border-none bg-transparent"
-//           />
-//           <img src={icon} alt="icon" className=" font-bold sm:pl-0 pl-4  " />
-//         </div>
-//       </div>
-
-//     </div>
-//   );
-// };
-
-// export default LabelInput;

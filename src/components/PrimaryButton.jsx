@@ -1,7 +1,7 @@
 import { AppContext,useGlobalContext } from "../Context";
 import { useNavigate  } from 'react-router-dom';
 
-export default function PrimaryButton ({className,textColor, buttonName, icon, padding,shadow,  scale, url, rounded,type, onClick}) {
+export default function PrimaryButton ({className,textColor, buttonName, icon, padding,shadow,  scale, url, rounded,type, onClick, disabled, loading}) {
   
   const {setSignInBtn,setQualityDescription ,setComfort ,setPrestige} = useGlobalContext(AppContext);
 
@@ -59,10 +59,16 @@ export default function PrimaryButton ({className,textColor, buttonName, icon, p
   return (
     <div>
       <a href={url}>
-  <button className={` ${rounded? `${rounded}` : 'rounded font-semibold'} capitalize  items-center justify-center     ${shadow? `${shadow}`: 'shadow-md shadow-green-800'} tracking-[1px] font-serif ${className} 
+  <button
+    disabled={disabled}
+    className={` ${rounded? `${rounded}` : 'rounded font-semibold'} capitalize  items-center justify-center     ${shadow? `${shadow}`: 'shadow-md shadow-green-800'} tracking-[1px] font-serif ${className} 
   ${textColor ? `${textColor}` : 'text-white'} ${padding ? `${padding}`: `px-4 py-2 text-sm`} ${scale? "":"hover:scale-105 transition-all duration-500 ease-in "}`}
-      
-  onClick={clickHandler} type={type} ><div className="flex items-center justify-center"> <span className="pr-2">{icon}</span> {buttonName}</div></button>
+    onClick={clickHandler} type={type} >
+    <div className="flex items-center justify-center">
+      <span className="pr-2">{icon}</span>
+      {loading ? <span className="animate-pulse">Searching...</span> : buttonName}
+    </div>
+  </button>
       </a>
     </div>
   )

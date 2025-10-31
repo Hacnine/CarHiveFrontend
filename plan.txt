@@ -1,4 +1,4 @@
-Use this color to building this site:     "primary-green": "#1fc916",
+Use this color and shadcnd components to building this site:     "primary-green": "#1fc916",
         "light-green": "#1dd213",
         "deep-green": "#179510",
         "slate-blue":"#031b4e",

@@ -1,7 +1,9 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import type { Booking, PaginatedBookings } from '../../types/booking';
 
+
 const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+
 
 export const bookingsApi = createApi({
   reducerPath: 'bookingsApi',
@@ -74,4 +76,3 @@ export const {
   useUpdateBookingStatusMutation,
 } = bookingsApi;
 
-export default bookingsApi;

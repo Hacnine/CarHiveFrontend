@@ -34,7 +34,7 @@ const CarsForRentalPage = () => {
   };
 
   return (
-    <div className="max-w-[1367px] mx-auto ">
+  <div className="w-full mx-auto px-4">
       <Header title={"Cars"} bg={"bg-singlecar"} />
 
       <div className="flex items-start justify-center md:flex-row flex-col gap-5   wrapper md:space-y-0 space-y-10 mb-10 ">

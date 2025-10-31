@@ -6,7 +6,7 @@ const Header = ({title, height, bg, bgColor }) => {
   
   return (
     <>
-    <div className={`${bg?  `${bg}`: 'bg-hero-img'} max-w-[1367px] mx-auto  bg-cover bg-center bg-no-repeat w-full `}>
+  <div className={`${bg?  `${bg}`: 'bg-hero-img'} w-full mx-auto px-4 bg-cover bg-center bg-no-repeat `}>
       <div className="wrapper">
       <Navigation />
       </div>

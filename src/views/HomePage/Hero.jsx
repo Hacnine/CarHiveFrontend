@@ -7,13 +7,13 @@ const Hero = () => {
   
 
   return (
-    <section className=" bg-hero-img bg-no-repeat flex items-center justify-center md:pb-52">
+  <section className="bg-hero-img bg-cover bg-center bg-no-repeat flex items-center justify-center md:pb-52 w-full min-h-screen">
       {/* <img
         src={heroImage}
         alt="cover-image"
         className=" min-w-full min-h-screen flex-1 object-cover"
       /> */}
-      <div className="  flex items-center flex-col">
+  <div className="w-full flex items-center flex-col">
       <Navigation/>
 
         <div className=" wrapper mt-10  pb-10 ">

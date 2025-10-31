@@ -50,7 +50,7 @@ const Dashboard = () => {
   // };
 
   return (
-    <div className="max-w-[1367px] mx-auto">
+  <div className="w-full mx-auto px-4">
       <Header/>
     <div className="flex items-start justify-between flex-col md:flex-row gap-8 wrapper my-20">
       <div className="md:w-[30%] bg-white-green rounded-md px-7 py-7 w-full ">

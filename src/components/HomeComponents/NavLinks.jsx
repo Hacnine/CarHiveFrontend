@@ -27,22 +27,22 @@ const NavLinks = () => {
   //   console.log(activeLink)}}
 
   return (
-    <div>
-        <div className="hidden lg:block mx-auto w-[697px]">
-            <div className="flex items-center justify-between font-open">
+    <div className="w-full">
+    <div className="hidden lg:block flex-1 w-full">
+      <div className="flex items-center justify-between font-open w-[80%] mx-auto">
               {navLinks2.map((section, key) => (
                 <div
-                  className="relative flex justify-between items-center gap-1 rounded group"
+                  className="relative flex-1 flex justify-center items-center gap-1 rounded group w-full"
                   key={key}
                 >
                   {/* <NavLink className={ 'active:text-primary-green'} to={section.link}>{section.title}</NavLink> */}
 
                   <NavLink  to={section.link} className=" hover:text-primary-green border-b-2 border-transparent hover:border-primary-green transition-all duration-150 ease-in cursor-pointer" >{section.title}</NavLink>
-                  <p className=""></p>
+               
                   {section.title !== "Home" && section.title !== "Booking" && section.title !== "News"  && section.title !== "Cars" ? (
                     <>
                       <IoMdArrowDropdown />
-                      <div className="absolute hidden group-hover:block top-full min-w-full w-max bg-white-green shadow-md mt-1 rounded z-50">
+                      <div className="absolute hidden group-hover:block top-full   bg-white-green shadow-md mt-1 rounded z-50 w-[70%]">
                         <ul className="text-left border rounded">
                           {section.links.map((item, index) => (
                             <li

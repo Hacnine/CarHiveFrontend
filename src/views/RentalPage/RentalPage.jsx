@@ -47,7 +47,7 @@ const BookingContext = () => {
   }
 
   return (
-    <div className="max-w-[1367px] mx-auto">
+  <div className="w-full mx-auto px-4">
     <Header title={'Cart'} bg={' bg-sevices'} pb/>
   
   <div className="flex items-start justify-between flex-col md:flex-row gap-8 wrapper my-20">

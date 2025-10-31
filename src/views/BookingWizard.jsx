@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
+import { useCreateBookingMutation, useConfirmBookingMutation, usePickupChecklistMutation, useReturnChecklistMutation, useGetAvailableVehiclesQuery, useCreateCheckoutSessionMutation } from "../app/services/bookingsApi";
 
 // Simple booking wizard with dummy data implementing the 10-step flow.
 const daysBetween = (start, end) => {
@@ -38,7 +39,25 @@ const BookingWizard = ({ initialVehicle = null, initialSearch = null }) => {
 
   const days = useMemo(() => daysBetween(search.start, search.end), [search.start, search.end]);
 
-  const available = DUMMY_VEHICLES.filter(v => true); // placeholder for filters
+  // Prefer backend availability when possible
+  const { data: availableData } = useGetAvailableVehiclesQuery({ startDate: search.start, endDate: search.end, locationCode: search.pickup }, { skip: !search.start || !search.end });
+
+  const backendResults = (availableData && availableData.data && Array.isArray(availableData.data.results))
+    ? availableData.data.results.map(r => ({
+        id: r.vehicle.id,
+        make: r.vehicle.make,
+        model: r.vehicle.model,
+        seats: r.vehicle.seats || r.vehicle.metadata?.seats || 5,
+        pricePerDay: r.price ? (r.price.dailyRates ? (r.price.subtotal / Math.max(1, r.price.days)) : (r.price.total / Math.max(1, r.price.days))) : (r.vehicle.dailyRate || r.vehicle.baseDailyRate || 0),
+        transmission: r.vehicle.transmission,
+        fuelPolicy: r.vehicle.fuelPolicy || 'Full-to-full',
+        mileage: r.vehicle.mileage || 'Unlimited',
+        supplier: r.vehicle.supplier || r.vehicle.location?.name || 'Supplier',
+        raw: r
+      }))
+    : null;
+
+  const available = backendResults && backendResults.length > 0 ? backendResults : DUMMY_VEHICLES;
 
   const extrasTotal = Object.keys(extras).reduce((sum, k) => (extras[k] ? sum + (extrasList.find(e => e.key === k)?.price || 0) : sum), 0);
 
@@ -49,12 +68,63 @@ const BookingWizard = ({ initialVehicle = null, initialSearch = null }) => {
   const next = () => setStep(s => Math.min(s + 1, 8));
   const prev = () => setStep(s => Math.max(s - 1, 0));
 
-  const confirmBooking = () => {
-    // create a dummy booking id
-    const id = `CH-${Math.random().toString(36).slice(2, 9).toUpperCase()}`;
-    setBookingId(id);
-    setPayment(p => ({ ...p, paid: true }));
-    setStep(6); // move to pickup checklist
+  const [createBooking, { isLoading: creating }] = useCreateBookingMutation();
+  const [confirmBookingMutation, { isLoading: confirming }] = useConfirmBookingMutation();
+  const [pickupChecklistMutation, { isLoading: pickupLoading }] = usePickupChecklistMutation();
+  const [returnChecklistMutation, { isLoading: returnLoading }] = useReturnChecklistMutation();
+  const [createCheckoutSessionMutation] = useCreateCheckoutSessionMutation();
+
+  const confirmBooking = async () => {
+    if (!selectedVehicle) return alert('Select a vehicle first');
+
+    // vehicle id and locations — support backend-shaped object (selectedVehicle.raw) or demo object
+    const vehicleId = selectedVehicle.raw ? selectedVehicle.raw.vehicle.id : selectedVehicle.id;
+    const locationPickupId = selectedVehicle.raw ? selectedVehicle.raw.vehicle.locationId : null;
+    const locationDropoffId = selectedVehicle.raw ? selectedVehicle.raw.vehicle.locationId : null;
+
+    try {
+      const body = {
+        vehicleId,
+        locationPickupId,
+        locationDropoffId,
+        startDate: search.start,
+        endDate: search.end,
+        addons: [],
+        promoCode: null,
+        notes: 'Created from frontend demo'
+      };
+
+      const createRes = await createBooking(body).unwrap();
+      const newBooking = createRes.data?.booking || createRes.booking || createRes.data;
+      const id = newBooking?.id || newBooking?._id || createRes.data?.id;
+      setBookingId(id);
+
+      // Try to create a Stripe Checkout session for payment if backend supports it
+      try {
+        const sessionRes = await createCheckoutSessionMutation({ bookingId: id }).unwrap();
+        if (sessionRes && sessionRes.url) {
+          // Redirect user to Stripe Checkout
+          window.location.href = sessionRes.url;
+          return;
+        }
+      } catch (e) {
+        // Stripe not configured or failed — fall back to confirm flow
+        console.info('Stripe checkout session not created or not configured', e?.data || e?.message || e);
+      }
+
+      // Confirm hold / capture payment (backend stub)
+      try {
+        await confirmBookingMutation({ bookingId: id }).unwrap();
+      } catch (e) {
+        console.warn('Confirm failed', e);
+      }
+
+      setPayment(p => ({ ...p, paid: true }));
+      setStep(6);
+    } catch (e) {
+      console.error('Create booking failed', e);
+      alert('Failed to create booking. Ensure you are signed in and backend is reachable.');
+    }
   };
 
   // If props change externally, update internal state
@@ -177,7 +247,17 @@ const BookingWizard = ({ initialVehicle = null, initialSearch = null }) => {
             <label className="flex items-center gap-2"><input type="checkbox" checked={pickupChecks.mileageChecked} onChange={e => setPickupChecks(p => ({ ...p, mileageChecked: e.target.checked }))} /> Note odometer reading</label>
           </div>
           <div className="mt-3 flex gap-2">
-            <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={() => setStep(7)} disabled={!(pickupChecks.photosTaken && pickupChecks.fuelChecked)}>Continue to Return Checklist</button>
+            <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={async () => {
+              if (!(pickupChecks.photosTaken && pickupChecks.fuelChecked)) return;
+              if (bookingId) {
+                try {
+                  await pickupChecklistMutation({ id: bookingId, photos: [], fuelLevel: 'full', odometer: 0, notes: 'Pickup inspection (demo)' }).unwrap();
+                } catch (e) {
+                  console.warn('Pickup API failed', e);
+                }
+              }
+              setStep(7);
+            }} disabled={!(pickupChecks.photosTaken && pickupChecks.fuelChecked)}>Continue to Return Checklist</button>
             <button className="px-4 py-2 border rounded" onClick={prev}>Back</button>
           </div>
         </div>
@@ -192,7 +272,17 @@ const BookingWizard = ({ initialVehicle = null, initialSearch = null }) => {
             <label className="flex items-center gap-2"><input type="checkbox" checked={returnChecks.damageFree} onChange={e => setReturnChecks(r => ({ ...r, damageFree: e.target.checked }))} /> Confirm no new damage</label>
           </div>
           <div className="mt-3 flex gap-2">
-            <button className="px-4 py-2 bg-green-600 text-white rounded" onClick={() => setStep(8)} disabled={!(returnChecks.fuelChecked)}>Finish & Receipt</button>
+            <button className="px-4 py-2 bg-green-600 text-white rounded" onClick={async () => {
+              if (!returnChecks.fuelChecked) return;
+              if (bookingId) {
+                try {
+                  await returnChecklistMutation({ id: bookingId, photos: [], fuelLevel: '3/4', odometer: 9999, damage: !returnChecks.damageFree, damageNotes: returnChecks.damageFree ? '' : 'Demo damage' }).unwrap();
+                } catch (e) {
+                  console.warn('Return API failed', e);
+                }
+              }
+              setStep(8);
+            }} disabled={!(returnChecks.fuelChecked)}>Finish & Receipt</button>
             <button className="px-4 py-2 border rounded" onClick={prev}>Back</button>
           </div>
         </div>

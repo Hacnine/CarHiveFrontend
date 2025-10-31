@@ -37,12 +37,22 @@ export const bookingsApi = createApi({
       }),
       invalidatesTags: ['Bookings'],
     }),
+    // Create a booking (used by BookingWizard)
     createBooking: builder.mutation({
-      query: (body) => ({
-        url: '/bookings',
-        method: 'POST',
-        body,
-      }),
+      query: (body) => ({ url: '/bookings', method: 'POST', body }),
+      invalidatesTags: ['Bookings'],
+    }),
+    getAvailableVehicles: builder.query({
+      // params: { startDate, endDate, locationCode, category, transmission, maxPrice }
+      query: (params) => ({ url: `/vehicles/available${params ? `?${new URLSearchParams(params).toString()}` : ''}` }),
+      providesTags: (result) => result && result.data && result.data.results ? result.data.results.map(r => ({ type: 'Vehicles', id: r.vehicle.id })) : [{ type: 'Vehicles', id: 'LIST' }]
+    }),
+    pickupChecklist: builder.mutation({
+      query: ({ id, ...body }) => ({ url: `/bookings/${id}/pickup`, method: 'POST', body }),
+      invalidatesTags: ['Bookings'],
+    }),
+    returnChecklist: builder.mutation({
+      query: ({ id, ...body }) => ({ url: `/bookings/${id}/return`, method: 'POST', body }),
       invalidatesTags: ['Bookings'],
     }),
     cancelBooking: builder.mutation({
@@ -99,6 +109,9 @@ export const bookingsApi = createApi({
     getProfile: builder.query({ query: () => ({ url: '/auth/me' }), providesTags: ['Auth'] }),
     updateProfile: builder.mutation({ query: (body) => ({ url: '/auth/profile', method: 'PUT', body }), invalidatesTags: ['Auth'] }),
 
+  // Payments (Stripe checkout session)
+  createCheckoutSession: builder.mutation({ query: (body) => ({ url: '/payments/create-checkout-session', method: 'POST', body }) }),
+
     // Reviews
     createReview: builder.mutation({ query: (body) => ({ url: '/reviews', method: 'POST', body }), invalidatesTags: ['Reviews'] }),
     getVehicleReviews: builder.query({ query: ({ vehicleId, page, limit }) => ({ url: `/reviews/vehicle/${vehicleId}${page ? `?page=${page}&limit=${limit||10}`:''}` }) }),
@@ -119,9 +132,14 @@ export const {
   useHoldBookingMutation,
   useConfirmBookingMutation,
   useCreateBookingMutation,
+  usePickupChecklistMutation,
+  useReturnChecklistMutation,
   useCancelBookingMutation,
   useGetUserBookingsQuery,
   useGetBookingByIdQuery,
+  useGetAvailableVehiclesQuery,
+  useLazyGetAvailableVehiclesQuery,
+  useCreateCheckoutSessionMutation,
   // Vehicles
   useGetVehiclesQuery,
   useGetVehicleByIdQuery,
