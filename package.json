@@ -16,6 +16,9 @@
     "@mui/material": "^5.14.16",
     "@reduxjs/toolkit": "^1.9.5",
     "@tailwindcss/forms": "^0.5.7",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.548.0",
     "react": "^18.2.0",
     "react-custom-scrollbars-2": "^4.5.0",
     "react-datepicker": "^4.21.0",
@@ -28,6 +31,8 @@
     "react-scrollbars-custom": "^4.1.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7",
     "time-picker": "^1.0.0"
   },
   "devDependencies": {

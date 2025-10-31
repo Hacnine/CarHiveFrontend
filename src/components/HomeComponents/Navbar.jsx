@@ -51,7 +51,7 @@ const Navigation = ({ paddingB, background }) => {
       <Headroom className=" w-full ">
         <nav
           id="navbar"
-          className={` ${paddingB} w-full  z-30 ${color} ${background}  max-w-[1367px] mx-auto border-black`}
+          className={` ${paddingB} w-full  z-30 ${color} ${background} w-full mx-auto px-4 border-black`}
         >
           <div className="w-full">
             <div className=" flex  items-center  justify-between gap-6">
